@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Quick Intro to R - HIST3814o Crafting Digital History</title>
+  
+
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Quick Intro to R";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+  <script src="../../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> HIST3814o Crafting Digital History</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../introduction/crafting-digital-history/">Getting Started</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>1. Open Access Research</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../module-1/Open-Access-Research/">Why you should be open</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../module-1/Exercises/">Exercises</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>2. Finding Data</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../module-2/Finding Data/">How do we find data?</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../module-2/Exercises/">Exercises</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>3. Fixing Data</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../module-3/Wrangling Data/">Data is messy</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../module-3/Exercises/">Exercises</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>4. Analysis</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../module-4/Seeing Patterns/">Seeing Patterns</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../module-4/Exercises/">Exercises</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>5. Visualization</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../module-5/Humanities Visualization/">Communicating your Findings</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../module-5/Exercises/">Exercises</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../conclusion/conclusion/">6. Final Thoughts</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Appendices</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../tei/">Text Encoding</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../ner/">NER</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../open-refine/">Open Refine</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../regex/">Regular Expressions (regex)</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../regex-ner/">Going further with regex</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../regexex/">Regex & the Republic of Texas</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../cyoa.txt/">CYOA</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../geoparsing-w-python.txt/">Geoparsing with Python</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../gephi.txt/">SNA with Gephi</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../graphing-the-net.txt/">Graphing the Net</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../multimode-networks.txt/">Multimode Networks</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../leaflet.txt/">Leaflet</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../glitch/">Glitch</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Quick Intro to R</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#a-quick-introduction-to-r-and-r-studio">A quick introduction to R and R studio</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../git-rstudio/">Git</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../topicmodel-r-dhbox/">TM, DHBox</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../topicmodel-r-yourmachine/">TM, Local</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">HIST3814o Crafting Digital History</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Appendices &raquo;</li>
+        
+      
+    
+    <li>Quick Intro to R</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+          <a href="https://github.com/shawngraham/hist3907o/tree/master/workbook/docs" class="icon icon-github"> Edit on GitHub</a>
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="a-quick-introduction-to-r-and-r-studio">A quick introduction to R and R studio</h1>
+<p>R is a powerful language for statistical exploring, visualizing, and manipulating all kinds of data, including textual. It is however not the most intutive of environments to work in. In which case, <a href="http://www.rstudio.com/products/RStudio/">RStudio</a> is what we need. Fortunately, you already have this installed for you in your DHBox; however, if you want to have it on your own computer, go get R <a href="http://cran.rstudio.com/">from here</a> and then the <a href="http://www.rstudio.com/products/RStudio/">RStudio</a>. In DHBox, you sign into RStudio with your DHBox credentials.</p>
+<p>Why do we bother with this? Why not just use Excel? One word: reproducibility. In Excel, the sequence of clicking that one does to do anything is next to <a href="https://www.practicereproducibleresearch.org/case-studies/benmarwick.html">impossible to effectively communicate</a> to someone else. Excel also was built for business applications, and those biases are built into its dna (<a href="http://www.bionews.org.uk/page_695210.asp">which can have some nasty effects</a>.)</p>
+<p>R allows us to do scripted analyses. We write out the sequence of transformations or analyses to be done, making a kind of program that we can then feed our data into. Once we have a workflow that does what we need it to do, it becomes trivial to re-use the code on other datasets. What's more, when we do an analysis, we can publish the scripts and the data. We don't have to taken an author's word for it: we can re-run the analysis ourselves or build upon it.</p>
+<p>This course only touches in the lightest manner on the potential for R for doing digital history. Please see Lincoln Mullen's <a href="http://dh-r.lincolnmullen.com/">Computational Historical Thinking with Applications in R</a> for more instruction.</p>
+<p>For now, we'll do a quick whistle-stop tour of using R Studio to do some analysis in R.</p>
+<p><img alt="Screenshot of R Studio in DHBox. Click the green plus sign to start a new script" src="../r-screenshot1.png" /></p>
+<p>You should always keep your research materials (scripts and associated data) organized in separate project folders. R Studio makes this easy for you. When you open R Studio to start a new project, click where it says 'project (none)' at the right hand side of the interface. Click on the down arrow, and select new R project. Follow the prompts, and create it in a new directory. R keeps track of what you're up to in a project file, so that you can pick up where you left off. <a href="../git-rstudio/">You should also keep your code under version control as well</a> so that you can recover from disaster and/or share your code/data with collaborators; click on that link to get version control set up. (Sometimes, it might happen that RStudio crashes (this can be, in DHBox, related to memory issues). If that happens - if it just seems to 'hang' (and you've waited several minutes), you can refresh your browser, and go back to DHBox. You'll probably have to re-open your project file. Use the file panel at bottom right to find your *.rproj file (your R project file) and click on it to re-open. Save your work often, from the File &gt; Save menu.)</p>
+<p>R Studio divides the screen up into four neat panes. The top left is for writing your analytical script (or code; I will use the two words interchangeably), the bottom left is the console where the analysis actually happens; top right is an environment pane which will show you the variables you've created, your history (commands you've run), and (once it's configured) git; indeed, other tools and plugins will appear as tabs here. The bottom right gives you a preview of any plots or charts you create; once you create one if you click 'zoom' the chart will open in its own pop up so that you can see it better. The file explorer and the help text also appear under tabs in this box.</p>
+<p>You write your script in the script box, and then you can get R Studio to run the code one line at a time by clicking on code &gt;&gt; run line (it runs the line of code where you left the cursor). If you select a number of lines of code and hit run line, all of that code will run. R scripts are text files that use .r as their file extension.</p>
+<p>The console is where the action happens. Click down in the console. Type <code>3 + 5</code> and hit enter. R Studio will run the calculation: <code>[1] 8</code>! The [1] indicates that this is the first result. Now type <code>a = 3</code> and hit enter. Over in the top right, the 'environment' pane updates to tell us that yes, a has a value of 3. Now type <code>b = 5</code>. The environment updates accordingly. Now type <code>a + b</code>. Hey, we can do algebra! Anything you can do in excel, we can do in code here in R Studio. A very good introduction to how R (the language) works is at <a href="http://tryr.codeschool.com/">Try R</a>, an interactive tutorial in your browser. Go give some of that a shot.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../git-rstudio/" class="btn btn-neutral float-right" title="Git"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../glitch/" class="btn btn-neutral" title="Glitch"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+    <!-- Copyright etc -->
+    </p>
+  </div>
+
+The Crafting Digital History site is built with <a href="http://www.mkdocs.org">MkDocs</a> using a theme provided by <a href="https://readthedocs.org">Read the Docs</a>. All documents are available on <a href="https://github.com/shawngraham/hist3907o/tree/master/workbook/docs"> GitHub</a>. I thank Reclaim Hosting for their help, support, and example in getting this site up and running.
+</footer>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/fitvids/1.1.0/jquery.fitvids.min.js"></script>
+<script>
+  $(document).ready(function(){
+    // Target your .container, .wrapper, .post, etc.
+    $(".section").fitVids();
+  });
+</script>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../glitch/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../git-rstudio/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>
