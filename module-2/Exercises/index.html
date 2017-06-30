@@ -121,7 +121,12 @@
                 <li class="toctree-l3"><a href="#exercise-4-apis">EXERCISE 4: APIs</a></li>
                 
             
-                <li class="toctree-l3"><a href="#exercise-5-mining-twitter">Exercise 5: Mining Twitter</a></li>
+                <li class="toctree-l3"><a href="#exercise-5-mining-twitter">EXERCISE 5: Mining Twitter</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#exercise-6-using-tesseract-to-turn-a-pdf-into-text">EXERCISE 6: Using Tesseract to turn a pdf into text</a></li>
+                
+                    <li><a class="toctree-l4" href="#wget-command-to-grab-the-equity">wget command to grab The Equity</a></li>
                 
             
             </ul>
@@ -406,7 +411,7 @@
 <h1 id="exercise-2-wget">EXERCISE 2: Wget</h1>
 <p>You've already encountered wget in the introduction to this workbook, when you were setting up your DHBox to use Pandoc. In this exercise, I want you to do <a href="http://programminghistorian.org/lessons/automated-downloading-with-wget">Ian Milligan's wget tutorial at the Programming Historian</a> to learn more about the power of this command, and how to wield that power properly. Skip ahead to step 2, since your DHBox already has wget installed. (If you want to continue to use wget after this course is over, you will have to install it on your own machine, obviously).</p>
 <p>Once you've completed Milligan's tutorial, remember to put your history into a new markdown file, and to lodge a copy of it in your repository.</p>
-<p>Now that you're <em>au fait</em> with wget, I want you to use wget to download the Shawville Equity from the Quebec provincial archives in a responsible and respectful manner. Otherwise, you will look like a bot attacking their site. The data is in this location: <code>http://collections.banq.qc.ca:8008/jrn03/equity/src/</code>. Make a new directory: <code>$ mkdir equity</code> and then cd into it: <code>$ cd equity</code>. Make sure you're in the directory by typing <code>$ pwd</code>. Work out the command to download the Equity data; configure your command to retrieve only the txt files (as the pdfs are large and will take much time and bandwidth to acquire.)</p>
+<p>Now that you're <em>au fait</em> with wget, I want you to use wget to download the Shawville Equity from the Quebec provincial archives in a responsible and respectful manner. Otherwise, you will look like a bot attacking their site. The data is in this location: <code>http://collections.banq.qc.ca:8008/jrn03/equity/src/</code>. Make a new directory: <code>$ mkdir equity</code> and then cd into it: <code>$ cd equity</code>. Make sure you're in the directory by typing <code>$ pwd</code>. Work out the command to download the Equity data; configure your command to retrieve only the txt files (as the pdfs are large and will take much time and bandwidth to acquire.) (Ok, I'm not heartless - scroll to the bottom of this page to see what the command should be).</p>
 <p>Add your command to your history file, and lodge it in your repository.</p>
 <p>Open some of the text files in Nano. How good, how careful was the 'object character recognition'? Part of the point of working with the Equity files is to show that even with horrible 'digitization', we can still extract useful insights. Digitization is more than simply throwing automatically generated files online. Good digitization requires scholarly work and effort! We will learn how to do this properly in the next exercise.</p>
 <h1 id="exercise-3-tei">EXERCISE 3: TEI</h1>
@@ -474,7 +479,7 @@ wget -i urlstograb.txt -O output.txt
 <p>And now we can run the program:</p>
 <p><code>$ ./canadiana.sh</code></p>
 <p>Ta da! You now have a pretty powerful tool now for grabbing data from one of the largest portals for Canadian history! Download your output.txt file to your computer via the file manager and have a look at it. Make sure to make a file noting what you've done, commands you've made, etc, and lodge it in your repository.</p>
-<h1 id="exercise-5-mining-twitter">Exercise 5: Mining Twitter</h1>
+<h1 id="exercise-5-mining-twitter">EXERCISE 5: Mining Twitter</h1>
 <p>Ed Summers is part of a project called '<a href="http://www.docnow.io/">Documenting the Now</a>' which is developing tools to collect and understand the historical materials being shared (and lost) on social media. One component of Documenting the Now is the Twitter Archiving Tool, '<a href="https://github.com/DocNow/twarc">Twarc</a>'. In this exercise, you are going to use Twarc to create an archive of Tweets relevant to a current trending news topic.</p>
 <ol>
 <li>First of all, you need to set up a Twitter account, if you haven't already got one. Do so, but make sure to minimize any personal information that is exposed. For instance, don't make your handle the same as your real name. Turn off geolocation. Do not give your actual location in the profile. View the settings, and make sure all of the privacy settings are dialed down. For the time being, you <em>do</em> have to associate a cell phone number with your account. You can delete that once you've done the next step.</li>
@@ -491,9 +496,31 @@ wget -i urlstograb.txt -O output.txt
 </ol>
 <p>NB. Twitter forbids the sharing of the full metadata of a collection of tweets. You may however share a list of tweet IDs. See the Twarc documentation for the instructions on how to do that.</p>
 <p>What can you do with this data? Examine the Twarc repository, especially its utilities. You could extract the geolocated ones and map them. You could examine the difference between 'male' and 'female' tweeters (and how problematic might that be?). In your csv, save the text of the posts to a new file and upload it to something like <a href="http://voyant-tools.org">Voyant</a> to visualize trends over time. Google for analyzes of twitter data to get some ideas.</p>
+<h1 id="exercise-6-using-tesseract-to-turn-a-pdf-into-text">EXERCISE 6: Using Tesseract to turn a pdf into text</h1>
+<p>We've all used pdfs - in academia, we often use a pdf to make sure that a page of text looks like an actual physical page of paper. PDFs always look the same on whatever machine they are displayed on, because they contain within themselves the complete description of what the 'page' should look like. If you've ever selected text within a pdf, you were only able to do this because there was within the pdf a text layer on top of the image layer. But when we digitize old newspapers, the pdf that results only contains the image layer, not the text. To turn that image into text, we have to do what's called 'object character recognition', or OCR. An OCR algorithm looks at the pattern of pixels in the image, and maps these against the shapes it 'knows' to be an A, or an a, or a B, or a &amp;, and so on. Cleaner, sharper printing gives better results as do hi resolution images free from noise. People who have a lot of material to OCR use some very powerful tools to identify blocks of text within the newspaper page, and then train the machine to identify these, a process beyond us just now (but see <a href="https://stackoverflow.com/questions/28591117/how-do-i-segment-a-document-using-tesseract-then-output-the-resulting-bounding-b#28640570">this q &amp; a on stackoverflow</a> if you're interested).</p>
+<p>In this exercise, you'll:</p>
+<ol>
+<li>install the Tesseract OCR engine into your DHBox</li>
+<li>download an edition of the Equity</li>
+<li>install and use pdftk to burst the pdf into individual one-page files</li>
+<li>install and use imagemagick to convert the pdf into tiff image format</li>
+<li>use Tesseract to OCR the resulting pages.</li>
+</ol>
+<p>Begin by making a new director for this exercise: <code>mkdir ocr-test</code>. Change directories into it: <code>cd ocr-test</code></p>
+<ol>
+<li><code>$ sudo apt-get install tesseract-ocr</code> will grab the latest version of tesseract and install it into your dhbox. Enter your password when the computer asks for it.</li>
+<li><code>$ sudo apt-get install imagemagick</code> to install imagemagick</li>
+<li><code>$ sudo apt-get install pdftk</code> to install pdftk.</li>
+<li>Now let's grab an edition of the Equity. Use wget to grab the pdf from July 4th 1950.</li>
+<li>Let's burst it into individual pages. The command is <code>pdtk &lt;input file&gt; burst</code>, so <code>$ pdftk 83471_1957-07-04.pdf burst</code></li>
+<li>Let's convert the first file to tiff with imagemagick's convert command: <code>$ convert -density 300 pg_0001.pdf -depth 8 -strip -background white -alpha off file.tiff</code> You want a high density image, which is what the -density and the -depth flags do; the rest of the command formats the image in a way that Tesseract expects to encounter text. This command might take a while. Just wait, be patient.</li>
+<li>Extract text! <code>$ tesseract file.tiff output.txt</code> This might also take some time.</li>
+</ol>
+<p>Download the output.txt file with the DHBox filemanager. Open the file with a text editor (there might be a lot of white space at the start of the file, fyi). Grab the txt file created by the Provincial Archives. Is yours better or worse than theirs? Look up the <a href="https://github.com/tesseract-ocr/tesseract/wiki/Command-Line-Usage">Tesseract wiki</a>. What other options could you use with the tesseract command to improve the results? For future reference, here are two guides to automating bulk OCR (multiple files) with tesseract: <a href="https://diging.atlassian.net/wiki/display/DCH/Tutorial%3A+Text+Extraction+and+OCR+with+Tesseract+and+ImageMagick">Peirson's</a>, <a href="http://benschmidt.org/dighist13/?page_id=129">Schmidt's</a>.</p>
+<h3 id="wget-command-to-grab-the-equity">wget command to grab The Equity</h3>
 <p>Hey - you've scrolled all the way down here. Here's the wget command to nicely download the Equity txt files:
 <code>wget http://collections.banq.qc.ca:8008/jrn03/equity/src/ -A .txt -r --no-parent -nd –w 2 --limit-rate=20k</code></p>
-<p>When you run this command, it will go through the entire file structure a couple of times, 'rejecting' index.html etc because we've asked it to just grab the .txt files. Be patient.</p>
+<p>When you run this command, it will go through the entire file structure a couple of times, 'rejecting' index.html etc because we've asked it to just grab the .txt files. Be patient. How would you change it to grab just the pdfs?</p>
               
             </div>
           </div>
