@@ -316,18 +316,6 @@
                 
                     <li><a class="toctree-l4" href="#getting-the-data-into-your-project">getting the data into your project</a></li>
                 
-            
-                <li class="toctree-l3"><a href="#examine-data">examine data</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#which-gives-the-number-of-nodes-in-our-data">which gives the number of nodes in our data</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#which-gives-the-number-of-sources-and-number-of-targets">which gives the number of sources, and number of targets</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#which-means-some-people-sent-more-than-one-letter-and-some-people-received-more-than-one-letter">which means some people sent more than one letter, and some people received more than one letter</a></li>
-                
                     <li><a class="toctree-l4" href="#visualization">Visualization</a></li>
                 
             
@@ -409,29 +397,31 @@ links &lt;- read.csv(&quot;texaslinks.csv&quot;, header=T, as.is=T)
 </code></pre>
 
 <p>We can examine the start or end of a variable with the head or tail command; these look at the first few lines at the start ('head') or end ('tail') of the variable, eg:</p>
-<p>``R</p>
-<h1 id="examine-data">examine data</h1>
-<p>head(nodes)</p>
-<p>head(links)</p>
-<p>nrow(nodes); length(unique(nodes$id))</p>
-<h1 id="which-gives-the-number-of-nodes-in-our-data">which gives the number of nodes in our data</h1>
-<p>nrow(links); nrow(unique(links[,c("source", "target")]))</p>
-<h1 id="which-gives-the-number-of-sources-and-number-of-targets">which gives the number of sources, and number of targets</h1>
-<h1 id="which-means-some-people-sent-more-than-one-letter-and-some-people-received-more-than-one-letter">which means some people sent more than one letter, and some people received more than one letter</h1>
-<pre><code>Let's rearrange things so that instead of this:
+<pre><code class="R">#examine data
+head(nodes)
 
+head(links)
+
+nrow(nodes); length(unique(nodes$id))
+# which gives the number of nodes in our data
+
+nrow(links); nrow(unique(links[,c(&quot;source&quot;, &quot;target&quot;)]))
+# which gives the number of sources, and number of targets
+# which means some people sent more than one letter, and some people received more than one letter
+</code></pre>
+
+<p>Let's rearrange things so that instead of this:</p>
+<pre><code>Alice -&gt; Bob, 1 letter
 Alice -&gt; Bob, 1 letter
 Alice -&gt; Bob, 1 letter
-Alice -&gt; Bob, 1 letter
+</code></pre>
 
-we have this:
+<p>we have this:</p>
+<pre><code>Alice -&gt; Bob, 3 letters
+</code></pre>
 
-Alice -&gt; Bob, 3 letters
-
-That is, we're going to count up the number of times a particular relationship exists, and assign that count to the weight column. Much tidier all around! We do that like this:
-
-```R
-links &lt;- aggregate(links[,3], links[,-3], sum)
+<p>That is, we're going to count up the number of times a particular relationship exists, and assign that count to the weight column. Much tidier all around! We do that like this:</p>
+<pre><code class="R">links &lt;- aggregate(links[,3], links[,-3], sum)
 
 links &lt;- links[order(links$from, links$to),]
 
