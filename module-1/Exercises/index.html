@@ -396,7 +396,7 @@
 <p><strong>NB this workbook assumes that you are using a DHBox</strong></p>
 <ol>
 <li>If you are on campus or are logged into Carleton's systems via a VPN, go to <a href="http://134.117.26.132:5000/signup">http://134.117.26.132:5000/signup</a>. If not, go to <a href="http://dhbox.org/signup">http://dhbox.org/signup</a>. These are two separate installations of DHBox; whichever one you start with, continue to use.</li>
-<li>Select a username, password, and your email address. Then select '1 month'. Then select launch.</li>
+<li>Select a username, password, and your email address. <strong>Your username must be four characters or longer</strong>. Then select '1 month'. Then select launch.</li>
 </ol>
 <p>You now have a virtual computer that you can use for the next month.</p>
 <p>Whenever you come back to the dhbox, you can now click 'login' and your personal dh computer and your work will be there waiting for you. Once you've logged in, the site will reload to the DHbox welcome screen, but your user name will show at the top right.</p>
@@ -423,7 +423,10 @@
 <p>at the command line. This 'lists' - ls - all the files in the directory. How do you know what directory you're in? You can use the <code>pwd</code> command, which prints the working directory.</p>
 <p>Let's take a look inside that new file you created. There is a text editor that you can use, called 'nano'. Type:</p>
 <p><code>$ nano dhbox-work-today.md</code></p>
-<p>This opens the text editor, and you can see that the history command has copied its output into the editor (<strong>if you got an error:</strong> try re-installing nano with this command: <code>sudo apt-get install nano</code>. It will ask for your password.) <a href="https://www.howtogeek.com/howto/42980/the-beginners-guide-to-nano-the-linux-command-line-text-editor/">Here is a guide to using the Nano text editor</a> which you should check out now.</p>
+<p>This opens the text editor, and you can see that the history command has copied its output into the editor. <strong>If you got an error:</strong> Sometimes, tools or commands we want to use are not present in the system. DHBox uses the 'Ubuntu' operating system (the underlying code that makes a PC a PC, a Mac a Mac, etc). We can install all sorts of useful things by using the <code>apt-get</code> command. To get and install Nano, try re-installing nano with this command:</p>
+<p><code>$ sudo apt-get install nano</code>.</p>
+<p>The computer makes things a little more difficult sometimes when you're asking it to do something that changes or adds capabilities, so simply typing <code>apt-get</code> wouldn't work. <code>sudo</code> tells the computer, I really do want to this (it stands for 'super-user do'). Any 'sudo' command will make the computer ask for your password to confirm that you really do want to run that command.</p>
+<p><a href="https://www.howtogeek.com/howto/42980/the-beginners-guide-to-nano-the-linux-command-line-text-editor/">Here is a guide to using the Nano text editor</a> which you should check out now.</p>
 <p>In Nano, with your file open, make a header (use <code>#</code> to indicate a header, remember) at the start of the file which has today's date in it, and add some text explaining what you're trying to do. Then, hit ctrl+x to edit Nano. Nano will ask you if you want to 'Save modified buffer?'. Hit <code>y</code>, then when it asks you for the file name, hit enter.</p>
 <p>Use the file manager to save a copy of <code>dhbox-work-today.md</code> onto your own computer. One last thing: let's convert the markdown file into both Word and HTML. Pandoc is capable of quite sophisticated transformations, but these are two of the easiest. Try this:</p>
 <p><code>$ pandoc -o todayscommands.docx dhbox-work-today.md</code></p>
@@ -431,6 +434,7 @@
 <p>You've done some interesting work - you've installed software into a remote computer, you've copied all of the commands you typed into a new file, you've used markdown and a text editor to add information and context to those commands, and you've used pandoc to transform your basic text into the more complicated formats of Word or HTML.</p>
 <p>As you do more work in this workbook, I want you to get in the habit of keeping these copies of what you've done. These are your actual lab notes, and they are invaluable for helping you keep track of what you've been doing and what you've been trying. If you remember the course manual, keeping a lab notebook is part of the assessment of the course.</p>
 <p>In the next exercise, we learn to use another piece of software called 'git' which will enable you to set up a remote location for pushing copies of your work to, for safe keeping and for collaboration. For more on why we go to all this trouble, see <a href="http://programminghistorian.org/lessons/preserving-your-research-data">'Preserving Your Research Data'</a>.</p>
+<p><a href="https://help.ubuntu.com/community/AdvancedCommandlineHowto#Keyboard_shortcuts">Here's a handy cheat-sheet of keyboard shortcuts and other useful commands for your DHBox command-line work</a>.</p>
 <h2 id="exercise-3-setting-up-your-github-space">EXERCISE 3: setting up your github space</h2>
 <p>It's a familiar situation - you've been working on a paper. It's where you want it to be, and you're certain you're done. You save it as 'final.doc'. Then, you ask your friend to take a look at it. She spots several typos and that you flubbed an entire paragraph. You open it up, make the changes, and save as 'final-w-changes.doc'. Later that day it occurs to you that you don't like those changes, and you go back to the original 'final.doc', make some changes, and just overwrite the previous version. Soon, you have a folder like:</p>
 <pre><code>|-project
@@ -507,7 +511,7 @@ added in the concluding section.
 <ul>
 <li>make a new directory: <code>$ mkdir first-repo</code></li>
 <li>type <code>$ ls</code> (list) to see that the director exists. Then change directory into it: <code>cd first-repo</code>. (remember: if you're ever not sure what directory you're in, type <code>$ pwd</code>, or print working directory).</li>
-<li>make a new file called <code>readme.md</code>. You do this by calling the text editor: <code>nano readme.md</code>. Type an explanation of what this exercise is about. Hit ctrl+x to exit, then y to save, leave the file name as it is.</li>
+<li>make a new file called <code>readme.md</code>. You do this by calling the text editor: <code>nano readme.md</code>. Type an explanation of what this exercise is about. Hit ctrl+x to exit, then y to save, leave the file name as it is. <strong>If you get an error to the effect that nano is not found</strong> you just need to install it with <code>sudo apt-get install nano</code>. DHBox will ask you for your password again. Once the dust settles, you can make the new file with <code>nano readme.md</code>.</li>
 <li>type <code>$ ls</code> again to check that the file is there.</li>
 <li>type <code>$ git init</code> to tell the Git program that this folder is to be tracked as a repository. If all goes correctly, you should see a variation on this message: <code>Initialized empty Git repository in /home/demonstration/first-repo/.git/</code>. But type <code>$ ls</code> again. What do you (not) see?</li>
 </ul>
