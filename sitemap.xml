@@ -209,6 +209,12 @@
      <changefreq>daily</changefreq>
     </url>
         
+    <url>
+     <loc>http://craftingdigitalhistory.ca/supporting materials/netviz/</loc>
+     <lastmod>2017-06-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
     
 
 </urlset>
