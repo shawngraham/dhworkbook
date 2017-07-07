@@ -511,7 +511,7 @@ wget -i urlstograb.txt -O output.txt
 <li><code>$ sudo apt-get install tesseract-ocr</code> will grab the latest version of tesseract and install it into your dhbox. Enter your password when the computer asks for it.</li>
 <li><code>$ sudo apt-get install imagemagick</code> to install imagemagick</li>
 <li><code>$ sudo apt-get install pdftk</code> to install pdftk.</li>
-<li>Now let's grab an edition of the Equity. Use wget to grab the pdf from July 4th 1950.</li>
+<li>Now let's grab an edition of the Equity. Use wget to grab the pdf from July 4th 1957.</li>
 <li>Let's burst it into individual pages. The command is <code>pdtk &lt;input file&gt; burst</code>, so <code>$ pdftk 83471_1957-07-04.pdf burst</code></li>
 <li>Let's convert the first file to tiff with imagemagick's convert command: <code>$ convert -density 300 pg_0001.pdf -depth 8 -strip -background white -alpha off file.tiff</code> You want a high density image, which is what the -density and the -depth flags do; the rest of the command formats the image in a way that Tesseract expects to encounter text. This command might take a while. Just wait, be patient.</li>
 <li>Extract text! <code>$ tesseract file.tiff output.txt</code> This might also take some time.</li>
