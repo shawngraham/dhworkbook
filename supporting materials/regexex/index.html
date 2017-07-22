@@ -387,9 +387,9 @@ Isaac Van Zandt, Anson Jones, January 11 1843
 <ul>
 <li>At the command line, type <code>$ curl http://archive.org/stream/diplomaticcorre33statgoog/diplomaticcorre33statgoog_djvu.txt &gt; texas.txt</code></li>
 </ul>
-<p>This downloads the txt file and saves it as texas.txt.</p>
+<p>The <code>curl</code> command downloads the txt file and the the <code>&gt;</code> pushes the result of the curl command to a file called texas.txt.</p>
 <ul>
-<li>Open it with Nano and delete everything for the index of the list of letters. To select a lot of text in Nano, you set a starting point (a mark) with ctrl+shift+6 (the 'carat' symbol: ^). Then hit the down arrow on your keyboard, and you will highlight the text. When you've selected everything you want, hit ctrl + k to cut the text.</li>
+<li>Open <code>texas.txt</code> with Nano and delete everything for the index of the list of letters. To select a lot of text in Nano, you set a starting point (a mark) with ctrl+shift+6 (the 'carat' symbol: ^). Then hit the down arrow on your keyboard, and you will highlight the text. When you've selected everything you want, hit ctrl + k to cut the text.</li>
 </ul>
 <p>That is, you’re looking for the table of letters, starting with ‘Sam Houston to J. Pinckney Henderson, December 31, 1836 51’ and ending with ‘Wm. Henry Daingerfield to Ebenezer Allen, February 2, 1846 1582’. Your file will now have approximately 2000 lines in it.</p>
 <p>Notice that there is a lot of text that we are not interested in at the moment: page numbers, headers, footers, or categories. We're going to use regular expressions to get rid of them. What we want to end up with is a spreadsheet that is arranged in three columns:</p>
@@ -411,92 +411,64 @@ Isaac Van Zandt, Anson Jones, January 11 1843
 <p><strong>However, we're going to use the two commands sed and grep at the command prompt in DHBox</strong>.</p>
 <p>Remember from our basic introduction that there's a way to see if the word "to" appears in full. Type</p>
 <pre><code>$ grep '\bto\b' texas.txt
+
 </code></pre>
 
 <p>The results print out to the screen. This command finds every instance of the word "to" (and not, for instance, also ‘potato’ or ‘tomorrow’ - try <code>grep 'to' texas.txt</code> instead to see the difference).</p>
-<p>We don't just want to find "to", but the entire line that contains it. We assume that every line that contains the word “to” in full is a line that has relevant letter information, and every line that does not is one we do not need. You learned earlier that the query <code>.+</code> returns any amount of text, no matter what it says. Thus, the pattern that we will build when we are ready to use the <code>sed</code> command (where the 's' means 'stream' and 'ed' means 'editor') will include</p>
-<pre><code> .+\bto\b.+
- ```
-
-so that we edit every line which includes the word &quot;to&quot; in full, no matter what comes before or after it, and none of the lines which don't.
-
-As mentioned earlier, we want to add a tilde ~ before each of the lines that look like letters, so we can save them for later. This involves the find-and-replace function, and a query identical to the one before, but with parentheses around it, so it looks like
-
+<p>We don't just want to find "to", but the entire line that contains it. We assume that every line that contains the word “to” in full is a line that has relevant letter information, and every line that does not is one we do not need. You learned earlier that the query <code>.+</code> returns any amount of text, no matter what it says. Thus, the pattern that we will build when we are ready to use the <code>sed</code> command (where the 's' means 'stream' and 'ed' means 'editor') will include <code>.+\bto\b.+</code> so that we edit every line which includes the word "to" in full, no matter what comes before or after it, and none of the lines which don't.</p>
+<p>As mentioned earlier, we want to add a tilde ~ before each of the lines that look like letters, so we can save them for later. This involves the find-and-replace function, and a query identical to the one before, but with parentheses around it, so it looks like</p>
+<pre><code>(.+\&lt;to\&gt;)
 </code></pre>
 
-<p>(.+\&lt;to>)</p>
-<pre><code>
-and the entire line is placed within a parenthetical group. Since this the first group in our search expression, we can replace that group with `\1` and put the tilde in front of it like so: `~\1`.
-
-+ Copy and past some of your text into [RegExr.com](http://RegExr.com). Write your regular expression (ie, what you're trying to find), and your substitution (ie, what you're replace with) in the RegExr interface. Once you're satisfied that you've got it right, we put the complete expression into our sed command:
-
-`sed -r -i.bak 's/(.+\bto\b.+)/~\1/g' texas.txt`
-
-where:
-
-`-r` means extended regex. this saves us from having to 'escape' certain characters
-`-i.bak` means make a backup of the original input file, in case things go wrong.
-`-'s/old-pattern/newpattern/g'` is how we find and switch what we're looking for. the final g means 'globally', everywhere in the file
-`texas.txt` the filename that we're looking to change.
-
-When you hit enter, the computer seems to pause for a moment, and then gives you the command prompt again. Type `ls` and you'll see that a new file, `texas.txt.bak` has been created. Type `nano texas.txt` and examine the file. You should now have ~ characters at the start of each entry of the index! If for some reason you don't, or you've mangled your original file, you can replace texas.txt with the backup file you made like so:
-
-`$ mv old-file-name new-file-name` thus,
-
-`$ mv texas.txt.bak texas.txt`. Use Nano to confirm that you're back to where you needed to be, and try again.
-
-### Step Two
-
-*Removing Lines that Aren’t Relevant*
-
-_Discussion_
-
-After running the find-and-replace, you should note your document now has most of the lines with tildes in front of it, and a few which do not. The next step is to remove all the lines that do not include a tilde. **If you were using a text editor on your own computer**, the search string to find all lines which don't begin with tildes is `\n[^~].+ `
-
-A ``` \n ``` at the beginning of a query searches for a new line, which means it's going to start searching at the first character of each new line.  
-
-*However, given the evolution of computing, it may well be that this won’t quite work on your system*.
-
-Linux based systems use ``` \n ``` for a new line, while Windows often uses ``` \r\n ```, and older Macs just use ``` \r ````. These are the sorts of things that can drive us crazy, and so we digital historians need to keep in mind! Since this will likely cause much frustration, your safest bet will be to save a copy of what you are working on, and then experiment to see what gives you the best result. In most cases, this will be:
-
-``` \r\n[^~].+ ```
-
-Within a set of square brackets ``` [] ``` the carrot ``` ^ ``` means search for anything that isn't within these brackets; in this case, the tilde ``` ~ ```. The  ```.+ ``` as before means search for all the rest of the characters in the line as well. All together, the query returns any full line which does not begin with a tilde; that is, the lines we did not mark as looking like letters.
-
-By finding all ``` \r\n[^~].+ ```and replacing it with nothing, you effectively delete all the lines that don't look like the index entries. What you're left with is a series of entries, and a series of blank lines.
-
-**But DHBox makes this so much easier**
-
-We are simply going to get grep to find all the lines that have a tilde in them, and write them to a new file:
-
-`$ grep '~' texas.txt &gt; index.txt`
-
-Use Nano to confirm that this is true. Wasn't that easy?
-
-### Step Three
-
-*Transforming into CSV format*
-
-_Discussion_
-
-To turn this text file into a spreadsheet, we'll want to separate it out into one column for sender, one for recipient, and one for date, each separated by a single comma. Notice that most lines have extraneous page numbers attached to them; we can get rid of those with regular expressions. There's also usually a comma separating the month-date and the year, which we'll get rid of as well. In the end, the first line should go from looking like:
-
-``` ~Sam Houston to J. Pinckney Henderson, December 31, 1836 51 ```
-
-to
-
-``` Sam Houston, J. Pinckney Henderson, December 31 1836 ```
-
-such that each data point is in its own column.
-
-You will start by removing the page number after the year and the comma between the year and the month-date. To do this, first locate the year on each line by using the regex:
-
+<p>and the entire line is placed within a parenthetical group. Since this the first group in our search expression, we can replace that group with <code>\1</code> and put the tilde in front of it like so: <code>~\1</code>.</p>
+<ul>
+<li>Copy and past some of your text into <a href="http://RegExr.com">RegExr.com</a>. Write your regular expression (ie, what you're trying to find), and your substitution (ie, what you're replace with) in the RegExr interface. Once you're satisfied that you've got it right, we put the complete expression into our sed command:</li>
+</ul>
+<p><code>sed -r -i.bak 's/(.+\bto\b.+)/~\1/g' texas.txt</code></p>
+<p>where:</p>
+<p><code>-r</code> means extended regex. this saves us from having to 'escape' certain characters
+<code>-i.bak</code> means make a backup of the original input file, in case things go wrong.
+<code>-'s/old-pattern/newpattern/g'</code> is how we find and switch what we're looking for. the final g means 'globally', everywhere in the file
+<code>texas.txt</code> the filename that we're looking to change.</p>
+<p>When you hit enter, the computer seems to pause for a moment, and then gives you the command prompt again. Type <code>ls</code> and you'll see that a new file, <code>texas.txt.bak</code> has been created. Type <code>nano texas.txt</code> and examine the file. You should now have ~ characters at the start of each entry of the index! If for some reason you don't, or you've mangled your original file, you can replace texas.txt with the backup file you made like so:</p>
+<p><code>$ mv old-file-name new-file-name</code> thus,</p>
+<p><code>$ mv texas.txt.bak texas.txt</code>. Use Nano to confirm that you're back to where you needed to be, and try again.</p>
+<h3 id="step-two">Step Two</h3>
+<p><em>Removing Lines that Aren’t Relevant</em></p>
+<p><em>Discussion</em></p>
+<p>After running the find-and-replace, you should note your document now has most of the lines with tildes in front of it, and a few which do not. The next step is to remove all the lines that do not include a tilde. <strong>If you were using a text editor on your own computer</strong>, the search string to find all lines which don't begin with tildes is <code>\n[^~].+</code></p>
+<p>A <code>\n</code> at the beginning of a query searches for a new line, which means it's going to start searching at the first character of each new line.  </p>
+<p><em>However, given the evolution of computing, it may well be that this won’t quite work on your system</em>.</p>
+<p>Linux based systems use <code>\n</code> for a new line, while Windows often uses <code>\r\n</code>, and older Macs just use <code>\r</code>. These are the sorts of things that can drive us crazy, and so we digital historians need to keep in mind! Since this will likely cause much frustration, your safest bet will be to save a copy of what you are working on, and then experiment to see what gives you the best result. In most cases, this will be:</p>
+<pre><code>\r\n[^~].+
 </code></pre>
 
-<p>[0-9]{4}
-```</p>
+<p>Within a set of square brackets <code>[]</code> the carrot <code>^</code> means search for anything that isn't within these brackets; in this case, the tilde <code>~</code>. The  <code>.+</code> as before means search for all the rest of the characters in the line as well. All together, the query returns any full line which does not begin with a tilde; that is, the lines we did not mark as looking like letters.</p>
+<p>By finding all <code>\r\n[^~].+</code>and replacing it with nothing, you effectively delete all the lines that don't look like the index entries. What you're left with is a series of entries, and a series of blank lines.</p>
+<p><strong>But DHBox makes this so much easier</strong></p>
+<p>We are simply going to get grep to find all the lines that have a tilde in them, and write them to a new file:</p>
+<p><code>$ grep '~' texas.txt &gt; index.txt</code></p>
+<p>Use Nano to confirm that this is true. Wasn't that easy?</p>
+<h3 id="step-three">Step Three</h3>
+<p><em>Transforming into CSV format</em></p>
+<p><em>Discussion</em></p>
+<p>To turn this text file into a spreadsheet, we'll want to separate it out into one column for sender, one for recipient, and one for date, each separated by a single comma. Notice that most lines have extraneous page numbers attached to them; we can get rid of those with regular expressions. There's also usually a comma separating the month-date and the year, which we'll get rid of as well. In the end, the first line should go from looking like:</p>
+<pre><code>~Sam Houston to J. Pinckney Henderson, December 31, 1836 51
+</code></pre>
+
+<p>to</p>
+<pre><code>Sam Houston, J. Pinckney Henderson, December 31 1836
+</code></pre>
+
+<p>such that each data point is in its own column.</p>
+<p>You will start by removing the page number after the year and the comma between the year and the month-date. To do this, first locate the year on each line by using the regex:</p>
+<pre><code>[0-9]{4}
+</code></pre>
+
 <p>We can find any digit between 0 and 9 by searching for <code>[0-9]</code>, and <code>{4}</code>will find four of them together. Now extend that search out by appending <code>.+</code> to the end of the query; as seen before, it will capture the entire rest of the line. The query</p>
-<p><code>[0-9]{4}.+</code></p>
+<pre><code>[0-9]{4}.+
+</code></pre>
+
 <p>will return, for example, "1836 51", "1839 52", and "1839 53" from the first three lines of the text. We also want to capture the comma preceding the year, so add a comma and a space before the query, resulting in</p>
 <p><code>, [0-9]{4}.+</code></p>
 <p>which will return ", 1836 51", ", 1839 52", etc.</p>
@@ -531,7 +503,13 @@ You will start by removing the page number after the year and the comma between 
 </ul>
 <p><em>Congratulations!</em></p>
 <p>You've now used regex to extract, transform, and clean historical text. As a csv file, you could now load this data into a network analysis program such as <a href="http://gephi.org">Gephi</a> to explore the ramifications of this correspondence network. Upload your file to your repository, and make a note of the original location of the file, the transformations that you've done, and the date/time. You will be using your <code>cleaned-correspondence.csv</code> file in the next exercise using <a href="../open-refine/"><em>Open Refine</em></a>, where we'll sort out some of the messy OCR (fixing names, and so on).</p>
-<p>Hi - the pattern you want in step three is <code>sed -r -i.bak 's/(,)( [0-9]{4})(.+)/\2/g' index.txt</code>. The pattern for step four is <code>sed -r -i.bak 's/~//g' index.txt</code>. The pattern for step five is: <code>sed -r -i.bak 's/(\b to \b)/,/g' index.txt</code></p>
+<h4 id="the-pattern-youre-after">the pattern you're after:</h4>
+<p>Hi - the pattern you want in step three is
+<code>sed -r -i.bak 's/(,)( [0-9]{4})(.+)/\2/g' index.txt</code>.</p>
+<p>The pattern for step four is
+<code>sed -r -i.bak 's/~//g' index.txt</code>.</p>
+<p>The pattern for step five is:
+<code>sed -r -i.bak 's/(\b to \b)/,/g' index.txt</code></p>
               
             </div>
           </div>
