@@ -497,7 +497,7 @@ Isaac Van Zandt, Anson Jones, January 11 1843
 <p><em>Discussion</em></p>
 <p>You may notice that some lines still do not fit our criteria. Line 22, for example, reads "Abner S. Lipscomb, James Hamilton and A. T. Bumley, AugUHt 15, ". It has an incomplete date; these we don't need to worry about for our purposes. More worrisome are lines, like 61 "Copy and summary of instructions United States Department of State, " which include none of the information we want. We can get rid of these lines later in a spreadsheet.  </p>
 <p>The only non-standard lines we need to worry about with regular expressions are the ones with more than 2 commas, like line 178, "A. J. Donelson, Secretary of State [Allen,. arf interim], December 10 1844". Notice that our second column, the name of the recipient, has a comma inside of it. If you were to import this directly into a spreadsheet, you would get four columns, one for sender, two for recipient, and one for date, which would break any analysis you would then like to run. Unfortunately these lines need to be fixed by hand, but happily regular expressions make finding them easy. The query:</p>
-<p><code>.+,.+,.+</code></p>
+<p><code>.+,.+,.+,</code></p>
 <p>will show you every line with more than 2 commas, because it finds any line that has any set of characters, then a comma, then any other set, then another comma, and so forth. Use Grep to find these.  </p>
 <ul>
 <li>At the top of the file, add a new line that simply reads "Sender, Recipient, Date". These will be the column headers. Make a copy as a csv file by using the <code>cp</code> command: <code>cp index.txt cleaned-correspondence.csv</code>.</li>
@@ -511,6 +511,9 @@ Isaac Van Zandt, Anson Jones, January 11 1843
 <code>sed -r -i.bak 's/~//g' index.txt</code>.</p>
 <p>The pattern for step five is:
 <code>sed -r -i.bak 's/(\b to \b)/,/g' index.txt</code></p>
+<p>The pattern for step six is:</p>
+<p><code>grep -E ".+,.+,.+," index.txt</code></p>
+<p>The <code>-E</code> tells grep to treat the pattern as an extended regex (regex with a few more bells and whistles)</p>
               
             </div>
           </div>
