@@ -1,0 +1,74 @@
+/*
+Overrides theme.css
+*/
+
+.wy-plain-list-decimal li p:last-child, .rst-content .section ol li p:last-child, .rst-content ol.arabic li p:last-child, article ol li p:last-child {
+  margin-bottom: 1em;
+}
+
+.wy-form label {
+  color: #ffffff;
+}
+
+.wy-side-nav-search {
+  background-color: #0e7bb6;
+}
+
+div[role=main] a {
+  text-decoration:none;
+  border-bottom: 2px solid #b4e7f8;
+  box-shadow: inset 0 -4px 0 #b4e7f8;
+  color: inherit;
+  transition: background 0.1s cubic-bezier(.33,.66,.66,1);
+}
+
+div[role=main] a:hover {
+  background: #b4e7f8;
+}
+
+span.caption-text {
+  color: #999999;
+}
+
+.wy-menu-vertical li.current a {
+  color: #656565;
+}
+.wy-table-secondary {
+  color: #656565;
+}
+
+.wy-table-tertiary {
+  color: #656565;
+}
+
+a {
+  color: #0e7bb6;
+}
+
+code,
+.rst-content tt {
+  color: #e13009;
+}
+
+footer {
+  color: #404040;
+}
+
+/* 
+Overrides highlight.css
+*/
+
+.hljs-comment {
+    color: #78785f;
+    font-style: bold;
+}
+
+.hljs-shebang {
+  color: #767676;
+}
+
+
+
+
+
+
