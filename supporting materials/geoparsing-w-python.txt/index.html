@@ -131,7 +131,7 @@
                 </li>
                 <li class="">
                     
-    <a class="" href="../../module-5/Exercises/">Exercises</a>
+    <a class="" href="../../module-5/Exercises/">Exercises (OPTIONAL)</a>
                 </li>
     </ul>
       </li>
@@ -275,23 +275,26 @@
             <div class="section">
               
                 <h1 id="geoparsing-with-python">Geoparsing with Python</h1>
-<p>This exercise draws from the work of <a href="http://fredgibbs.net/">Fred Gibbs</a></p>
+<p>This exercise draws from the work of <a href="http://fredgibbs.net/">Fred Gibbs</a>.</p>
 <ul>
-<li><a href="http://fredgibbs.net/tutorials/extract-transform-save-csv.html">extract, transform, and save as CSV</a></li>
-<li><a href="http://fredgibbs.net/tutorials/extract-geocode-placenames-from-text-file.html">extract geocoded placenames from a text file</a></li>
-<li><a href="http://fredgibbs.net/tutorials/create-kml-file-python.html">create a kml file with python</a></li>
+<li><a href="http://fredgibbs.net/tutorials/extract-transform-save-csv.html">Extract, transform, and save as CSV</a></li>
+<li><a href="http://fredgibbs.net/tutorials/extract-geocode-placenames-from-text-file.html">Extract geocoded placenames from a text file</a></li>
+<li><a href="http://fredgibbs.net/tutorials/create-kml-file-python.html">Create a KML file with Python</a></li>
 </ul>
 <p>In this exercise, you will need to have Python installed on your machine. <a href="https://www.python.org/downloads/">You can download it from Python's website</a>. I have version 2.7.9 on this machine, and know that what follows works with that version.</p>
-<p>You should also read and understand Fred Gibbs' tutorial on <a href="http://fredgibbs.net/tutorials/install-python-modules">installing python modules</a> because you will need to install some helper modules.</p>
-<p>In Module 3, you used the NER to extract place names from a text. After some further munging with regex, you might have ended up with a CSV that looks like <a href="https://raw.githubusercontent.com/hist3907b-winter2015/module4-holes/master/texas.csv">this one on GitHub</a>.</p>
+<p><strong>NB</strong> Mac comes presinstalled with Python. There is no need to install it again.</p>
+<p>You should also read and understand Fred Gibbs' tutorial on <a href="http://fredgibbs.net/tutorials/install-python-modules">installing Python modules</a> because you will need to install some helper modules.</p>
+<p>In Module 3, you used the NER to extract place names from a text. After some further munging with regex, you might have ended up with a CSV that looks like <a href="https://raw.githubusercontent.com/hist3907b-winter2015/module4-holes/master/texas.csv">this one on my GitHub</a>.</p>
 <ol>
-<li>Use Openrefine to open that CSV file. In the same way you tidied up in the <a href="https://github.com/hist3907b-winter2015/module3-wranglingdata/blob/master/openrefine.md">Open Refine tutorial in module 3</a>, clean up this CSV so that you merge together place names appropriately (ie. so that '4ustin' gets merged with 'Austin'). Do this for all the columns.</li>
+<li>Use Open Refine to open that CSV file. In the same way you tidied up in the <a href="../../supporting materials/open-refine/">Open Refine tutorial in Module 3</a>, clean up this CSV so that you merge together place names appropriately (ie. so that '4ustin' gets merged with 'Austin'). Do this for all the columns.</li>
 <li>Export the table as a new CSV &mdash; call it <code>cleaned-places.csv</code>.</li>
-<li>Open that CSV in your spreadsheet program. Copy and paste all of the columns so that they become a single list. (ie. one column of place names).</li>
-<li>Using your spreadsheet's filtering options, see if you can remove any more duplicates. (It might be useful to keep track of how many duplicates you delete, in a new file, eg -&gt; Texas,200 &lt;- that kind of information might be handy, as in <a href="http://mappingtexts.stanford.edu/whitepaper/MappingTexts_WhitePaper.pdf">the mapping texts project (PDF opens in new tab)</a>).</li>
-<li>Save the file you were removing the duplicates from (which has just a single column of unique place names) as 'placelist.txt'</li>
-<li>Now, at this point, we're going to open up our text editor and create a new python program, following <a href="http://fredgibbs.net/tutorials/extract-geocode-placenames-from-text-file.html">Gibbs' tutorial</a>. His complete script is at the bottom of his post, but make sure you understand everything that is going on. Do you see the places where he has to import new python modules to make his script work? Make sure you've installed those modules. Let's call your completed script 'geoparse.py'. Done that? Good. </li>
-<li>Open your terminal, navigate to the folder you're working in, and run your script: <code>python geoparse.py</code></li>
+<li>Open that CSV in your spreadsheet program. Copy and paste all of the columns so that they become a single list (ie. one column of place names).</li>
+<li>Using your spreadsheet's filtering options, see if you can remove any more duplicates. (It might be useful to keep track of how many duplicates you delete, in a new file, eg. <code>Texas,200</code> that kind of information might be handy, as in <a href="http://mappingtexts.stanford.edu/whitepaper/MappingTexts_WhitePaper.pdf">the mapping texts project (PDF downloads in new tab)</a>).</li>
+<li>Save the file you were removing the duplicates from (which has just a single column of unique place names) as <code>placelist.txt</code>.</li>
+<li>Now, at this point, we're going to open up our text editor and create a new Python program, following <a href="http://fredgibbs.net/tutorials/extract-geocode-placenames-from-text-file.html">Gibbs' tutorial</a>. His complete script is at the bottom of his post, but make sure you understand everything that is going on. Do you see the places where he has to import new Python modules to make his script work? Make sure you've installed those modules. Let's call your completed script <code>geoparse.py</code>. Done that? Good. </li>
+<li>Open your terminal, navigate to the folder you're working in, and run your script by typing the following:<pre><code>$ python geoparse.py
+</code></pre>
+</li>
 </ol>
 <p>Did it work? Did you get an error message? It's entirely possible that you got this message:</p>
 <pre><code class="SHELL">Traceback (most recent call last):
@@ -300,15 +303,16 @@
 IndexError: list index out of range
 </code></pre>
 
-<p>...but check your folder. Do you have a <code>geocoded-places.txt</code> file? If so, it worked! Or at least, it got most of your places from the Google maps API. (For the rest, you can try uploading your places list to <a href="https://www.ltg.ed.ac.uk/software/geoparser/">Scargill's geoparser</a> and then copying and pasting the output to an excel file. This parser will give you several columns of results, where the first column represents its best guess and the other columns other possibilities).</p>
-<p>You can now import your geocoded places into many other software packages. Gibbs also shows us how to convert our list into KML, the format that Google Earth and Google Maps can read. <a href="http://fredgibbs.net/tutorials/create-kml-file-python.html">Try out Gibbs' tutorial</a>. You can double-click on the resulting KML file, and if you have Google Earth installed, it will open up there. Within google earth, you can start adding more information, other annotations... pretty soon, you'll have a complete map!</p>
-<p><strong>Remember to upload your scripts &amp; data &amp; obersvations to your open notebook.</strong></p>
-<p>(Incidentally, if you wanted to load this material into <a href="http://palladio.designhumanities.org/">Palladio</a> you'd need a file that looked like this:</p>
-<p>Place   Coordinates<br>
-MEXICO  23.634501,-102.552784<br>
-California  36.778261,-119.4179324<br>
-Brazos  32.661389,-98.121667<br></p>
-<p>etc: that is, a tab between 'place' and 'coordinates' in the first line, a tab between 'mexico' and the latitude, and a comma between latitude and logitude. Best way to effect this transformation? Probably using Regex. It's unfortunate that Palladio doesn't accept straightforward place,latitude,longitude comma separated data).</p>
+<p>...but check your folder. Do you have a <code>geocoded-places.txt</code> file? If so, it worked! Or at least, it got most of your places from the Google maps API. (For the rest, you can try uploading your places list to <a href="https://www.ltg.ed.ac.uk/software/geoparser/">Scargill's geoparser</a> and then copying and pasting the output to an Excel file. This parser will give you several columns of results, where the first column represents its best guess and the other columns other possibilities).</p>
+<p>You can now import your geocoded places into many other software packages. Gibbs also shows us how to convert our list into KML, the format that Google Earth and Google Maps can read. Try out <a href="http://fredgibbs.net/tutorials/create-kml-file-python.html">Gibbs' tutorial on creating KML files</a>. You can double-click on the resulting KML file, and if you have Google Earth installed, it will open up there. Within Google Earth, you can start adding more information, other annotations... pretty soon, you'll have a complete map!</p>
+<p><strong>Remember to upload your scripts, data, and obersvations to your open notebook.</strong></p>
+<p>(Incidentally, if you wanted to load this material into <a href="http://hdlab.stanford.edu/palladio/">Palladio</a> you'd need a file that looked like this the following.</p>
+<pre><code>    Place   Coordinates
+    MEXICO  23.634501,-102.552784
+    California  36.778261,-119.4179324
+    Brazos  32.661389,-98.121667
+</code></pre>
+<p>etc. That is, a tab between 'Place' and 'Coordinates' in the first line, a tab between 'Mexico' and the latitude, and a comma between latitude and logitude. Best way to effect this transformation? Probably using regex. (It's unfortunate that Palladio doesn't accept straightforward place, latitude, longitude comma separated data.)</p>
               
             </div>
           </div>
@@ -365,7 +369,6 @@ The Crafting Digital History site is built with <a href="http://www.mkdocs.org">
     </span>
 </div>
     <script src="../../js/theme.js"></script>
-      <script src="../../js/tota11y.min.js"></script>
 
 </body>
 </html>

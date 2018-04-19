@@ -149,7 +149,7 @@
                 </li>
                 <li class="">
                     
-    <a class="" href="../../module-5/Exercises/">Exercises</a>
+    <a class="" href="../../module-5/Exercises/">Exercises (OPTIONAL)</a>
                 </li>
     </ul>
       </li>
@@ -294,10 +294,10 @@
 </ul>
 <hr />
 <h2 id="exercise-1-regular-expressions">Exercise 1: Regular Expressions</h2>
-<p>When we have text that has been marked up, we can do interesting things with it. In the previous module, you saw that XSL can be used to add styles to your XML (which a browser can interpret and display). You can see how having those tags makes for easier searching for information as well, right? Sometimes things are not well marked up. Sometimes, it's all a real mess. In this exercise, we'll explore 'regular expressions', (aka 'Regex') or ways of asking the computer to search for <strong>patterns</strong> rather than matching exact text.</p>
+<p>When we have text that has been marked up, we can do interesting things with it. In the previous module, you saw that XSL can be used to add styles to your XML (which a browser can interpret and display). You can see how having those tags makes for easier searching for information as well, right? Sometimes things are not well marked up. Sometimes, it's all a real mess. In this exercise, we'll explore 'regular expressions', (AKA 'Regex') or ways of asking the computer to search for <strong>patterns</strong> rather than matching exact text.</p>
 <p>This exercise follows a tutorial written for <a href="http://themacroscope.org">The Macroscope</a>. Another good reference is the <a href="http://www.regular-expressions.info/">regular expressions website</a>.</p>
-<p>You should open <a href="http://www.regexr.com/">RegeXr</a>, an interactive tutorial that shows us what various regular expressions can do, in a browser window so you can test your regular expressions out <strong>before</strong> applying them to your data! We will use the power of regular expressions to search for particular patterns in a published volume of the correspondence of the Republic of Texas. We'll use regex to massage the information into a format that we can then use to generate a social network of letter writers over time. (You might also want to try the <a href="http://programminghistorian.org/lessons/understanding-regular-expressions">Programming Historian tutorial Understanding Regular Expressions</a>).</p>
-<p>What if you had <strong>a lot</strong> of documents that you needed to clean up? One way of doing it would be to write a python program that applied your regex automatically, across all the files in a folder. <strong>Optional advanced exercise</strong>: <a href="http://programminghistorian.org/lessons/cleaning-ocrd-text-with-regular-expressions">Cleaning OCR'd Text with Regular Expressions</a>.</p>
+<p>You should open <a href="http://www.regexr.com/">RegeXr</a>, an interactive tutorial that shows us what various regular expressions can do, in a browser window so you can test your regular expressions out <strong>before</strong> applying them to your data! We will use the power of regular expressions to search for particular patterns in a published volume of the correspondence of the Republic of Texas. We'll use regex to massage the information into a format that we can then use to generate a social network of letter writers over time. (You might also want to try the <a href="http://programminghistorian.org/lessons/understanding-regular-expressions">Programming Historian tutorial Understanding Regular Expressions</a>.)</p>
+<p>What if you had <strong>a lot</strong> of documents that you needed to clean up? One way of doing it would be to write a Python program that applied your regex automatically, across all the files in a folder. <strong>Optional advanced exercise</strong>: <a href="http://programminghistorian.org/lessons/cleaning-ocrd-text-with-regular-expressions">Cleaning OCR'd Text with Regular Expressions</a>.</p>
 <p>For this exercise, do the following: </p>
 <ol>
 <li>
@@ -322,7 +322,7 @@
 <p>You can use what you've been learning here to do some clean-up on the Canadian war diary files (or a subset of them, of course, as suits your interests &mdash; you have explored them, haven't you?). Google for <strong>sed patterns</strong> and see if you can combine what you find with what you've learned in this module in order to clean up the text. For instance, a common error in OCR is to confuse the letter <code>i</code> with the letter <code>l</code> and the numeral <code>1</code>. Shawville becomes Shawvllle. You could use grep to see if that error is present, and then sed to correct it. The file names are long, and there are several hundred; you might give this kind of thing a try too:</p>
 <p><code>$ find . -type f -exec sed -i.bak "s/foo/bar/g" {} \;</code></p>
 <p>This command finds all files in a folder and creates a backup for each one in turn before searching for <strong>foo</strong> and replacing it with <strong>bar</strong>.</p>
-<p>The command <code>$ grep "[b-df-hj-np-tv-xz]\{5\}" filename</code> will find all instances of strings of five consonants or more, which can be useful to give you and idea of what kinds of sed patterns to write.</p>
+<p>The command <code>$ grep "[b-df-hj-np-tv-xz]\{5\}" filename</code> will find all instances of strings of five consonants or more, which can be useful to give you an idea of what kinds of sed patterns to write.</p>
 <p>Maybe, if you inspect the PDF and the txt files together, you can figure out patterns that set off interesting things in say the classified ads or the editorials &mdash; and then write some grep and sed to create new files with just that information. Then you could use Open Refine to further clean things up. Maybe the messiness of the data is <a href="https://smgprojects.github.io/experiment-bad-equity/">exactly the point</a> (<a href="https://smgprojects.github.io/experiment-determining-bad-ocr-via-automated-spellcheck/">and my workup on bad OCR</a>) you want to explore. Nevertheless:</p>
 <p><strong>Cleaning data is 80% of the work in digital history.</strong></p>
 <p><strong>Remember to copy your notes and any other information/observations/thoughts to your GitHub repo.</strong></p>
@@ -394,7 +394,6 @@ The Crafting Digital History site is built with <a href="http://www.mkdocs.org">
     </span>
 </div>
     <script src="../../js/theme.js"></script>
-      <script src="../../js/tota11y.min.js"></script>
 
 </body>
 </html>

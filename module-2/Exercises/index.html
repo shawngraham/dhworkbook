@@ -107,6 +107,8 @@
         
             <li><a class="toctree-l4" href="#exercise-6-using-tesseract-to-turn-an-image-into-text">Exercise 6: Using Tesseract to turn an image into text</a></li>
         
+            <li><a class="toctree-l4" href="#reference">Reference</a></li>
+        
         </ul>
     
 
@@ -155,7 +157,7 @@
                 </li>
                 <li class="">
                     
-    <a class="" href="../../module-5/Exercises/">Exercises</a>
+    <a class="" href="../../module-5/Exercises/">Exercises (OPTIONAL)</a>
                 </li>
     </ul>
       </li>
@@ -310,24 +312,28 @@
 <blockquote>
 <p>[...] poor and misunderstood use of online newspapers can skew historical research. In a conference presentation or a lecture, it’s not uknown to see the familiar yellow highlighting of found searchwords on projected images: indicative of how the original primary material was obtained. But this historical approach generally usually remains unspoken, without a critical methodological reflection. As I hope I’ll show here, using Pages of the Past uncritically for historical research is akin to using a volume of the Canadian Historical Review with 10% or so of the pages ripped out. Historians, journalists, policy researchers, genealogists, and amateur researchers need to at least have a basic understanding of what goes on behind the black box.</p>
 </blockquote>
-<p>Ask yourself: what are some of the key dangers? Reflect: how have you used digitized resources uncritically in the past? Remember: <strong>To digitize</strong> doesn't &mdash; or shouldn't &mdash; mean uploading a photograph of a document. There's a lot more going on that that. We'll get to that in a moment.</p>
+<p>Ask yourself: what are some of the key dangers? Reflect: how have you used digitized resources uncritically in the past? Remember: <strong>To digitize</strong> doesn't &mdash; or shouldn't &mdash; mean uploading a photograph of a document. There's a lot more going on than that. We'll get to that in a moment.</p>
 <hr />
 <h2 id="exercise-1-the-dream-case">Exercise 1: The Dream Case</h2>
 <p>In the dream case, your data are not just images, but are actually sorted and structured into some kind of pre-existing database. There are choices made in the <strong>creation</strong> of the database, but a good database, a good project, will lay out for you their decision making, their corpora, and how they've dealt with ambiguity and so on. You search using a robust interface, and you get a well-formed spreadsheet of data in return. Two examples of 'dream case' data:</p>
+<blockquote>
 <ul>
 <li><a href="http://edh-www.adw.uni-heidelberg.de/inschrift/suche">Epigraphic Database Heidelberg</a></li>
 <li><a href="https://www.cwgc.org/find/find-war-dead">Commwealth War Graves Commission, Find War Dead</a></li>
+</ul>
+</blockquote>
+<ol>
 <li>Explore both databases. Perform a search of interest to you. In the case of the epigraphic database, if you've done any Latin, try searching for terms related to occupations; or you could search <a href="http://www.latin-dictionary.org/Latin-English-Dictionary/figlina">Figlina</a>. </li>
 <li>In the CWGC database, search your own surname. Download your results. You now have data that you can explore! </li>
-<li>Using the Nano text editor in your DH Box, make a record (or records) of what you searched, the URL for your search &amp; its results, and where you're keeping your data. </li>
+<li>Using the Nano text editor in your DH Box, make a record (or records) of what you searched, the URL for your search and its results, and where you're keeping your data. </li>
 <li>Lodge a copy of this record in your repository.</li>
-</ul>
+</ol>
 <hr />
 <h2 id="exercise-2-wget">Exercise 2: Wget</h2>
 <p>You've already encountered wget in the introduction to this workbook, when you were setting up your DH Box to use Pandoc. </p>
 <ol>
 <li>
-<p>In this exercise, I want you to do <a href="http://programminghistorian.org/lessons/automated-downloading-with-wget">Ian Milligan's wget tutorial at the Programming Historian</a> to learn more about the power of this command, and how to wield that power properly. Skip ahead to step 2, since your DH Box already has wget installed. (If you want to continue to use wget after this course is over, you will have to install it on your own machine, obviously).</p>
+<p>In this exercise, I want you to do <a href="http://programminghistorian.org/lessons/automated-downloading-with-wget">Ian Milligan's wget tutorial at the Programming Historian</a> to learn more about the power of this command, and how to wield that power properly. Skip ahead to step 2, since your DH Box already has wget installed. (If you want to continue to use wget after this course is over, you will have to install it on your own machine, obviously.)</p>
 <p>Once you've completed Milligan's tutorial, remember to put your history into a new Markdown file, and to lodge a copy of it in your repository.</p>
 <p>Now that you're <strong>au fait</strong> with wget, we will do part of <a href="https://programminghistorian.org/lessons/applied-archival-downloading-with-wget">Kellen Kurschinski's wget tutorial at the Programming Historian</a>. I want you to use wget to download the Library and Archives Canada <a href="http://collectionscanada.gc.ca/pam_archives/index.php?fuseaction=genitem.displayItem&amp;lang=eng&amp;rec_nbr=2005110&amp;rec_nbr_list=3366167,3203123,2005097,2005100,2005101,2005099,2005096,2005110,2005108,2005106">14th Canadian General Hospital war diaries</a> in a responsible and respectful manner. Otherwise, you will look like a bot attacking their site.</p>
 <p>The URLs of this diary go from <code>http://data2.archives.ca/e/e061/e001518029.jpg</code> to <code>http://data2.archives.ca/e/e061/e001518109.jpg</code>. This is a total of 80 pages &mdash; note the last part of the URL goes from <code>e001518029</code> to <code>e001518109</code> for a total of 80 images.</p>
@@ -380,7 +386,7 @@ f.close
 <hr />
 <h2 id="exercise-3-tei">Exercise 3: TEI</h2>
 <p>Digitization requires human intervention. This can be as straightforward as correcting errors or adjusting the scanner settings when we do OCR, or it can be the rather more involved work of adding a layer of semantic information to the text. When we mark up a text with the semantic hooks and signs that explain we are talking about <strong>London, Ontario</strong> rather than <strong>London, UK</strong>, we've made the text a whole lot more useful for other scholars or tools. In this exercise, you will do some basic marking up of a text using standards from the <a href="http://www.tei-c.org/index.xml">Text Encoding Initiative</a>. (Some of the earliest digital history work was along these lines). </p>
-<p>The TEI exercise requires carefully attention to detail. Read through it before you try it. In this exercise, you'll transcribe a page from an abolitionist's pamphlet. You'll also think about ways of transforming the resulting XML into other formats. Make notes in a file to upload to your repository, and upload your XML and your XSL file to your own repository as well. (As an added optional challenge, create a gh-pages branch and figure out the direct URL to your XML file, and email that URL to me).</p>
+<p>The TEI exercise requires careful attention to detail. Read through it before you try it. In this exercise, you'll transcribe a page from an abolitionist's pamphlet. You'll also think about ways of transforming the resulting XML into other formats. Make notes in a file to upload to your repository, and upload your XML and your XSL file to your own repository as well. (As an added optional challenge, create a gh-pages branch and figure out the direct URL to your XML file, and email that URL to me).</p>
 <p>For this exercise, do the following: </p>
 <ol>
 <li>The TEI exercise found <a href="../../supporting materials/tei/">in our supporting materials</a>.</li>
@@ -398,7 +404,7 @@ f.close
 </li>
 <li>
 <p>Set the date range to 1800 to 1900 and hit enter. You are presented with a page of results -56 249 results! That's a lot of data. But do you notice the address bar of your browser? It'll say something like this:</p>
-<pre><code>http://search.canadiana.ca/search?q=ottawa&amp;field=&amp;df=1900&amp;dt=1900
+<pre><code>http://search.canadiana.ca/search?q=ottawa&amp;field=&amp;df=1800&amp;dt=1900
 </code></pre>
 <p>Your search query has been put into the URL. You're looking at the API! Everything after <code>/search</code> is a command that you are sending to the Canadiana server.</p>
 </li>
@@ -428,10 +434,10 @@ http://search.canadiana.ca/search/4?df=1800&amp;dt=1900&amp;q=ottawa&amp;field=
 <p>We need to create a program. Make a new directory for this exercise like so: <code>$ mkdir m2e4</code>. Then, change into that directory by typing <code>$ cd m2e4</code>. </p>
 </li>
 <li>
-<p>Make sure that's where you are by typing <code>$ pwd</code>. Now, make an empty file for our program with <code>$ touch canadiana.sh</code>. Touch makes an empty file; the .sh in the filename indicates that this is a shell script.</p>
+<p>Make sure that's where you are by typing <code>$ pwd</code>. Now, make an empty file for our program with <code>$ touch canadiana.sh</code>. Touch makes an empty file; the <code>.sh</code> in the filename indicates that this is a shell script.</p>
 </li>
 <li>
-<p>Open the empty file with <code>$ nano canadiana.sh</code>. Now, the program that Ian Milligan wrote makes calls to the API that <strong>used to live</strong> at eco.canadiana.ca. But note the <a href="http://eco.canadiana.ca/view/oocihm.16278/?r=0&amp;s=1&amp;fmt=json&amp;api_text=1">error message on Canadiana's website</a>. So we have to change Milligan's script so that it points to the API at <a href="http://search.canadiana.ca/">search.canadiana.ca</a>. Copy the script below into your empty <code>canadiana.sh</code>. If you want, adjust the search parameters (in the line starting with <code>pages</code>) for material you're more interested in.</p>
+<p>Open the empty file with <code>$ nano canadiana.sh</code>. Now, the program that Ian Milligan wrote makes calls to the API that <strong>used to live</strong> at <code>eco.canadiana.ca</code>. But note the <a href="http://eco.canadiana.ca/view/oocihm.16278/?r=0&amp;s=1&amp;fmt=json&amp;api_text=1">error message on Canadiana's website</a>. So we have to change Milligan's script so that it points to the API at <a href="http://search.canadiana.ca/">search.canadiana.ca</a>. Copy the script below into your empty <code>canadiana.sh</code>. If you want, adjust the search parameters (in the line starting with <code>pages</code>) for material you're more interested in.</p>
 <pre><code>#! /bin/bash
 pages=$(curl 'http://search.canadiana.ca/search?q=ottawa*&amp;field=&amp;so=score&amp;df=1800&amp;dt=1900&amp;fmt=json' | jq '.pages')
 # this goes into the results and reads the value of 'pages' in each one of them.
@@ -462,7 +468,7 @@ wget -i urlstograb.txt -O output.txt
 </li>
 <li>
 <p>And now we can run the program by typing <code>$ ./canadiana.sh</code> (the ./ is important!)</p>
-<p>Ta da! You now have a pretty powerful tool now for grabbing data from one of the largest portals for Canadian history! </p>
+<p>Ta da! You now have a pretty powerful tool for grabbing data from one of the largest portals for Canadian history! </p>
 </li>
 <li>
 <p>Download your <code>output.txt</code> file to your computer via the file manager and have a look at it. </p>
@@ -562,7 +568,7 @@ wget -i urlstograb.txt -O output.txt
 </ol>
 <hr />
 <h2 id="exercise-6-using-tesseract-to-turn-an-image-into-text">Exercise 6: Using Tesseract to turn an image into text</h2>
-<p>We've all used image files like JPGs and PNGs. Images always look the same on whatever machine they are displayed on, because they contain within themselves the complete description of what the 'page' should look like. You're likley familiar with the fact that you cannot select text within an image. When we digitize documens, the image that results only contains the image layer, not the text. </p>
+<p>We've all used image files like JPGs and PNGs. Images always look the same on whatever machine they are displayed on, because they contain within themselves the complete description of what the 'page' should look like. You're likley familiar with the fact that you cannot select text within an image. When we digitize documents, the image that results only contains the image layer, not the text. </p>
 <p>To turn that image into text, we have to do what's called 'object character recognition', or OCR. An OCR algorithm looks at the pattern of pixels in the image, and maps these against the shapes it 'knows' to be an A, or an a, or a B, or a &amp;, and so on. Cleaner, sharper printing gives better results as do high resolution images free from noise. People who have a lot of material to OCR use some very powerful tools to identify blocks of text within the newspaper page, and then train the machine to identify these, a process beyond us just now (but visit <a href="https://stackoverflow.com/questions/28591117/how-do-i-segment-a-document-using-tesseract-then-output-the-resulting-bounding-b#28640570">this Tesseract q &amp; a on stackoverflow</a> if you're interested).</p>
 <p>In this exercise, you'll:</p>
 <ul>
@@ -575,7 +581,7 @@ wget -i urlstograb.txt -O output.txt
 <h3 id="converting-images-in-the-command-line">Converting images in the command line</h3>
 <ol>
 <li>
-<p>Begin by making a new director for this exercise: <code>$ mkdir ocr-test</code>. </p>
+<p>Begin by making a new directory for this exercise: <code>$ mkdir ocr-test</code>. </p>
 </li>
 <li>
 <p>Type <code>$ cd ocr-test</code> to change directories into ocr-test.</p>
@@ -617,10 +623,12 @@ wget -i urlstograb.txt -O output.txt
 <p>Paste in the following script and save it as <code>ocr</code> in RStudio.</p>
 <pre><code>install.packages('magick')
 install.packages('magrittr')
+install.packages('pdftools')
 install.packages('tesseract')
 library(magick) 
-library(magrittr) 
-library(tesseract) 
+library(magrittr)
+library(pdftools)
+library(tesseract)
 text &lt;- image_read("~/war-diary/e001518087.jpg") %&gt;% 
   image_resize("2000") %&gt;% 
   image_convert(colorspace = 'gray') %&gt;% 
@@ -628,7 +636,11 @@ text &lt;- image_read("~/war-diary/e001518087.jpg") %&gt;%
   image_ocr()
 write.table(text, "~/ocr-test/R.txt")
 </code></pre>
-<p>Before installing any packages in RStudio, we need to install some dependencies in the command line. The reason is that since DH Box runs an older version of RStudio, not everything installs as planned.</p>
+<p>The above script first installs three packages to RStudio, Magick, Magrittr, and Tesseract. Magick processes the image as high quality; Magrittr uses the symbols <code>%&gt;%</code> as a pipe that forces the values of an expression into the next function (allowing our script to perform it's conversion in steps); Tesseract is the actual OCR engine that converts our image to text. Then the script loads each package. Lastly, the script processes the image, OCRs the text, and writes it to a <code>txt</code> file.</p>
+<p>Before installing any packages in the DH Box RStudio, we need to install some dependencies in the command line. The reason is that since DH Box runs an older version of RStudio, not everything installs as planned compared to the desktop RStudio.</p>
+</li>
+<li>
+<p>Type <code>$ sudo apt-get install libcurl4-gnutls-dev</code> in the command line to install the libcurl library (this installs RCurl).</p>
 </li>
 <li>
 <p>Type <code>$ sudo apt-get install libmagick++-dev</code> in the command line to install the libmagick library.</p>
@@ -641,6 +653,9 @@ write.table(text, "~/ocr-test/R.txt")
 </li>
 <li>
 <p>Type <code>$ sudo apt-get install tesseract-ocr-eng</code> in the command line to install the English Tesseract library.</p>
+</li>
+<li>
+<p>Type <code>$ sudo apt-get install libpoppler-cpp-dev</code> in the command line to install the poppler cpp library.</p>
 </li>
 <li>
 <p>Navigate to RStudio and run each <code>install.packages</code> line in our script. This will take some time.</p>
@@ -677,13 +692,7 @@ write.table(text, "~/ocr-test/R.txt")
 </li>
 <li>
 <p>In RStudio, change the file paths in your script to the following:</p>
-<pre><code>install.packages('magick')
-install.packages('magrittr')
-install.packages('tesseract')
-library(magick) 
-library(magrittr) 
-library(tesseract) 
-text &lt;- image_read("~/ocr-test/R_1.png") %&gt;% 
+<pre><code>text &lt;- image_read("~/ocr-test/R_1.png") %&gt;% 
   image_resize("2000") %&gt;% 
   image_convert(colorspace = 'gray') %&gt;% 
   image_trim() %&gt;% 
@@ -704,7 +713,8 @@ write.table(text, "~/ocr-test/R_1.txt")
 <br></p>
 </li>
 <li>
-<p>Choose either the command line or the R method to convert more of the war diary files to text. Save these files into a new directory called <code>war-diary-text</code>. We will use these text files for future work in topic modeling and text analysis. How might your decision on which method to use change the results you would get in, say, a topic modeling tool? </p>
+<p>Choose either the command line or the R method to convert more of the war diary files to text. Save these files into a new directory called <code>war-diary-text</code>. We will use these text files for future work in topic modeling and text analysis. How might your decision on which method to use change the results you would get in, say, a topic modeling tool?</p>
+<p><strong>Hint:</strong> Check below for <a href="#batch-converting-image-files">a way to automate the conversion process</a>.</p>
 <p><br>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/puUNq1qzFmY?rel=0" title="Converting the war diary files to text using RStudio" frameborder="0" gesture="media" allowfullscreen></iframe>
 <br></p>
@@ -712,6 +722,42 @@ write.table(text, "~/ocr-test/R_1.txt")
 </ol>
 <p>Think about how these conversions can change based on the image being run through Tesseract. Does Tesseract have an easier time converting computer text even though it's in an image format? How might OCR conversions affect the way historians work on batch files? How does the context of the text change how historians analyse it? </p>
 <p>Look up the <a href="https://github.com/tesseract-ocr/tesseract/wiki/Command-Line-Usage">Tesseract wiki</a>. What other options could you use with the Tesseract command to improve the results? When you decide to download Tesseract to you own computer, use the following two guides to automating bulk OCR (multiple files) with Tesseract: <a href="https://diging.atlassian.net/wiki/display/DCH/Tutorial%3A+Text+Extraction+and+OCR+with+Tesseract+and+ImageMagick">Peirson's</a> and <a href="http://benschmidt.org/dighist13/?page_id=129">Schmidt's</a>.</p>
+<h3 id="batch-converting-image-files">Batch converting image files</h3>
+<p>Now that you've learned to convert image files to text individually, you should know that there is a quicker way to do this. The following script takes your Canadian war diary <code>jpg</code> image files and OCRs them using the same process as above. However this time, the <code>function(i)</code> (<code>i</code> stands for iterate), goes through the folder for each <code>jpg</code> file and converts them to a <code>png</code> file into a text file with the suffix <code>-ocr.txt</code> until it notes there are no more image files to convert. The converted files will output to the same folder, in our case <code>war-diary</code>. </p>
+<pre><code>    library(magick) 
+    library(magrittr)
+    library(pdftools)
+    library(tesseract)
+
+    dest &lt;- "/war-diary"
+    myfiles &lt;- list.files(path = dest, pattern = "jpg", full.names = TRUE)
+
+    # improve the images
+    # ocr 'em
+    # write the output to text file
+
+    lapply(myfiles, function(i){
+        text &lt;- image_read(i) %&gt;%
+        image_resize("3000x") %&gt;%
+        image_convert(type = 'Grayscale') %&gt;%
+        image_trim(fuzz = 40) %&gt;%
+        image_write(format = 'png', density = '300x300') %&gt;%
+        tesseract::ocr()
+
+    outfile &lt;- paste(i,"-ocr.txt",sep="")
+    cat(text, file=outfile, sep="\n")
+
+    })
+</code></pre>
+<p>You can probably understand now why this method works much better than the previous R script: we automate our process (ie. we run the script just once and it iterates through the folder for us), append a suffix to the txt file name noting the OCRd text, and output it all to the same folder.</p>
+<p>Keep these files somewhere handy on your computer! We will use them throughout the course.</p>
+<p>By iterating through the folder, we have created a loop. Loops can be a very powerful tool for Digital Historians, as we can begin to automate processes that would take much longer by hand. Read more about <a href="https://www.r-bloggers.com/how-to-write-the-first-for-loop-in-r/">'for loops' on the R-blogger website</a>.</p>
+<p><strong>NB</strong> The above script processes dozens of images and may take quite a bit of time to complete. </p>
+<h2 id="reference">Reference</h2>
+<p>Part of this tutorial was adapted from <a href="https://programminghistorian.org">The Programming Historian</a> released under the CC-BY license, including:</p>
+<p>Ian Milligan, "Automated Downloading with Wget," The Programming Historian 1 (2012), <a href="https://programminghistorian.org/lessons/automated-downloading-with-wget">https://programminghistorian.org/lessons/automated-downloading-with-wget</a>.</p>
+<p>Kellen Kurschinski, "Applied Archival Downloading with Wget," The Programming Historian 2 (2013), <a href="https://programminghistorian.org/lessons/applied-archival-downloading-with-wget">https://programminghistorian.org/lessons/applied-archival-downloading-with-wget</a>.</p>
+<p><a href="https://twitter.com/superboreen/status/958418116324790273">Twitter user 'superboreen' on R OCR</a>.</p>
               
             </div>
           </div>
@@ -768,7 +814,6 @@ The Crafting Digital History site is built with <a href="http://www.mkdocs.org">
     </span>
 </div>
     <script src="../../js/theme.js"></script>
-      <script src="../../js/tota11y.min.js"></script>
 
 </body>
 </html>

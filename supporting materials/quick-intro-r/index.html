@@ -131,7 +131,7 @@
                 </li>
                 <li class="">
                     
-    <a class="" href="../../module-5/Exercises/">Exercises</a>
+    <a class="" href="../../module-5/Exercises/">Exercises (OPTIONAL)</a>
                 </li>
     </ul>
       </li>
@@ -275,8 +275,8 @@
             <div class="section">
               
                 <h1 id="a-quick-introduction-to-r-and-rstudio">A quick introduction to R and RStudio</h1>
-<p>R is a powerful language for statistical exploring, visualizing, and manipulating all kinds of data, including textual. It is however not the most intutive of environments to work in. In which case, <a href="http://www.rstudio.com/products/RStudio/">RStudio</a> is what we need. Fortunately, you already have this installed for you in your DH Box; however, if you want to have it on your own computer, go get R <a href="http://cran.rstudio.com/">from RStudio</a> and then the <a href="http://www.rstudio.com/products/RStudio/">RStudio</a>. In DH Box, you sign into RStudio with your DH Box credentials.</p>
-<p>Why do we bother with this? Why not just use Excel? One word: reproducibility. In Excel, the sequence of clicking that one does to do anything is next to <a href="https://www.practicereproducibleresearch.org/case-studies/benmarwick.html">impossible to effectively communicate</a> to someone else. Excel also was built for business applications, and those biases are built into its dna (<a href="http://www.bionews.org.uk/page_695210.asp">which can have some nasty effects</a>.)</p>
+<p>R is a powerful language for statistical exploring, visualizing, and manipulating all kinds of data, including textual. It is, however, not the most intutive of environments to work in. In which case, <a href="http://www.rstudio.com/products/RStudio/">RStudio</a> is what we need. Fortunately, you already have this installed for you in your DH Box; however, if you want to have it on your own computer, download <a href="http://cran.rstudio.com/">R from RStudio</a> and then the actual <a href="http://www.rstudio.com/products/RStudio/">RStudio environment</a>. In DH Box, you sign into RStudio with your DH Box credentials.</p>
+<p>Why do we bother with this? Why not just use Excel? One word: reproducibility. In Excel, the sequence of clicking that one does to do anything is next to <a href="https://www.practicereproducibleresearch.org/case-studies/benmarwick.html">impossible to effectively communicate</a> to someone else. Excel also was built for business applications, and those biases are built into its DNA (<a href="http://www.bionews.org.uk/page_695210.asp">which can have some nasty effects</a>.)</p>
 <p>R allows us to do scripted analyses. We write out the sequence of transformations or analyses to be done, making a kind of program that we can then feed our data into. Once we have a workflow that does what we need it to do, it becomes trivial to re-use the code on other datasets. What's more, when we do an analysis, we can publish the scripts and the data. We don't have to taken an author's word for it: we can re-run the analysis ourselves or build upon it.</p>
 <p>This course only touches in the lightest manner on the potential for R for doing digital history. Please see Lincoln Mullen's <a href="http://dh-r.lincolnmullen.com/">Computational Historical Thinking with Applications in R</a> for more instruction.</p>
 <p>For now, we'll do a quick whistle-stop tour of using RStudio to do some analysis in R.</p>
@@ -284,10 +284,10 @@
 <p>You should always keep your research materials (scripts and associated data) organized in separate project folders. RStudio makes this easy for you. </p>
 <ol>
 <li>
-<p>When you open RStudio to start a new project, click where it says 'project (none)' at the right hand side of the interface.</p>
+<p>When you open RStudio to start a new project, click where it says 'Project (None)' at the right side of the interface.</p>
 </li>
 <li>
-<p>Click on the down arrow, and select new R project. </p>
+<p>Click on the down arrow, and select New R project. </p>
 </li>
 <li>
 <p>Follow the prompts, and create it in a new directory. R keeps track of what you're up to in a project file, so that you can pick up where you left off. <a href="../git-rstudio/">You should also keep your code under version control as well</a> so that you can recover from disaster and/or share your code/data with collaborators; click on that link to get version control set up.</p>
@@ -296,20 +296,20 @@
 <p>Sometimes, it might happen that RStudio crashes (this can be, in DH Box, related to memory issues). If that happens &mdash; if it just seems to 'hang' (and you've waited several minutes), you can refresh your browser, and go back to DH Box. You'll probably have to re-open your project file. </p>
 </li>
 <li>
-<p>Use the file panel at bottom right to find your *.rproj file (your R project file) and click on it to re-open. </p>
+<p>Use the file panel at bottom right to find your <code>\*.rproj</code> file (your R project file) and click on it to re-open. </p>
 </li>
 <li>
 <p>Save your work often, from the File &gt; Save menu.</p>
 <p>RStudio divides the screen up into four neat panes. </p>
 <ul>
-<li>The top left is for writing your analytical script (or code; I will use the two words interchangeably)</li>
-<li>The bottom left is the console where the analysis actually happens</li>
+<li>The top left is for writing your analytical script (or code; I will use the two words interchangeably).</li>
+<li>The bottom left is the console where the analysis actually happens.</li>
 <li>The top right is an environment pane which will show you the variables you've created, your history (commands you've run), and (once it's configured) git; indeed, other tools and plugins will appear as tabs here.</li>
 <li>The bottom right gives you a preview of any plots or charts you create; once you create one if you click 'zoom' the chart will open in its own pop up so that you can see it better. The file explorer and the help text also appear under tabs in this box.</li>
 </ul>
 </li>
 <li>
-<p>You write your script in the script box, and then you can get RStudio to run the code one line at a time by clicking on code &gt;&gt; run line (it runs the line of code where you left the cursor). If you select a number of lines of code and hit run line, all of that code will run. R scripts are text files that use .r as their file extension.</p>
+<p>You write your script in the script box, and then you can get RStudio to run the code one line at a time by clicking on Code &gt;&gt; Run Line (it runs the line of code where you left the cursor). If you select a number of lines of code and hit run line, all of that code will run. R scripts are text files that use <code>.r</code> as their file extension.</p>
 </li>
 <li>
 <p>The console is where the action happens. Click down in the console. </p>
@@ -318,13 +318,13 @@
 <p>Type <code>3 + 5</code> and hit enter. RStudio will run the calculation: <code>[1] 8</code>! The [1] indicates that this is the first result. </p>
 </li>
 <li>
-<p>Now type <code>a = 3</code> and hit enter. Over in the top right, the 'environment' pane updates to tell us that yes, a has a value of 3. </p>
+<p>Now type <code>a = 3</code> and hit enter. Over in the top right, the 'Environment' pane updates to tell us that yes, a has a value of 3. </p>
 </li>
 <li>
-<p>Now type <code>b = 5</code>. The environment updates accordingly. </p>
+<p>Now type <code>b = 5</code>. The Environment updates accordingly. </p>
 </li>
 <li>
-<p>Now type <code>a + b</code>. Hey, we can do algebra! Anything you can do in excel, we can do in code here in RStudio. </p>
+<p>Now type <code>a + b</code>. Hey, we can do algebra! Anything you can do in Excel, we can do in code here in RStudio. </p>
 </li>
 </ol>
 <p>A very good introduction to how R (the language) works is at <a href="http://tryr.codeschool.com/">Try R on codeschool</a>, an interactive tutorial in your browser. Go give some of that a shot.</p>
@@ -384,7 +384,6 @@ The Crafting Digital History site is built with <a href="http://www.mkdocs.org">
     </span>
 </div>
     <script src="../../js/theme.js"></script>
-      <script src="../../js/tota11y.min.js"></script>
 
 </body>
 </html>

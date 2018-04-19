@@ -131,7 +131,7 @@
                 </li>
                 <li class="">
                     
-    <a class="" href="../../module-5/Exercises/">Exercises</a>
+    <a class="" href="../../module-5/Exercises/">Exercises (OPTIONAL)</a>
                 </li>
     </ul>
       </li>
@@ -291,7 +291,13 @@
             <div class="section">
               
                 <h1 id="glitching-files">Glitching Files</h1>
-<p>Glitching files messses with our expectations of what digital data should be. There is actually quite a large body of literature on the why and how of glitching (<a href="https://github.com/GlitchTools/Glitch-Arts-Resources#writings">try Glitch's GitHub for a place to start</a>). For us as digital historians, glitching digital images or other documents reminds of us the ephemerality of digital data. It might also raise other questions about the composition of historical photography, and the ways that no image is an objective record of the past. In the exercise below, you build on what you learned about APIs and Regex to download images from the Open Context repository of archaeological data. Then, you use a script that will perform the same manipulations on every image in your folder. Finally, you will use another script to create a static website with all of your images, a gallery of glitch.</p>
+<p>Glitching files messes with our expectations of what digital data should be. There is actually quite a large body of literature on the why and how of glitching (try <a href="https://github.com/GlitchTools/Glitch-Arts-Resources#writings">Glitch's GitHub for a place to start</a>). For us as digital historians, glitching digital images or other documents reminds of us the ephemerality of digital data. It might also raise other questions about the composition of historical photography, and the ways that no image is an objective record of the past. </p>
+<p>In the exercise below, you will do the following:</p>
+<ol>
+<li>Build on what you learned about APIs and regex to download images from the <a href="https://opencontext.org/">Open Context</a> repository of archaeological data.</li>
+<li>Use a script that will perform the same manipulations on every image in your folder.</li>
+<li>Use another script to create a static website with all of your images, a gallery of Glitch.</li>
+</ol>
 <p>Spend some time on the articles and resources curated on <a href="https://github.com/GlitchTools/Glitch-Arts-Resources">Glitch's GitHub</a> to begin to explore the philosophy and aesthetic of Glitch.</p>
 <h2 id="workflow-were-going-for">Workflow we're going for:</h2>
 <ol>
@@ -305,14 +311,14 @@
 <ol>
 <li>
 <p>Check out <a href="https://opencontext.org/media-search/.json?prop=rel--oc-gen-cat-object||rel--oc-gen-cat-animal-bone&amp;response=uri-meta&amp;rows=10">this example search on Open Context</a>. Open that up, give it a play right now, and see what kinds of information exist. Try to craft a search that retrieves some interesting information.</p>
-<p>Once you've crafted a search that retrieves something of interest, it's time to build a script that will retrieve that information for you. Remember the exercise that queried the Canadiana api? Below I have modified that script to grab 10 records from the 'animal bone' category on Open Context. You could use that as a basis for your own search.</p>
+<p>Once you've crafted a search that retrieves something of interest, it's time to build a script that will retrieve that information for you. Remember the exercise that queried the Canadiana API? Below I have modified that script to grab 10 records from the 'animal bone' category on Open Context. You could use that as a basis for your own search.</p>
 </li>
 <li>
 <p>In DH Box, create a new folder with <code>mkdir</code> for this exercise, then <code>cd</code> into it. </p>
 </li>
 <li>
 <p>Open the nano editor and paste the script below in a new file. Make sure to read the comments, because there are a few lines you have to customize. (You'll get file not found errors if you don't pay attention!) </p>
-<p>The line beginning with 'sed' searches for the <code>thumbnail</code> key, and marks it off with a tilde. The <code>|</code> character is called a 'pipe' and it pipes the output of the command before it into the input of the command after it. The first pipe passes the output of that first sed command to grep, which finds the lines marked with the tilde to the tr (trim) command, which then deletes all of the other information; the next pipe passes to a series of sed commands which then get rid of whitespace and the word thumbnail, the tilde, and any commas, leaving us with a list of direct URLs to the thumbnails.</p>
+<p>The line beginning with 'sed' searches for the <code>thumbnail</code> key, and marks it off with a tilde <code>~</code>. The <code>|</code> character is called a 'pipe' and it pipes the output of the command before it into the input of the command after it. The first pipe passes the output of that first sed command to grep, which finds the lines marked with the tilde to the <code>tr</code> (trim) command, which then deletes all of the other information; the next pipe passes to a series of sed commands which then get rid of whitespace and the word thumbnail, the tilde, and any commas, leaving us with a list of direct URLs to the thumbnails.</p>
 <p>The wget command grabs each thumbnail in the list in turn, waiting 2 seconds between requests, and using a limited amount of bandwidth (we're good digital citizens, remember).</p>
 <pre><code>#! /bin/bash
 # we already know how to ask the api for the infromation we're interested in, from studying opencontex.org' api documentation. Below we ask for a 10 records related to animal bones
@@ -331,13 +337,13 @@ wget -i thumbnailstograb.txt -P path/to/images --limit-rate=20k -w 2
 <p>Then <code>$ mkdir images</code> so you have a place to put the images into.</p>
 </li>
 </ol>
-<p><strong>Hey, images keep appearing even though I ctrl+c to stop the download</strong> I hear some of you say. Well, that doesn't necessarily stop anything; when you ran the command, you started a <strong>process</strong> and it might still be ticking away in the background. If this seems to be happening to you, type <code>ps ux</code> to get a list of running processes. If wget is still running in the backround, you'll see it listed in the right-most column. The first number in that row is its PIDnumber; to kill it, type <code>kill -9 PIDnumber</code> where you swap in the actual PIDnumber.</p>
-<p><strong>Also</strong>, before you re-run this script, you need to delete the 'results.txt' file and the 'thumbnailstograb.txt' file, like so: <code>rm results.txt</code> etc. Otherwise, it'll just add your results to the end of the previous results, making your list longer and longer...</p>
+<p><strong>"Hey, images keep appearing even though I ctrl+c to stop the download,"</strong> I hear some of you say. Well, that doesn't necessarily stop anything; when you ran the command, you started a <strong>process</strong> and it might still be ticking away in the background. If this seems to be happening to you, type <code>ps ux</code> to get a list of running processes. If wget is still running in the backround, you'll see it listed in the right-most column. The first number in that row is its PIDnumber; to kill it, type <code>kill -9 PIDnumber</code> where you swap in the actual PIDnumber.</p>
+<p><strong>Also</strong>, before you re-run this script, you need to delete the <code>results.txt</code> file and the <code>thumbnailstograb.txt</code> file, like so: <code>rm results.txt</code> etc. Otherwise, it'll just add your results to the end of the previous results, making your list longer and longer...</p>
 <h2 id="an-image-glitch-script-in-python">An image glitch script in Python</h2>
 <p>The next step is to glitch the image. </p>
 <ol>
 <li>
-<p>Go to <a href="https://github.com/Xpktro/bndr">the bndr GitHub repository</a>. This is a python package for mucking about the bits inside a jpg. </p>
+<p>Go to <a href="https://github.com/Xpktro/bndr">the bndr GitHub repository</a>. This is a Python package for mucking about the bits inside a jpg image. </p>
 </li>
 <li>
 <p>Install it at the command line with <code>$ pip install bndr</code>.</p>
@@ -361,7 +367,7 @@ find ./ -name '*out.png' -exec cp -prv '{}' 'out/' ';'
 <p>Change the permissions so we can run it by typing <code>$ chmod 755 do-glitch.sh</code>. This script reads each file name in the images folder, and passes them one at a time to the bndr command (you can't run it when you're <strong>inside</strong> the images folder, remember). Then, we move just the glitched images to the 'out' folder. </p>
 </li>
 <li>
-<p>Download some of the pics to your own machine using the filemanager to see your glitched art!</p>
+<p>Download some of the images to your own machine using the File Manager to see your glitched art!</p>
 </li>
 </ol>
 <h2 id="a-static-website-generator-for-photography">A static website generator for photography</h2>
@@ -371,18 +377,19 @@ find ./ -name '*out.png' -exec cp -prv '{}' 'out/' ';'
 <p>Use the <code>cd</code> command to get back up to your main directory (ie. don't do this when you're in your images folder). </p>
 </li>
 <li>
-<p>Grab the code:
-    <code>$ git clone https://github.com/Jack000/Expose.git</code></p>
+<p>Grab the Exposé code with the following command:</p>
+<pre><code>$ git clone https://github.com/Jack000/Expose.git
+</code></pre>
 <p>The Exposé script relies on some helpers and so on in its folder. But we would like to be able to run that command no matter which folder we're in. We tell the computer that when we type <code>expose</code> we <strong>actually</strong> mean, the version that lives in that location where we just downloaded it. That is to say, we use the <code>alias</code> command. On my machine, it looks like this: <code>alias expose=/home/shawngraham/oc/Expose/expose.sh</code> </p>
-<p>On your machine, it might be in a different location. Note also that the Expose repo is uppercase E, while the command is lowercase e. <strong>also</strong> every time you start a session, you'll need to do this alias command or else the computer won't know what you're talking about.</p>
+<p>On your machine, it might be in a different location. Note also that the Exposé repo is uppercase 'E', while the command is lowercase e'. <strong>Also</strong>,every time you start a session, you'll need to do this alias command or else the computer won't know what you're talking about.</p>
 </li>
 <li>
-<p>To generate the static site, cd into your <code>out</code> folder that holds your glitched images. </p>
+<p>To generate the static site, <code>cd</code> into your <code>out</code> folder that holds your glitched images. </p>
 </li>
 <li>
 <p>At the prompt, type <code>$ expose</code>. </p>
-<p>Ta da! You now have a fully functional website showing off your glitch art.</p>
-<p>You can customize it to use an alternative theme, a few bells and whistles; see the Expose documentation. One thing that you should do is to add captions for your images. You write these as either .txt or .md files, but make sure the file name for the caption is the same as for the image <strong>and</strong> put it in the same folder as the source images! You do this <strong>before</strong> you run the expose script. So <code>beaker-pic.png</code> would have as a caption file <code>beaker-pic.txt</code> or <code>beaker-pic.md</code>. You specify where the caption goes on the image in the YAML; that is, the metadata for your caption. So, if we opened <code>beaker-pic.md</code> we might see,</p>
+<p>Ta da! You now have a fully functional website showing off your Glitch art.</p>
+<p>You can customize it to use an alternative theme, a few bells and whistles; see the Exposé documentation. One thing that you should do is to add captions for your images. You write these as either <code>.txt</code> or .<code>md</code> files, but make sure the file name for the caption is the same as for the image <strong>and</strong> put it in the same folder as the source images! You do this <strong>before</strong> you run the expose script. So <code>beaker-pic.png</code> would have as a caption file <code>beaker-pic.txt</code> or <code>beaker-pic.md</code>. You specify where the caption goes on the image in the YAML; that is, the metadata for your caption. So, if we opened <code>beaker-pic.md</code>, it might contain the following:</p>
 <pre><code>---
 top: 30
 left: 5
@@ -395,26 +402,26 @@ Beakers were used to carry rare aromatic herbs and spices...
 </code></pre>
 </li>
 </ol>
-<p>More possibilities for sorting out the position of the text are discussed in the Expose documentation.</p>
+<p>More possibilities for sorting out the position of the text are discussed in the Exposé documentation.</p>
 <h2 id="host-the-site-on-github">Host the site on GitHub</h2>
-<p>You can push the code for your site to GitHub, and then use GitHub's gh-pages feature to serve it up as a live website! Expose creates all of the code for the website inside a new folder called <code>_site</code>.</p>
+<p>You can push the code for your site to GitHub, and then use GitHub's gh-pages feature to serve it up as a live website! Exposé creates all of the code for the website inside a new folder called <code>_site</code>.</p>
 <ol>
 <li>Type <code>$ cd _site</code></li>
-<li>Turn this folder into a git repository: <code>git init</code>.</li>
-<li>Go to your account on GitHub.com (in another browser window). Click on the <code>+</code> at the top-right to make a new repository. Call it whatever you want, but <em>do not</em> initialize it with a readme.</li>
+<li>Turn this folder into a git repository by typing <code>git init</code>.</li>
+<li>Go to your account on GitHub.com (in another browser window). Click on the <code>+</code> at the top-right to make a new repository. Call it whatever you want, but <strong>do not</strong> initialize it with a readme.</li>
 <li>Back at the command line in your <code>_site</code> folder, type <code>$ git add .</code> This stages all of the files and subfolders for a new commit.</li>
-<li>Type <code>$ git commit -m "first commit"</code> to make a commit message</li>
-<li>Tell git where your remote repository is: <code>$ git remote add origin https://github.com/YOUR-ACCOUNT/YOUR-NEW-REPO-YOU-JUST-MADE.git</code></li>
-<li>Push your materials to GitHub: <code>$ git push -u origin master</code> (Git might ask for your account username and password)</li>
-<li>Once that finishes, go back to GitHub and reload the page at https://github.com/YOUR-ACCOUNT/YOUR-NEW-REPO-YOU-JUST-MADE. You should see your changes.</li>
+<li>Type <code>$ git commit -m "first commit"</code> to make a commit message.</li>
+<li>Tell git where your remote repository is by typing <code>$ git remote add origin https://github.com/YOUR-ACCOUNT/YOUR-NEW-REPO-YOU-JUST-MADE.git</code></li>
+<li>Push your materials to GitHub by typing <code>$ git push -u origin master</code>. (Git might ask for your account username and password.)</li>
+<li>Once that finishes, go back to GitHub and reload the page at <code>https://github.com/YOUR-ACCOUNT/YOUR-NEW-REPO-YOU-JUST-MADE</code>. You should see your changes.</li>
 <li>On the button where it says 'Branch: Master', click on the down arrow. In the box where it says faintly 'Find or create a branch', type <code>gh-pages</code>. This is a special branch which tells GitHub, 'serve this up as actual code when the user goes to the special github.io version of GitHub'.</li>
-<li>Click on the gearwheel icon, to go to the settings page (You can also find it at https://github.com/YOUR-ACCOUNT/YOUR-NEW-REPO-YOU-JUST-MADE/settings). </li>
+<li>Click on the gearwheel icon, to go to the settings page (You can also find it at <code>https://github.com/YOUR-ACCOUNT/YOUR-NEW-REPO-YOU-JUST-MADE/settings</code>.) </li>
 <li>Scroll down to the box that says 'GitHub Pages'. </li>
-<li>In the green box, it says 'you're site is published at https://YOUR-ACCOUNT.github.io/YOUR-NEW-REPO-YOU-JUST-MADE'. </li>
+<li>In the green box, it says 'you're site is published at <code>https://YOUR-ACCOUNT.github.io/YOUR-NEW-REPO-YOU-JUST-MADE</code>'. </li>
 <li>Click on that link and you'll see your site! (Visit <a href="https://shawngraham.github.io/exposetest/site/">my site on gh pages</a>.)</li>
 </ol>
 <h2 id="conclusion">Conclusion</h2>
-<p>I see no reason why digital history cannot bleed into art. Art is meant to provoke, to prompt reflection, discussion, controversy. Glitching images confounds our expectation of what digital data are supposed to be, supposed to do. If you choose your pictures carefully, glitching can tell a story as profound as any essay.</p>
+<p>I see no reason why digital history cannot bleed into art. Art is meant to provoke, to prompt reflection, discussion, and controversy. Glitching images confounds our expectation of what digital data are supposed to be, supposed to do. If you choose your pictures carefully, glitching can tell a story as profound as any essay.</p>
               
             </div>
           </div>
@@ -471,7 +478,6 @@ The Crafting Digital History site is built with <a href="http://www.mkdocs.org">
     </span>
 </div>
     <script src="../../js/theme.js"></script>
-      <script src="../../js/tota11y.min.js"></script>
 
 </body>
 </html>

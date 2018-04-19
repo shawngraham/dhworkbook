@@ -131,7 +131,7 @@
                 </li>
                 <li class="">
                     
-    <a class="" href="../../module-5/Exercises/">Exercises</a>
+    <a class="" href="../../module-5/Exercises/">Exercises (OPTIONAL)</a>
                 </li>
     </ul>
       </li>
@@ -289,7 +289,7 @@
                 <h1 id="creating-a-github-pages-site-with-mkdocs">Creating a GitHub pages site with MkDocs</h1>
 <p>In <a href="../../module-5/Exercises/#exercise-2-typography">Module 5</a>, you learned how to set up and serve a basic webpage on GitHub's gh-pages. GitHub allows you to host a website on a personal URL with the syntax <code>https://myname.github.io</code>. Many developers will use a static site generator to create a simple website run on gh-pages. Some popular static site generators are <a href="https://jekyllrb.com/">Jekyll</a>, <a href="https://gohugo.io/">Hugo</a>, and <a href="http://www.mkdocs.org/">MkDocs</a>. In fact, this website is built with MkDocs.</p>
 <p>Static site generators are command line tools that use templates to build and create websites. Users define basic information in a yaml or toml filetype, write in markdown, and use a simple command to build it into a functioning static site. Due to the popularity of static site generators, most contain simple methods to link it to gh-pages. </p>
-<p>In this exercise, we will use MkDocs in the DH Box to build a site that updates to GitHub and pushes changes to a <code>https://myname.github.io</code> URL. In this exercise we will use DH Box to download MkDocs and build the site. Although your changes will be saved in a GitHub repository, when your DH Box account expires, you will have to clone the website again and redowload everything. Therefore, if you want to use your MkDocs site past the purposes of this course, you may want to follow these steps on your desktop. These steps will be similar to using Mac's terminal, but may be different on a Windows machine.</p>
+<p>In this exercise, we will use MkDocs in the DH Box to build a site that updates to GitHub and pushes changes to a <code>https://myname.github.io</code> URL. We will use DH Box to download MkDocs and build the site. Although your changes will be saved in a GitHub repository, when your DH Box account expires, you will have to clone the website again and redownload everything. Therefore, if you want to use your MkDocs site past the purposes of this course, you may want to follow these steps on your desktop. These steps will be similar to using Mac's terminal, but may be different on a Windows machine.</p>
 <h2 id="preparing-mkdocs-in-dh-box">Preparing MkDocs in DH Box</h2>
 <ol>
 <li>
@@ -305,7 +305,7 @@
 <p>Type <code>$ mkdocs new my-site</code> or whatever you want your site to be called. Mine is called <code>static-site</code>.</p>
 </li>
 <li>
-<p>Typically, you could now view your site by typing <code>$ mkdocs serve</code>. This would not work within DH Box, though, since DH Box already runs within your browser. It will work from your desktop terminal.</p>
+<p>Typically, you could now view your site in your browser by typing <code>$ mkdocs serve</code>. This would not work within DH Box, though, since DH Box runs as a virtual environment within your browser. It would work from your desktop terminal.</p>
 </li>
 <li>
 <p>Type <code>$ ls</code> to view the files MkDocs created. You will define your site within the <code>mkdocs.yml</code> file.</p>
@@ -356,10 +356,13 @@ theme: readthedocs
 </li>
 <li>
 <p>Type <code>$ mkdocs gh-deploy</code> to push your folder to a gh-pages site.</p>
-<p>MkDocs will show a message saying <code>INFO    -  Your documentation should shortly be available at: https://myname.github.io/my-site/</code>. This means it pushed your changes to a project folder and not the main <code>https://myname.github.io/</code>. </p>
+<p>MkDocs will show a message which says the following:</p>
+<pre><code>INFO    -  Your documentation should shortly be available at: https://myname.github.io/my-site/`.
+</code></pre>
+<p>The above means it pushed your changes to a project folder called <code>my-site</code> and not the main <code>https://myname.github.io/</code>. </p>
 </li>
 <li>
-<p>Navigate to your URL <code>https://myname.github.io/my-site/</code>. You should now see a webpage that looks a lot like the course website.</p>
+<p>Navigate to your URL <code>https://myname.github.io/my-site/</code>. You should now see a webpage that looks a lot like this workbook.</p>
 <p><br>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/hSxZDktdSdY?rel=0" title="Creating a GitHub repository" frameborder="0" gesture="media" allowfullscreen></iframe>
 <br></p>
@@ -394,7 +397,7 @@ theme: readthedocs
 <p>Type <code>$ cd docs</code> to enter the docs folder.</p>
 </li>
 <li>
-<p>Type <code>$ touch about.md</code> to create the About file and <code>touch blog.md</code> to create the blog file.</p>
+<p>Type <code>$ touch about.md</code> to create the About file and <code>touch blog.md</code> to create the Blog file.</p>
 </li>
 <li>
 <p>Type <code>$ ls</code> to make sure the files were created.</p>
@@ -459,7 +462,7 @@ theme: readthedocs
 <p>Let's change the font of our site to Open Sans.</p>
 </li>
 <li>
-<p>Add the following your css file:</p>
+<p>Add the following to your css file:</p>
 <pre><code>h1, h2, h3, h4, h5, h6, legend {
     font-family: 'Open Sans', sans-serif;
 }
@@ -535,7 +538,6 @@ The Crafting Digital History site is built with <a href="http://www.mkdocs.org">
     </span>
 </div>
     <script src="../../js/theme.js"></script>
-      <script src="../../js/tota11y.min.js"></script>
 
 </body>
 </html>

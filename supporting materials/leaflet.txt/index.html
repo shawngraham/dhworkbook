@@ -131,7 +131,7 @@
                 </li>
                 <li class="">
                     
-    <a class="" href="../../module-5/Exercises/">Exercises</a>
+    <a class="" href="../../module-5/Exercises/">Exercises (OPTIONAL)</a>
                 </li>
     </ul>
       </li>
@@ -232,7 +232,7 @@
         
             <li><a class="toctree-l4" href="#setup">Setup</a></li>
         
-            <li><a class="toctree-l4" href="#so-lets-get-started">So let's get started.</a></li>
+            <li><a class="toctree-l4" href="#so-lets-get-started">So let's get started</a></li>
         
         </ul>
     
@@ -290,72 +290,72 @@
 <p>Create a new GitHub repository for this exercise. </p>
 </li>
 <li>
-<p>Create a new branch called <code>gh-pages</code>. We will be putting our html on the gh-pages branch, so that <code>&lt;your username&gt;/github.io/&lt;repo&gt;map.html</code> can serve us up the webpage when we're done.</p>
+<p>Create a new branch called <code>gh-pages</code>. We will be putting our HTML on the gh-pages branch, so that <code>&lt;your username&gt;/github.io/&lt;repo&gt;map.html</code> can serve us up the webpage when we're done.</p>
 </li>
 <li>
 <p>Leaflet comes with a number of <a href="http://leafletjs.com/examples.html">excellent tutorials</a>. We're going to look at the <a href="http://leafletjs.com/examples/quick-start/">first one</a>. </p>
 </li>
 <li>
-<p>Go to the <a href="http://leafletjs.com/examples/quick-start/">leaflet quick-start tutorial</a> and read through it carefully. In essence, you create a webpage that draws its instructions on how to handle geographic data and how to style that data from the leaflet.js source. That way, the browser knows how to render all the geographic information you're about to give it. </p>
-<p>Do you see where leaflet is calling on geographic information? This bit:</p>
+<p>Go to the <a href="http://leafletjs.com/examples/quick-start/">Leaflet quick-start tutorial</a> and read through it carefully. In essence, you create a webpage that draws its instructions on how to handle geographic data and how to style that data from the <code>leaflet.js</code> source. That way, the browser knows how to render all the geographic information you're about to give it. </p>
+<p>Do you see where Leaflet is calling on geographic information? The following code is calling on a background layer from the Mapbox service:</p>
 <pre><code>L.tileLayer('http://{s}.tiles.mapbox.com/v3/MapID/{z}/{x}/{y}.png', {
     attribution: 'Map data &amp;copy; &lt;a href="http://openstreetmap.org"&gt;OpenStreetMap&lt;/a&gt; contributors, &lt;a href="http://creativecommons.org/licenses/by-sa/2.0/"&gt;CC-BY-SA&lt;/a&gt;, Imagery © &lt;a href="http://mapbox.com"&gt;Mapbox&lt;/a&gt;',
     maxZoom: 18
 }).addTo(map);
 </code></pre>
-<p>is calling on a background layer from the mapbox service. Instead of using mapbox, We can slot the url to the georectified map we made in module 4 in there! That is, swap out the url from the line beginning <code>L.tileLayer</code>. You'd change the copyright notice, etc, too, obviously.</p>
+<p>Instead of using Mapbox, We can slot the URL to the georectified map we made in Module 4 in there! That is, swap out the URL from the line beginning <code>L.tileLayer</code>. You'd change the copyright notice, etc, too, obviously.</p>
 <p>The other bits of code that create callouts, polygons, and so on, are all using decimal degrees to locate the drawn elements on top of that map.</p>
-<p>This code:</p>
+<p>The following code can be copied and repeated in the document, with new coordinates in decimal degrees for each new point:</p>
 <pre><code>L.marker([51.5, -0.09]).addTo(map)
             .bindPopup("&lt;b&gt;Hello world!&lt;/b&gt;&lt;br /&gt;I am a popup.").openPopup();
 </code></pre>
-<p>can be copied and repeated in the document, with new coordinates in decimal degrees for each new point. In the second line, between the quotation marks, you can use regular html to style your text, include pictures, and so on.</p>
+<p>In the second line, between the quotation marks, you can use regular HTML to style your text, include pictures, and so on.</p>
 </li>
 <li>
-<p>In a new browser window, open the <a href="http://leafletjs.com/examples/quick-start/example.html">example map for the quickstart guide</a>.</p>
+<p>In a new browser window, open the <a href="http://leafletjs.com/examples/quick-start/example.html">example map from the quickstart guide</a>.</p>
 </li>
 <li>
-<p>Right-click the page and select view source.</p>
+<p>Right-click the page and select View source to inspect the code.</p>
 </li>
 </ol>
-<h2 id="so-lets-get-started">So let's get started.</h2>
+<h2 id="so-lets-get-started">So let's get started</h2>
 <ol>
 <li>
-<p>Create a new html document in your gh-pages branch of your repo.</p>
+<p>Create a new HTML document in your gh-pages branch of your repo.</p>
 </li>
 <li>
-<p>Copy the html from the quickstart map (right-click and select 'view source' on <a href="http://leafletjs.com/examples/quick-start/example.html">Leaflet's quick start example page</a>.</p>
+<p>Copy the HTML from the quickstart map (right-click and select 'View source' on <a href="http://leafletjs.com/examples/quick-start/example.html">Leaflet's quick start example page</a>.</p>
 </li>
 <li>
-<p>Paste the code in your new html document in your gh-pages branch of your repo. Call it 'map.html' and commit your changes.</p>
+<p>Paste the code in your new HTML document in your gh-pages branch of your repo. Call it <code>map.html</code> and commit your changes.</p>
 </li>
 <li>
-<p>Change the source map to point to a georectified map you made in Module 4. Using the Ottawa Fire Insurance map I used as an example in module 4, I created <a href="http://shawngraham.github.io/exercise/leaflet-ottawa.html">this map</a>. </p>
+<p>Change the source map to point to a georectified map you made in Module 4. Using the Ottawa Fire Insurance map I used as an example in Module 4, I created <a href="http://shawngraham.github.io/exercise/leaflet-ottawa.html">this map</a>. </p>
 </li>
 <li>
 <p>Right click and view my page source to see what I changed up.</p>
-<p><strong>NB You could keep the basic mapbox service base map, and render the Ottawa Fire Insurance map as an overlay [reference documentation]http://leafletjs.com/reference-1.0.3.html#imageoverlay). Or you could do a series of overlays, showing the change in the city over time. (My favourite example of a leaflet-powered historical map visualization is the <a href="http://revolt.axismaps.com/">Slave Revolt in Jamaica project</a> by Vincent Brown). But you don't necessarily have to do this.</strong></p>
+<p><strong>NB You could keep the basic Mapbox service base map, and render the Ottawa Fire Insurance map as an overlay <a href="http://leafletjs.com/reference-1.0.3.html#imageoverlay">reference documentation</a>. Or you could do a series of overlays, showing the change in the city over time. (My favourite example of a Leaflet-powered historical map visualization is the <a href="http://revolt.axismaps.com/">Slave Revolt in Jamaica project</a> by Vincent Brown.) But you don't necessarily have to do this.</strong></p>
 </li>
 <li>
 <p>Add a series of markers with historical information by duplicating and then changing up the <code>L.marker</code> settings to your own data. Commit your changes!</p>
-<p>This all just makes the map. The rest of the webpage would have to be styled as you would normally for a webpage. That is, you'd probably want to add an explanation about what the map shows, how it was created, and how the user ought to interact with it, links to your source data, and so on. The easiest place to add all that kind of information would be between these two tags in the page source:</p>
+<p>This all just makes the map. The rest of the webpage would have to be styled as you would normally for a webpage. That is, you'd probably want to add an explanation about what the map shows, how it was created, how the user ought to interact with it, links to your source data, and so on. The easiest place to add all that kind of information would be between the following two tags in the page source:</p>
 <pre><code>&lt;/script&gt;
 &lt;/body&gt;
 </code></pre>
 </li>
 </ol>
 <h3 id="going-further">Going further</h3>
-<p>Let's say you have a whole bunch of information that you want to represent on the map. Perhaps it's in a well organized CSV file, with a latitude and a longitude column in decimal degrees. Adding points one at a time to the map as described above would take ages. Instead, let's convert that CSV to geojson, and then use <a href="https://github.com/bmcbride/bootleaf">bootleaf</a> to make a map.</p>
-<p>Bootleaf is a template that uses a common html template package, '<a href="http://getbootstrap.com/">Bootstrap</a>' as a wrapper for a leaflet powered map that draws its points of interest from a geojson file. To get this up and running, do the following steps:</p>
+<p>Let's say you have a whole bunch of information that you want to represent on the map. Perhaps it's in a well organized CSV file, with a latitude and a longitude column in decimal degrees. Adding points one at a time to the map as described above would take ages. Instead, let's convert that CSV to geojson, and then use <a href="https://github.com/bmcbride/bootleaf">BootLeaf</a> to make a map.</p>
+<p>BootLeaf is a template that uses a common HTML template package, <a href="http://getbootstrap.com/">Bootstrap</a>, as a wrapper for a Leaflet powered map that draws its points of interest from a geojson file. To get this up and running, do the following steps:</p>
 <ol>
 <li>
-<p>Go to the <a href="https://github.com/bmcbride/bootleaf">GitHub repo for bootleaf</a>.</p>
+<p>Go to the <a href="https://github.com/bmcbride/bootleaf">GitHub repo for BootLeaf</a>.</p>
 </li>
 <li>
-<p>Fork a copy to a new repo (you have to be logged into github.com) by hitting the 'fork' button.</p>
+<p>Fork a copy to a new repo (you have to be logged into GitHub) by hitting the 'Fork' button.</p>
 </li>
 <li>
-<p>In your copy of bootleaf, you now have a gh-pages version of the site. If you go to <code>&lt;yourusername&gt;.github.io/bootleaf</code> you should see an active version of the map.</p>
+<p>In your copy of BootLeaf, you now have a gh-pages version of the site. If you go to <code>&lt;yourusername&gt;.github.io/bootleaf</code> you should see an active version of the map.</p>
 </li>
 <li>
 <p>Now, the map is grabbing its data from a series of geojson files. You can use <a href="https://mapbox.github.io/togeojson/">the 'to geo json' service</a> to convert your CSV to geojson. There are other services.</p>
@@ -364,16 +364,16 @@
 <p>Clone your repository in your desktop (by pressing the clone your repo in desktop).</p>
 </li>
 <li>
-<p>Open your desktop client, and make sure you're in the gh-pages branch</p>
+<p>Open your desktop client, and make sure you're in the gh-pages branch.</p>
 </li>
 <li>
-<p>Using your Windows explorer or Mac finder, put your newly created geojson file in the data folder.</p>
+<p>Using your Windows explorer or Mac Finder, put your newly created geojson file in the data folder.</p>
 </li>
 <li>
 <p>Commit and sync your changes.</p>
 </li>
 <li>
-<p>To add your data to the dropdown menu, you need to change the code in the index.html file:</p>
+<p>To add your data to the dropdown menu, you need to change the following code in the <code>index.html</code> file:</p>
 <pre><code>  &lt;li class="dropdown"&gt;
     &lt;a class="dropdown-toggle" id="downloadDrop" href="#" role="button" data-toggle="dropdown"&gt;&lt;i class="fa fa-cloud-download white"&gt;&lt;/i&gt;&amp;nbsp;&amp;nbsp;Download &lt;b class="caret"&gt;&lt;/b&gt;&lt;/a&gt;
     &lt;ul class="dropdown-menu"&gt;
@@ -386,7 +386,7 @@
 <p>And since you probably don't want that other stuff, you could delete it.</p>
 </li>
 <li>
-<p>You could change the 'about' pop-up here:</p>
+<p>You could change the 'about' pop-up like the following:</p>
 <pre><code>&lt;div class="tab-pane fade active in" id="about"&gt;
   &lt;p&gt;A simple, responsive template for building web mapping applications with &lt;a href="http://getbootstrap.com/"&gt;Bootstrap 3&lt;/a&gt;, &lt;a href="http://leafletjs.com/" target="_blank"&gt;Leaflet&lt;/a&gt;, and &lt;a href="http://twitter.github.io/typeahead.js/" target="_blank"&gt;typeahead.js&lt;/a&gt;. Open source, MIT licensed, and available on &lt;a href="https://github.com/bmcbride/bootleaf" target="_blank"&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
   &lt;div class="panel panel-primary"&gt;
@@ -403,7 +403,7 @@
 </code></pre>
 </li>
 <li>
-<p>And you have to remove this:</p>
+<p>And you have to remove the following:</p>
 <pre><code>    &lt;!-- Remove this maptiks analytics code from your BootLeaf implementation --&gt;
     &lt;script src="//cdn.maptiks.com/maptiks-leaflet.min.js"&gt;&lt;/script&gt;
     &lt;script&gt;maptiks.trackcode='c7ca251e-9c17-47ef-ac33-e0fb24e05976';&lt;/script&gt;
@@ -412,10 +412,10 @@
 <p>Now the really hard part: putting your own base maps in. </p>
 </li>
 <li>
-<p>To insert your own base map, you have to find, and modify, a file called app.js. You should be able to find it by following this path: bootleaf/assets/js/app.js</p>
+<p>To insert your own base map, you have to find, and modify, a file called <code>app.js</code>. You should be able to find it by following the path: <code>bootleaf/assets/js/app.js</code>.</p>
 </li>
 <li>
-<p>You need to change these lines to point to your maps</p>
+<p>You need to change these lines to point to your maps like the following:</p>
 <pre><code>/* Basemap Layers */
 var mapquestOSM = L.tileLayer("http://{s}.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png", {
   maxZoom: 19,
@@ -436,10 +436,10 @@ var mapquestHYB = L.layerGroup([L.tileLayer("http://{s}.mqcdn.com/tiles/1.0.0/sa
   attribution: 'Labels courtesy of &lt;a href="http://www.mapquest.com/" target="_blank"&gt;MapQuest&lt;/a&gt; &lt;img src="http://developer.mapquest.com/content/osm/mq_logo.png"&gt;. Map data (c) &lt;a href="http://www.openstreetmap.org/" target="_blank"&gt;OpenStreetMap&lt;/a&gt; contributors, CC-BY-SA. Portions Courtesy NASA/JPL-Caltech and U.S. Depart. of Agriculture, Farm Service Agency'
 })]);
 </code></pre>
-<p>...and then you'd have to go through the rest of that file and change up the .geojson pointers to point to your own data.</p>
+<p>...and then you'd have to go through the rest of that file and change up the <code>.geojson</code> pointers to point to your own data.</p>
 </li>
 <li>
-<p>Visit GitHub for a <a href="https://github.com/shawngraham/daea">template for mapping with leaflet</a>, drawing all of your point data and ancillary information from a CSV file. Study the index.html file carefully to identify which lines you'd modify to change the base map, and to identify how elements in the CSV are being rendered on the screen. <a href="https://xtina-r.github.io/daea/">Visit this example that a former student made</a>.</p>
+<p>Visit GitHub for a <a href="https://github.com/shawngraham/daea">template for mapping with Leaflet</a>, drawing all of your point data and ancillary information from a CSV file. Study the <code>index.html</code> file carefully to identify which lines you'd modify to change the base map, and to identify how elements in the CSV are being rendered on the screen. Visit <a href="https://xtina-r.github.io/daea/">this example that a former student made</a>.</p>
 </li>
 </ol>
 <p><strong>Further reading:</strong> Arian Katsimbras on making beautiful maps with <a href="https://medium.com/@ArianKatsimbras/tilemill-c886a3ccba6a">Tilemill</a>.</p>
@@ -495,7 +495,6 @@ The Crafting Digital History site is built with <a href="http://www.mkdocs.org">
     </span>
 </div>
     <script src="../../js/theme.js"></script>
-      <script src="../../js/tota11y.min.js"></script>
 
 </body>
 </html>
