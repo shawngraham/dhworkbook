@@ -3,31 +3,29 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Git - HIST3814o Crafting Digital History</title>
-  
-
+  <meta name="author" content="Shawn Graham">
   <link rel="shortcut icon" href="../../img/favicon.ico">
-
-  
+  <title>Git in RStudio - HIST3814o Crafting Digital History</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
   <link rel="stylesheet" href="../../css/highlight.css">
-
+  <link href="../../css/extra.css" rel="stylesheet">
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Git";
+    var mkdocs_page_name = "Git in RStudio";
+    var mkdocs_page_input_path = "supporting materials/git-rstudio.md";
+    var mkdocs_page_url = "/supporting materials/git-rstudio/";
   </script>
   
   <script src="../../js/jquery-2.1.1.min.js"></script>
   <script src="../../js/modernizr-2.8.3.min.js"></script>
-  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
-  <script src="../../js/theme.js"></script> 
-
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
   
 </head>
 
@@ -39,287 +37,202 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
       <div class="wy-side-nav-search">
         <a href="../.." class="icon icon-home"> HIST3814o Crafting Digital History</a>
+        <a href="#skip-nav">Skip navigation menu</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <label hidden for="search-box" aria-hidden="false">Search Documents
+    </label>
+    <input id="search-box" type="text" name="q" placeholder="Search docs" />
   </form>
 </div>
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-        <ul class="current">
+  <ul class="current">
+    
           
-            <li>
-    <li class="toctree-l1 ">
-        <a class="" href="../..">Home</a>
-        
-    </li>
-<li>
+            <li class="toctree-l1">
+    
+    <a class="" href="../..">Home</a>
+      </li>
           
-            <li>
-    <li class="toctree-l1 ">
-        <a class="" href="../../introduction/crafting-digital-history/">Getting Started</a>
-        
-    </li>
-<li>
+            <li class="toctree-l1">
+    
+    <a class="" href="../../introduction/crafting-digital-history/">Getting Started</a>
+      </li>
           
-            <li>
+            <li class="toctree-l1">
+    
+    <span class="caption-text">1. Open Access Research</span>
     <ul class="subnav">
-    <li><span>1. Open Access Research</span></li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../module-1/Open-Access-Research/">Why you should be open</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../module-1/Exercises/">Exercises</a>
-        
-    </li>
-
-        
+                <li class="">
+                    
+    <a class="" href="../../module-1/Open-Access-Research/">Why you should be open</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../module-1/Exercises/">Exercises</a>
+                </li>
     </ul>
-<li>
+      </li>
           
-            <li>
+            <li class="toctree-l1">
+    
+    <span class="caption-text">2. Finding Data</span>
     <ul class="subnav">
-    <li><span>2. Finding Data</span></li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../module-2/Finding Data/">How do we find data?</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../module-2/Exercises/">Exercises</a>
-        
-    </li>
-
-        
+                <li class="">
+                    
+    <a class="" href="../../module-2/Finding Data/">How do we find data?</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../module-2/Exercises/">Exercises</a>
+                </li>
     </ul>
-<li>
+      </li>
           
-            <li>
+            <li class="toctree-l1">
+    
+    <span class="caption-text">3. Fixing Data</span>
     <ul class="subnav">
-    <li><span>3. Fixing Data</span></li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../module-3/Wrangling Data/">Data is messy</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../module-3/Exercises/">Exercises</a>
-        
-    </li>
-
-        
+                <li class="">
+                    
+    <a class="" href="../../module-3/Wrangling Data/">Data is messy</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../module-3/Exercises/">Exercises</a>
+                </li>
     </ul>
-<li>
+      </li>
           
-            <li>
+            <li class="toctree-l1">
+    
+    <span class="caption-text">4. Analysis</span>
     <ul class="subnav">
-    <li><span>4. Analysis</span></li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../module-4/Seeing Patterns/">Seeing Patterns</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../module-4/Exercises/">Exercises</a>
-        
-    </li>
-
-        
+                <li class="">
+                    
+    <a class="" href="../../module-4/Seeing Patterns/">Seeing Patterns</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../module-4/Exercises/">Exercises</a>
+                </li>
     </ul>
-<li>
+      </li>
           
-            <li>
+            <li class="toctree-l1">
+    
+    <span class="caption-text">5. Visualization</span>
     <ul class="subnav">
-    <li><span>5. Visualization</span></li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../module-5/Humanities Visualization/">Communicating your Findings</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../module-5/Exercises/">Exercises</a>
-        
-    </li>
-
-        
+                <li class="">
+                    
+    <a class="" href="../../module-5/Humanities Visualization/">Communicating your Findings</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../module-5/Exercises/">Exercises (OPTIONAL)</a>
+                </li>
     </ul>
-<li>
+      </li>
           
-            <li>
-    <li class="toctree-l1 ">
-        <a class="" href="../../conclusion/conclusion/">6. Final Thoughts</a>
-        
-    </li>
-<li>
+            <li class="toctree-l1">
+    
+    <a class="" href="../../conclusion/conclusion/">6. Final Thoughts</a>
+      </li>
           
-            <li>
+            <li class="toctree-l1">
+    
+    <span class="caption-text">Appendices</span>
     <ul class="subnav">
-    <li><span>Appendices</span></li>
+                <li class="">
+                    
+    <a class="" href="../tei/">Text Encoding Initiative</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="./">Git in RStudio</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#using-git-with-rstudio-pubs-static">Using Git with rstudio-pubs-static</a></li>
+    
 
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../tei/">Text Encoding</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../ner/">NER</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../open-refine/">Open Refine</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../regex/">Regular Expressions (regex)</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../regex-ner/">Going further with regex</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../regexex/">Regex & the Republic of Texas</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../cyoa.txt/">CYOA</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../geoparsing-w-python.txt/">Geoparsing with Python</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../gephi.txt/">SNA with Gephi</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../graphing-the-net.txt/">Graphing the Net</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../multimode-networks.txt/">Multimode Networks</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../leaflet.txt/">Leaflet</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../glitch/">Glitch</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../quick-intro-r/">Quick Intro to R</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 current">
-        <a class="current" href="./">Git</a>
-        
-            <ul>
-            
-                <li class="toctree-l3"><a href="#using-git-with-rstudio-pubs-static">Using Git with rstudio-pubs-static</a></li>
-                
-            
-            </ul>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../topicmodel-r-dhbox/">TM, DHBox</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../topicmodel-r-yourmachine/">TM, Local</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../netviz/">igraph</a>
-        
-    </li>
-
-        
     </ul>
-<li>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../regex/">Introduction to Regular Expressions (regex)</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../regexex/">Regex & the Republic of Texas</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../open-refine/">Open Refine</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../ner/">Stanford Named Entity Recognizer</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../regex-ner/">Going further with regex</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../quick-intro-r/">Quick intro to R</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../cyoa.txt/">Choose Your Own Adventure</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../geoparsing-w-python.txt/">Geoparsing with Python</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../glitch/">Glitch</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../gephi.txt/">Social Network Analysis with Gephi</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../multimode-networks.txt/">Multimode Networks</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../graphing-the-net.txt/">Graphing the Net</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../topicmodel-r-dhbox/">Topic Modeling, DH Box</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../topicmodel-r-yourmachine/">Topic Modeling, Local</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../netviz/">Network visualization with igraph</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../inkscape/">Inkscape</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../gh-pages/">GitHub Pages</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../leaflet.txt/">Leaflet</a>
+                </li>
+    </ul>
+      </li>
           
         </ul>
       </div>
@@ -347,39 +260,71 @@
         
       
     
-    <li>Git</li>
+    <li>Git in RStudio</li>
     <li class="wy-breadcrumbs-aside">
       
-        
-          <a href="https://github.com/shawngraham/dhworkbook/tree/gh-pages" class="icon icon-github"> Edit on GitHub</a>
-        
+        <a href="https://github.com/shawngraham/dhworkbook/tree/gh-pages/edit/master/docs/supporting materials/git-rstudio.md"
+          class="icon icon-github"> Edit on GitHub</a>
       
     </li>
   </ul>
   <hr/>
 </div>
+          <a name="skip-nav" aria-label="Anchor link destination for skipping navigation"></a>
           <div role="main">
             <div class="section">
               
                 <h1 id="using-git-with-rstudio-pubs-static">Using Git with rstudio-pubs-static</h1>
-<p>Before you can use Git to keep track of your changes to your R project, you need to tell the Git program (which keeps snapshots of your changes) who you are. Do this with these two commands via the command line:
-<code>$ git config --global user.email "you@example.com"``</code>$ git config --global user.name "Your Name"`</p>
-<p>Go back to R Studio. Under 'Tools' select 'Version Control' then 'project setup'. Under 'Version control system' select 'Git'.</p>
-<p>You now have a new option in the pane at top right, beside 'environment' and 'history': 'git'. Click on 'git'.</p>
-<p>The panel now displays all of the files created in this project folder. Tick off the ones you want to commit. Then click on the 'Commit' button.</p>
-<p><img alt="screenshot of the Git panel in RStudio" src="https://i.imgur.com/6CiY06Q.png" /></p>
-<p>A new window opens called 'RStudio: Review Changes'. This window shows you a preview of the text of each file, in green where material has been added, red where material has been deleted (these are the 'difs'). Add a commit message int the top right 'commit message' box.</p>
-<p>You've now made a local commit to your git repository! If things go horribly wrong, you can roll back the changes. Now, let's setup your github repo for this.</p>
-<p>Go to your github account. Make a new repository; initialize it with a readme.md</p>
-<p>Back in RStudio, click on the 'more' gearwheel on the Git tab. Select shell (you could do this from the command line too, when you're in your project folder). This will open up a box into which you can type commands; we're going to tell Git the location of our remote repository, add that info into the config, and do two pulls.</p>
-<p>open shell</p>
-<pre><code class="shell">$ git remote add origin https://github.com/YOUR-ACCOUNT/YOUR-REPO.git
+<ol>
+<li>
+<p>Before you can use git to keep track of your changes to your R project, you need to tell the git program (which keeps snapshots of your changes) who you are. To do this, execute the following commands in the command line:
+    <code>$ git config --global user.email "you@example.com"</code>
+    <code>$ git config --global user.name "Your Name"</code></p>
+</li>
+<li>
+<p>Go back to RStudio. Under 'Tools' select 'Version Control' then 'project setup'.</p>
+</li>
+<li>
+<p>Under 'Version control system' select the 'Git' tab.</p>
+<p>You now have a new option in the pane at top right, beside 'Environment' and 'History': 'git'. </p>
+</li>
+<li>
+<p>Click on 'Git'.</p>
+<p>The panel now displays all of the files created in this project folder. </p>
+</li>
+<li>
+<p>Tick off the files you want to commit. </p>
+</li>
+<li>
+<p>Click on the 'Commit' button.</p>
+<p><img alt="Image of the Git panel in RStudio" src="https://i.imgur.com/6CiY06Q.png" /></p>
+<p>A new window opens called 'RStudio: Review Changes'. This window shows you a preview of the text of each file, in green where material has been added, red where material has been deleted (these are the 'difs'). </p>
+</li>
+<li>
+<p>Add a commit message into the top right 'commit message' box.</p>
+<p>You've now made a local commit to your git repository! If things go horribly wrong, you can roll back the changes. Now, let's setup your GitHub repo for this.</p>
+</li>
+<li>
+<p>Go to your GitHub account. </p>
+</li>
+<li>
+<p>Make a new repository; initialize it with a readme.md</p>
+</li>
+<li>
+<p>Back in RStudio, click on the 'more' gearwheel on the Git tab. </p>
+</li>
+<li>
+<p>Select shell (you could do this from the command line too, when you're in your project folder). This will open up a box into which you can type commands; we're going to tell git the location of our remote repository, add that info into the config, and do two pulls.</p>
+</li>
+<li>
+<p>Open shell and execute the following commands:</p>
+<pre><code>$ git remote add origin https://github.com/YOUR-ACCOUNT/YOUR-REPO.git
 $ git config remote.origin.url https://github.com/YOUR-ACCOUNT/YOUR-REPO.git
 $ git pull -u origin master
-$ git pull -u origin master
 </code></pre>
-
-<p>And you now can push your changes to your remote repository whenever you make a new commit. There is a variation of markdown called RMarkdown that enables you to embed working R code into a document, and then 'knit' it into HTML or slide shows or pdfs. When you push those to a Github repo, you are now making data publications! The official <a href="https://shiny.rstudio.com/articles/rmarkdown.html">R Markdown information is here</a>.</p>
+</li>
+</ol>
+<p>And you now can push your changes to your remote repository whenever you make a new commit. There is a variation of markdown called RMarkdown that enables you to embed working R code into a document, and then 'knit' it into HTML or slide shows or PDFs. When you push those to a GitHub repo, you are now making data publications! The official <a href="https://shiny.rstudio.com/articles/rmarkdown.html">R Markdown information can be found on the RStudio website</a>.</p>
               
             </div>
           </div>
@@ -387,10 +332,10 @@ $ git pull -u origin master
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../topicmodel-r-dhbox/" class="btn btn-neutral float-right" title="TM, DHBox"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../regex/" class="btn btn-neutral float-right" title="Introduction to Regular Expressions (regex)"/>Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../quick-intro-r/" class="btn btn-neutral" title="Quick Intro to R"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../tei/" class="btn btn-neutral" title="Text Encoding Initiative"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -414,27 +359,28 @@ The Crafting Digital History site is built with <a href="http://www.mkdocs.org">
     $(".section").fitVids();
   });
 </script>
-	  
+    
         </div>
       </div>
 
     </section>
-
+    
   </div>
 
-<div class="rst-versions" role="note" style="cursor: pointer">
+  <div class="rst-versions" role="note" style="cursor: pointer">
     <span class="rst-current-version" data-toggle="rst-current-version">
       
-          <a class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
+          <a href="https://github.com/shawngraham/dhworkbook/tree/gh-pages" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
-        <span><a href="../quick-intro-r/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../tei/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../topicmodel-r-dhbox/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../regex/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
+    <script src="../../js/theme.js"></script>
 
 </body>
 </html>
