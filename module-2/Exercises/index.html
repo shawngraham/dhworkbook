@@ -437,16 +437,16 @@ http://search.canadiana.ca/search/4?df=1800&amp;dt=1900&amp;q=ottawa&amp;field=
 <p>Make sure that's where you are by typing <code>$ pwd</code>. Now, make an empty file for our program with <code>$ touch canadiana.sh</code>. Touch makes an empty file; the <code>.sh</code> in the filename indicates that this is a shell script.</p>
 </li>
 <li>
-<p>Open the empty file with <code>$ nano canadiana.sh</code>. Now, the program that Ian Milligan wrote makes calls to the API that <strong>used to live</strong> at <code>eco.canadiana.ca</code>. But note the <a href="http://eco.canadiana.ca/view/oocihm.16278/?r=0&amp;s=1&amp;fmt=json&amp;api_text=1">error message on Canadiana's website</a>. So we have to change Milligan's script so that it points to the API at <a href="http://search.canadiana.ca/">search.canadiana.ca</a>. Copy the script below into your empty <code>canadiana.sh</code>. If you want, adjust the search parameters (in the line starting with <code>pages</code>) for material you're more interested in.</p>
+<p>Open the empty file with <code>$ nano canadiana.sh</code>. Now, the program that Ian Milligan wrote makes calls to the API that <strong>used to live</strong> at <code>eco.canadiana.ca</code>. But note the <a href="http://eco.canadiana.ca/view/oocihm.16278/?r=0&amp;s=1&amp;fmt=json&amp;api_text=1">error message on Canadiana's website</a>. So we have to change Milligan's script so that it points to the API at <a href="http://search.canadiana.ca/">search.canadiana.ca</a>. Copy the script below into your empty <code>canadiana.sh</code> **BUT** just to make sure it is working right, we're going to shorten the search window from 100 years to 2 years. You can always re-run the code with a different date range! Also, if you want, adjust the search keywords (in the line starting with <code>pages</code>) for material you're more interested in.</p>
 <pre><code>#! /bin/bash
-pages=$(curl 'http://search.canadiana.ca/search?q=ottawa*&amp;field=&amp;so=score&amp;df=1800&amp;dt=1900&amp;fmt=json' | jq '.pages')
+pages=$(curl 'http://search.canadiana.ca/search?q=ottawa*&amp;field=&amp;so=score&amp;df=1800&amp;dt=1802&amp;fmt=json' | jq '.pages')
 # this goes into the results and reads the value of 'pages' in each one of them.
 # it then tells us how many pages we're going to have.
 echo "Pages:"$pages
 # this says 'for each one of these pages, download the 'key' value on each page'
 for i in $(seq 1 $pages)
 do
-        curl 'http://search.canadiana.ca/search/'${i}'?q=ottawa*&amp;field=&amp;so=score&amp;df=1800&amp;dt=1900&amp;fmt=json' | jq '.docs[] | {key}' &gt;&gt; results.txt
+        curl 'http://search.canadiana.ca/search/'${i}'?q=ottawa*&amp;field=&amp;so=score&amp;df=1800&amp;dt=1802&amp;fmt=json' | jq '.docs[] | {key}' &gt;&gt; results.txt
 done
 # the next two lines take the results.txt file that is quite messy and clean it up. I'll try to explain what they all mean. Basically, tr deletes a given character - so we delete quotation marks "\"" (the slash tells the computer not to treat the quotation mark as a computer code, but as a quotation mark itself), to erase spaces, and to find the phrase "key:" and delete it too.
 sed -e 's/\"key\": \"//g' results.txt | tr -d "\"" | tr -d "{" | tr -d "}" | tr -s " " | sed '/^\s*$/d' | tr -d ' ' &gt; cleanlist.txt
