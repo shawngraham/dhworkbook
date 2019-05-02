@@ -8,24 +8,25 @@
   
   <meta name="author" content="Shawn Graham">
   <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>Exercises (OPTIONAL) - HIST3814o Crafting Digital History</title>
+  <title>Capstone Exercise - HIST3814o Crafting Digital History</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
-  <link rel="stylesheet" href="../../css/highlight.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
   <link href="../../css/extra.css" rel="stylesheet">
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Exercises (OPTIONAL)";
+    var mkdocs_page_name = "Capstone Exercise";
     var mkdocs_page_input_path = "module-5/Exercises.md";
     var mkdocs_page_url = "/module-5/Exercises/";
   </script>
   
-  <script src="../../js/jquery-2.1.1.min.js"></script>
-  <script src="../../js/modernizr-2.8.3.min.js"></script>
-  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
   
 </head>
 
@@ -37,32 +38,29 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
       <div class="wy-side-nav-search">
         <a href="../.." class="icon icon-home"> HIST3814o Crafting Digital History</a>
-        <a href="#skip-nav">Skip navigation menu</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <label hidden for="search-box" aria-hidden="false">Search Documents
-    </label>
-    <input id="search-box" type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
   </form>
 </div>
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-  <ul class="current">
-    
+	<ul class="current">
+	  
           
             <li class="toctree-l1">
-    
+		
     <a class="" href="../..">Home</a>
-      </li>
+	    </li>
           
             <li class="toctree-l1">
-    
+		
     <a class="" href="../../introduction/crafting-digital-history/">Getting Started</a>
-      </li>
+	    </li>
           
             <li class="toctree-l1">
-    
+		
     <span class="caption-text">1. Open Access Research</span>
     <ul class="subnav">
                 <li class="">
@@ -74,10 +72,10 @@
     <a class="" href="../../module-1/Exercises/">Exercises</a>
                 </li>
     </ul>
-      </li>
+	    </li>
           
             <li class="toctree-l1">
-    
+		
     <span class="caption-text">2. Finding Data</span>
     <ul class="subnav">
                 <li class="">
@@ -89,10 +87,10 @@
     <a class="" href="../../module-2/Exercises/">Exercises</a>
                 </li>
     </ul>
-      </li>
+	    </li>
           
             <li class="toctree-l1">
-    
+		
     <span class="caption-text">3. Fixing Data</span>
     <ul class="subnav">
                 <li class="">
@@ -104,10 +102,10 @@
     <a class="" href="../../module-3/Exercises/">Exercises</a>
                 </li>
     </ul>
-      </li>
+	    </li>
           
             <li class="toctree-l1">
-    
+		
     <span class="caption-text">4. Analysis</span>
     <ul class="subnav">
                 <li class="">
@@ -119,10 +117,10 @@
     <a class="" href="../../module-4/Exercises/">Exercises</a>
                 </li>
     </ul>
-      </li>
+	    </li>
           
             <li class="toctree-l1">
-    
+		
     <span class="caption-text">5. Visualization</span>
     <ul class="subnav">
                 <li class="">
@@ -131,22 +129,28 @@
                 </li>
                 <li class=" current">
                     
-    <a class="current" href="./">Exercises (OPTIONAL)</a>
+    <a class="current" href="./">Capstone Exercise</a>
     <ul class="subnav">
             
-    <li class="toctree-l3"><a href="#module-5-exercises-optional">Module 5 Exercises (OPTIONAL)</a></li>
+    <li class="toctree-l3"><a href="#capstone-exercise">Capstone Exercise</a></li>
     
         <ul>
         
-            <li><a class="toctree-l4" href="#exercise-1-layout">Exercise 1: Layout</a></li>
+            <li><a class="toctree-l4" href="#option-1-github-pages-with-a-static-site-generator">Option 1: GitHub Pages with a Static Site Generator</a></li>
         
-            <li><a class="toctree-l4" href="#exercise-2-typography">Exercise 2: Typography</a></li>
+            <li><a class="toctree-l4" href="#option-2-jekyll-now">Option 2: Jekyll Now</a></li>
         
-            <li><a class="toctree-l4" href="#exercise-3-colour">Exercise 3: Colour</a></li>
+            <li><a class="toctree-l4" href="#option-3-reclaim-hosting">Option 3: Reclaim Hosting</a></li>
         
-            <li><a class="toctree-l4" href="#exercise-4-creating-an-online-exhibit-with-omeka">Exercise 4: Creating an online exhibit with Omeka</a></li>
+            <li><a class="toctree-l4" href="#layout">Layout</a></li>
         
-            <li><a class="toctree-l4" href="#more">More</a></li>
+            <li><a class="toctree-l4" href="#typography">Typography</a></li>
+        
+            <li><a class="toctree-l4" href="#colour">Colour</a></li>
+        
+            <li><a class="toctree-l4" href="#creating-an-online-exhibit-with-omeka">Creating an online exhibit with Omeka</a></li>
+        
+            <li><a class="toctree-l4" href="#more-resources">More Resources</a></li>
         
         </ul>
     
@@ -154,15 +158,15 @@
     </ul>
                 </li>
     </ul>
-      </li>
+	    </li>
           
             <li class="toctree-l1">
-    
-    <a class="" href="../../conclusion/conclusion/">6. Final Thoughts</a>
-      </li>
+		
+    <a class="" href="../../conclusion/Conclusion/">6. Final Thoughts</a>
+	    </li>
           
             <li class="toctree-l1">
-    
+		
     <span class="caption-text">Appendices</span>
     <ul class="subnav">
                 <li class="">
@@ -215,10 +219,6 @@
                 </li>
                 <li class="">
                     
-    <a class="" href="../../supporting materials/multimode-networks.txt/">Multimode Networks</a>
-                </li>
-                <li class="">
-                    
     <a class="" href="../../supporting materials/graphing-the-net.txt/">Graphing the Net</a>
                 </li>
                 <li class="">
@@ -246,7 +246,7 @@
     <a class="" href="../../supporting materials/leaflet.txt/">Leaflet</a>
                 </li>
     </ul>
-      </li>
+	    </li>
           
         </ul>
       </div>
@@ -274,7 +274,7 @@
         
       
     
-    <li>Exercises (OPTIONAL)</li>
+    <li>Capstone Exercise</li>
     <li class="wy-breadcrumbs-aside">
       
         <a href="https://github.com/shawngraham/dhworkbook/tree/gh-pages/edit/master/docs/module-5/Exercises.md"
@@ -284,34 +284,190 @@
   </ul>
   <hr/>
 </div>
-          <a name="skip-nav" aria-label="Anchor link destination for skipping navigation"></a>
           <div role="main">
             <div class="section">
               
-                <h1 id="module-5-exercises-optional">Module 5 Exercises (OPTIONAL)</h1>
-<p>In this module, you will begin with an introduction to web design concepts and finish by creating your own online exhibit. While we will not explore every possibility here, I do not want to leave you thinking that all digital history work is necessarily text based. To that end, if you are looking for a challenge or for exposure to something rather different, I suggest you at least bookmark my <a href="https://github.com/shawngraham/ar-archaeology/tree/master/workshop%20materials">series of tutorials on augmented reality, games, and 3d models for history and archaeology</a>.</p>
-<p><img alt="Image showing Ukrainian Parliament fist fight three times: 1 the original; 2 the photo with the Fibonnaci Golden spiral overlayed; 3 the photo as a Renaissance painting" src="http://uploads.neatorama.com/images/posts/587/74/74587/1407463055-0.jpg" /></p>
-<p><a href="http://www.theguardian.com/artanddesign/2014/aug/06/accidental-renaissance-photojournalism-italian-painting-ukraine-frank-lampard">'Accidental Renaissance: the photos that look like Italian paintings'</a>.</p>
-<p>The exercises in this module cover:</p>
+                <h1 id="capstone-exercise">Capstone Exercise</h1>
+<p>For the Capstone Exercise, you have the opportunity to create a domain (website + complete access to the webserver that powers it, so that you can install other platforms/services) of your own. A typical setup will be something along the lines of:</p>
+<ol>
+<li>GitHub: <code>yourusername.github.io</code>.</li>
+<li>Reclaim Hosting: <code>your-domain-name.org</code> or <code>your-domain-name.ca</code> or <code>your-domain-name.com</code>.</li>
+</ol>
+<p>On your blog/narrative, you may want an 'About' page where you can signal the kinds of history you're interested in, and the preferred way for people to get in touch with you. You do not have to use your real name. Remember the <a href="http://site.craftingdigitalhistory.ca/rubric-and-assessment.html#real-names-policy">real names policy</a>.</p>
+<p>This section begins with several options you may wish to pursue for the Capstone Exercise. Following these options are resources, tutorials, and tips/hints you can reference to support the Capstone Exercise you choose. Depending on how you decided to communicate findings, this section contains resources which introduce you to the following concepts:</p>
 <ul>
-<li>Design with colour and font</li>
-<li>Layout </li>
+<li>Layout</li>
 <li>Manipulating graphics</li>
+<li>Design with colour and font</li>
 <li>Creating digital exhibits</li>
 </ul>
+<p>I do not want to leave you thinking that all digital history work is necessarily text based. To that end, if you are looking for a challenge or for exposure to something rather different, I suggest you at least bookmark my <a href="https://github.com/shawngraham/ar-archaeology/tree/master/workshop%20materials">series of tutorials on augmented reality, games, and 3d models for history and archaeology</a>.</p>
+<p>Let's get started.</p>
+<p><img alt="Image showing Ukrainian Parliament fist fight three times: 1 the original; 2 the photo with the Fibonnaci Golden spiral overlayed; 3 the photo as a Renaissance painting" src="http://uploads.neatorama.com/images/posts/587/74/74587/1407463055-0.jpg" /></p>
+<p><a href="http://www.theguardian.com/artanddesign/2014/aug/06/accidental-renaissance-photojournalism-italian-painting-ukraine-frank-lampard">'Accidental Renaissance: the photos that look like Italian paintings'</a>.</p>
+<h2 id="option-1-github-pages-with-a-static-site-generator">Option 1: GitHub Pages with a Static Site Generator</h2>
+<p>Static site generators are software packages that allow you to quickly build and easily update a website via the terminal. Most static site generators use human readable programming languages like <code>YAML</code>/<code>YML</code> (Yet Another Markdown Language) that contain the settings for your website. You create a basic text file (i.e. Markdown), run a build command in the terminal that will convert your text files into web pages, and push the pages to your server. </p>
+<p>GitHub offers each user their own unique domain attached to their account - this service is called <a href="https://pages.github.com/">GitHub Pages, or gh-pages</a>. Each user domain resembles <code>yourusername.github.io</code>, where <code>yourusername</code> is your GitHub account username. If you went to <code>yourusername.github.io</code> right now, it will show a <code>404</code> / 'site not found' error. This is because you have not yet set-up your gh-pages website.</p>
+<p>Like the <code>master</code> branch of your GitHub repository, <code>gh-pages</code> is another branch option. Essentially, you create a GitHub respository, populate the gh-pages branch with web files, and your <code>yourusername.github.io</code> will become a functioning website.</p>
+<p>By deafault, GitHub Pages uses <a href="https://jekyllrb.com/">Jekyll, a static site generator</a>. However, Jekyll is not the only option. <a href="https://gohugo.io/">Hugo</a> is another static site generator. This workbook was built using the <a href="https://www.mkdocs.org/">static site generator MKDocs</a>. While this option shows you how to use GitHub Pages powered by Jekyll to populate your GitHub domain, the instructions are generally similar for other static site generators. You make a few changes and run the website using a GitHub repository. </p>
+<ol>
+<li>Login to your GitHub account.</li>
+<li>Click the button labelled <code>+</code> at the top left of the page next to your account.</li>
+<li>Select <code>New repository</code>.</li>
+<li>Under <code>Repository name *</code>, enter <code>yourusername.github.io</code> (ensure you change 'yourusername' to your GitHub username).</li>
+<li>Click the button labelled <code>Create repository</code>.</li>
+<li>Navigate to your DH Box account and open the terminal (you can also set this up on your own machine, in which case you open the Terminal (Mac) or Command Prompt (Windows) or GitHub desktop client).</li>
+<li>Type <code>$ git clone https://github.com/username/username.github.io</code> into the terminal (changing the URL to your GitHub repository path).</li>
+<li>Type <code>$ cd username.github.io</code> into the terminal (ensure you change 'username' to your GitHub username).</li>
+<li>Type <code>$ echo "Hello World" &gt; index.html</code> into the terminal. This will pipe "Hello World" into the home file <code>index.html</code> of your new site.</li>
+<li>Type <code>$ git add --all</code> into the terminal.</li>
+<li>Type <code>$ git commit -m "Initial commit"</code> into the terminal. </li>
+<li>Type <code>$ git push -u origin master</code> into the terminal.</li>
+<li>Navigate to your domain at <code>yourusername.github.io</code>. You will see the text "Hello World".</li>
+</ol>
+<h3 id="customize-your-website">Customize your website</h3>
+<p>The instructions above showed you how to get you GitHub Pages domain up and running. GitHub provides further instruction on <a href="https://help.github.com/en/articles/using-jekyll-as-a-static-site-generator-with-github-pages">customizing your Jekyll site in their documentation</a>. GitHub Pages makes it easy to set-up a theme.</p>
+<ol>
+<li>Navigate to your GitHub Pages repository.</li>
+<li>Click the tab labelled <code>Settings</code>.</li>
+<li>Scroll down to the section labelled <code>GitHub Pages</code>.</li>
+<li>Click the button labelled <code>Change theme</code>.</li>
+<li>Choose a new theme from the provided options.</li>
+<li>Open the <code>_config.yml</code> file and and click the pen/pencil icon to edit the file.</li>
+<li>
+<p>Your configuration file will show only the theme information. Add the following <code>YAML</code> configuration settings to you <code>_config.yml</code> file:</p>
+<pre><code>github: [metadata]
+encoding: UTF-8
+kramdown:
+ input: GFM
+ hard_wrap: false
+future: true
+jailed: false
+gfm_quirks: paragraph_end
+</code></pre>
+</li>
+<li>
+<p>Open the <code>index.html</code> file and and click the pen/pencil icon to edit the file.</p>
+</li>
+<li>Change the name of the file to <code>index.md</code>.</li>
+<li>
+<p>Remove the "Hello World" message and replace it with the following Markdown header:</p>
+<pre><code>---
+title: Home page
+layout: default
+---
+
+Here is my home page.
+</code></pre>
+</li>
+<li>
+<p>Add a commit message and click the green button labelled <code>Commit changes</code>.</p>
+</li>
+<li>Navigate to your repository home page and create a new file called <code>2019-04-07-first-post.md</code> (change the <code>2019-04-07</code> to today's date).</li>
+<li>
+<p>Copy and paste the following text into your new Markdown file:</p>
+<pre><code>---
+title: This is my title
+layout: post
+---
+
+Here is my page.
+</code></pre>
+</li>
+<li>
+<p>Add a commit message and click the green button labelled <code>Commit changes</code>.</p>
+</li>
+<li>Navigate to your <code>yourusername.github.io</code> domain. If the site has not updated yet, wait a minute and/or clear your browser's cache.</li>
+</ol>
+<h3 id="going-further">Going Further</h3>
+<p>The instructions above show you how you can begin customizing you Jekyll website. You will probably want to change the theme and structure of the website. For instance, your blog posts should go in a folder called <code>_posts</code>. For more information, read <a href="https://www.smashingmagazine.com/2014/08/build-blog-jekyll-github-pages/">Barry Clark's article on customizing your Jekyll site</a>. You will also want to read through the <a href="https://jekyllrb.com/docs/">Jekyll documentation</a>.</p>
+<p>Most static site generators use similar layouts, structures, and <code>YAML</code> configurations. While the documentation for each generator will differ, the general idea between all of them remains the same. </p>
+<p>You may also want to build a simple website through GitHub Pages using the MkDocs static site generator and DH Box. Navigate to the <a href="../../supporting materials/gh-pages/">static site generator exercise using GitHub Pages in the supporting materials</a>.</p>
+<h2 id="option-2-jekyll-now">Option 2: Jekyll Now</h2>
+<p>Jekyll is a static site generator widely used to create a website quickly that you can run from your GitHub account. Jekyll takes static Markdown files and converts them to a functioning website. While Jekyll requires some editing via the terminal, <a href="https://github.com/barryclark/jekyll-now">Jekyll Now</a> is a project from <a href="https://github.com/barryclark">Barry Clark</a> that allows you to leverage the blogging power and simplicity of Jekyll without touching the terminal. </p>
+<p><strong>NB</strong> If you already have a gh-pages branch set up at <code>yourusername.github.io</code>, this may produce some unexpected results.  </p>
+<ol>
+<li>Login to your GitHub account.</li>
+<li>Navigate to the <a href="https://github.com/barryclark/jekyll-now">Jekyll Now repository</a>. For further instruction, follow the <a href="https://github.com/barryclark/jekyll-now#quick-start">Jekyll Now Quick Start guide on GitHub</a>.</li>
+<li>Fork the Jekyll Now repository.</li>
+<li>In your fork of the respository, click <code>Settings</code>.</li>
+<li>Under <code>Repository name</code>, change the name from <code>jekyll-now</code> to <code>yourusername.github.io</code> (ensure you change 'yourusername' to your GitHub username). By setting the name to your unique GitHub domain (i.e. gh-pages), GitHub knows to make your gh-pages domain draw from these files.</li>
+<li>Click the button labelled <code>Rename</code>. Your site is now available at <code>yourusername.github.io</code>. <strong>NB</strong> If you navigate to your domain URL right away, it will not be there and will show a '404' error. <strong>You first need to upload a post in the format <code>YYYY-MM-DD-some-text.md</code>, ensuring <code>YYYY-MM-DD</code> is always the prefix to your posts file name.</strong></li>
+<li>Navigate back to your forked repository page.</li>
+<li>Open the <code>_config.yml</code> file.</li>
+<li>Click the pen/pencil icon to edit the file.</li>
+<li>Change the relevant fields (i.e. <code>name</code>, <code>description</code>, <code>avatar</code>, <code>footer-links</code>, etc.). For <code>avatar</code>, navigate to your GitHub profile, right click your profile picture/avatar, and select <code>View image</code>. This will open your avatar in a new tab. Copy the URL for your avatar and paste it into the <code>_config.yml</code> <code>avatar</code> section.</li>
+<li>Write a commit message and click the green button labelled <code>Commit changes</code>. </li>
+<li>Navigate to the <code>_posts</code> folder and open the <code>2014-3-3-Hello-World.md</code> file.</li>
+<li>Click the pen/pencil icon to edit the file.</li>
+<li>Change the file name from <code>2014-3-3-Hello-World.md</code> to something relevant, ensuring to change the prefix to today's date in the <code>YYYY-MM-DD</code> format. </li>
+<li>Edit the file to describe your new site.</li>
+<li>Write a commit message and click the green button labelled <code>Commit changes</code>. </li>
+<li>Navigate to <code>yourusername.github.io</code> (<strong>remember</strong>, ensure you change 'yourusername' to your GitHub username). You should now see your udpated site. If your site still shows a <code>404</code> error, try clearing your browser's cache and trying again. Also, ensure your post files use the proper naming convention with the <code>YYYY-MM-DD</code> date prefix. </li>
+<li>To add new posts, navigate to the <code>_posts</code> folder and click the button labelled <code>Create new file</code>. Remember to use the proper naming convention with the <code>YYYY-MM-DD</code> date prefix.</li>
+</ol>
+<h3 id="going-further_1">Going Further</h3>
+<p>After following the instructions in the previous section, you now have a functioning website that runs entirely through GitHub. You can, however, further customize your site. Read through <a href="https://www.smashingmagazine.com/2014/08/build-blog-jekyll-github-pages/">Barry Clark's article on customizing your Jekyll site</a>. Incorporate design and functionality in your website from the resources on this page.</p>
+<h2 id="option-3-reclaim-hosting">Option 3: Reclaim Hosting</h2>
+<p>In the course space for cuLearn, I gave you a code to use to pay for a domain of your own. I have already purchased domain space for you from an academic web hosting service, <a href="https://reclaimhosting.com/shared-hosting/">Reclaim Hosting</a>. This space will last for one year, at which point you have the option of paying to renew it or letting it die. Previous students in this course have used their domain to help with their applications for jobs and graduate school.</p>
+<p>Because you have complete access and control over your domain, you can install other services as well. For instance, maybe you use Dropbox or Google Drive to sync your files across machines, or to function as a backup? You can install a service called 'OwnCloud' on your own domain that does the same thing, so that you have control over all your own materials.</p>
+<ol>
+<li>You will be asked for the name you want to have for your space. You need to be thinking of branding here. Think of a professional name that conveys something of your personality and approach to history. I for instance own the domain, 'Electric Archaeology', which I chose to convey that I'm interested in digital archaeology, but also, that I move fast and cover a lot of breaking develops in the field (Hey. It's my blog. I like the name). Please choose wisely. Some combination of your first and last name is often the best idea, since your own name is your own best calling card ('shawn graham' is such a generic name, that it was already long gone by the time I started doing digital history). Type in a name, select a top-level domain (ie. .com, .ca, .org, etc. I'll suggest .ca), and click on the 'check availability' button.</li>
+<li>If the pop-up says 'Congratulations, domain available!' then click on the continue button. (You may be offered free id protection, where Reclaim Hosting will hide your details is someone does a 'who-is' search on the domain name. If it does, then tick off the check box to confirm that you want this, and hit continue).</li>
+<li>On the next screen, (the billing screen) fill in all of the information. The balance should be $0. At the bottom left, it will also say that you’ve used a one-time promotional code. Hit the green button at the bottom to complete the purchase (which is not costing you anything).</li>
+</ol>
+<p>Congratulations! You now own your very own domain. <strong>It might take a bit of time for your domain to appear live on the web</strong>. During this time, you can log into your cPanel and install Wordpress and so on - see the next section below.</p>
+<p>Giving you a space of your own is my political act of protest against the centralization of learning inside learning management systems. Learning isn't 'managed', it's cultivated. Unlike cuLearn, I cannot monitor your activity inside your own domain. I can only see what you choose to make public. Unlike Facebook or Snapchat or Instagram, I am not trying to monetize your personality on the web.</p>
+<h3 id="wordpress-for-your-blog">Wordpress for your blog</h3>
+<p>Wordpress is probably the best option for a platform for writing the narrative bits of your digital history work.</p>
+<ol>
+<li>Click the 'Client area'. It will tell you that you have one active account (with Reclaim Hosting) and one active domain. When the time comes to renew your account or to close it down, this is where you do it. Note also that there is a link to 'Support', which will put you in touch with Reclaim Hosting's help desk. They are extremely fast and good at providing support; always treat any help request you make with them <strong>as if</strong> you were writing a formal email to me. Be polite and considerate, and thank them. The owners of the business often are the ones who provide the help! Without them, we couldn't do this class.</li>
+<li>Go to 'cPanel' - this is where you can install all sorts of different kinds of software on your account. Search for and select 'Web applications'</li>
+<li>Click on Wordpress. Then click on 'Install this application'.</li>
+<li>The next screen presents you with a number of options. Leave these set to their defaults. For 'location', leave this blank (you want to leave the directory option blank). That tells the installatron to put Wordpress at <code>your-domain.ca</code>. (When/if you install other pieces of software, you'd change this variable so that the new software doesn't overwrite this software!)</li>
+<li>Further down the page, under 'Settings', you need to change 'Administrator username', 'Administrator password', 'Website title', 'Website tagline'. <strong>This is the username and password to actually do things with your blog, and the name of your blog itself</strong>. Leave everything else alone.</li>
+<li>Click Install!</li>
+<li>Once it's done, the installer will remind you of the URL to your site, and the URL to the blog's dashboard (where you go to write posts, make changes to the look and feel of the site). Open these in a new browser window, and bookmark them. To login to your blog, remember to go to the dashboard URL (eg. <code>http://your-domain.ca/wp-admin</code>), enter your blog administrator username and password.</li>
+<li>You can close the cPanel webpage now (log out first).</li>
+</ol>
+<h4 id="customising-your-blog">Customising your blog</h4>
+<p>If you look at the dashboard for your blog, you'll see a lot of options down the left side of your screen. If you want to change the look of your blog, click on 'Appearance' then click on 'Themes'. A number of themes are pre-installed. You can click on the different themes and select 'Preview' to see how your blog might look. When you find one you like, select 'activate'. Go to the other browser window where you have <code>your-domain.ca</code> open. Reload the page to see the changes take effect!</p>
+<p>If you're the sort of person who likes to sketch ideas out on paper, Lauren Heywood of the <a href="http://dmll.org.uk/">Disruptive Media Learning Lab</a> has designed a paper-based exercise to prototype ideas. Why not give it a try? <a href="http://coventry.domains/support/wp-content/uploads/staff-guide-to-plan-your-wordpress-site-with-paper.pdf">Print this PDF of Wordpress design (downloads in a new window)</a> and follow the instructions.</p>
+<p>To write new content, know that there is a difference between a <strong>Post</strong> and a <strong>Page</strong>. A <strong>page</strong> is a new link on your site, while <strong>posts</strong> appear in chronological order on a page, with the most recent on top. Most themes show the most recent post by default, and pages appear in any menus on the site. <strong>When you are logged into your blog</strong> any post or page will have an 'Edit' button at the bottom that you can click. You'll then be presented with an editing box with the standard toolbar across the top (allowing you to change the font, insert images, change the alignment of the text and so on). At the top right will be a button to save or publish/update the post/page.</p>
+<p>Your blog will have a default 'about' page. Change that default text now to reflect something about who you are and why you are taking this course.</p>
+<p>To create new pages, you click on the 'Pages' link in your dashboard and select 'Add new'.</p>
+<p>To create new posts, you click on the 'Posts' link in  your dashboard and select 'Add new'.</p>
+<p>Explore the options for your blog; customize and make the space your own.</p>
+<p><strong>Password protected posts:</strong> If for any reason you feel that you don't want a post to be viewable by the web-at-large, you can hide it behind a password. At the top right where the 'Publish' button hides, click on 'Visibility' and select 'Password protected'. Remember though: you'll have to share the password with me for grading purposes.</p>
+<p><img alt="Visibility Options in Wordpress" src="https://codex.wordpress.org/images/7/70/visibility.jpg" /></p>
+<p>For more information about controlling visibility of your posts and so on, <a href="https://codex.wordpress.org/Content_Visibility">visit the Wordpress content visibility help page</a>.</p>
+<h3 id="collecting-your-own-annotations-on-your-blog">Collecting your own annotations on your blog</h3>
+<p>Hypothes.is has an <strong>API</strong> that allows you to do some neat things. 'API' stands for 'Application Programming Interface', which is just a fancy way of saying, 'you can write a program that interacts with this web service'. <a href="http://pushpullfork.com/">Kris Shaffer</a>, a professor at the University of Mary Washington, has written a <strong>plugin</strong> for Wordpress that allows you to automatically collect annotations you make across the web and to display them all on a single page on your blog. So, we'll go get that plugin and install it on your blog:</p>
+<p>Open <a href="https://github.com/kshaffer/hypothesis_aggregator">Kris Shaffer's Hypothes.is aggregator</a> in a new browser window.</p>
+<ol>
+<li>Click 'Clone or Download' (the green button at the top right).</li>
+<li>In the pop-up, click 'Download ZIP'</li>
+<li>Go over to the dashboard for your blog (if you closed this, you can get there again by opening a new browser window and going to <code>your-domain.ca/wp-admin</code>).</li>
+<li>In the dashboard, click on Plugins &gt;&gt; Add New.</li>
+<li>Click 'Upload Plugin'. It will open a window asking you to find and select the zip file you downloaded. This is probably in your 'Downloads' folder. Select and click Ok.</li>
+<li>Once it’s uploaded and installed, click 'Activate'.</li>
+<li>In the dashboard, click on 'pages' then add a new page. Call it 'Web Notes' or 'Annotations' or something similar.</li>
+<li>Shaffer has created a 'shortcode' that tells Wordpress to go over to Hypothes.is and grab the latest information. So, in the text of your new page (in the editor window, make sure to click the 'text' button or else this won't work), enter the shortcode that will grab all of your public annotations: <code>[hypothesis user = 'kris.shaffer']</code> where you remove the <code>kris.shaffer</code> and put in your own Hypothes.is username.</li>
+<li>Hit the 'Publish' button. Wordpress will report that the page has been published and give you a link to it; click on this link to see your new always-updating list of annotations! Of course, if you haven't made any public annotations yet, nothing will display. Go annotate something, then come back and reload the page, but remember to annotate using <a href="https://hypothes.is/groups/886ipqWe/hist3814o">our HIST3814o group</a>.</li>
+</ol>
 <hr />
-<h2 id="exercise-1-layout">Exercise 1: Layout</h2>
-<p>'Layout' can mean different things in different contexts. A general overview on issues in layout is covered by <a href="https://www.lynda.com/Graphic-Design-tutorials/What-makes-design-great/419419/534011-4.html">'What makes a design great', Lynda.com</a> and <a href="https://www.lynda.com/Graphic-Design-tutorials/Exploring-principles-layout-composition/419419/534012-4.html">'Exploring principles of layout and composition'</a>. The <a href="http://www.slideshare.net/kernlearningsolutions/what-is-an-effective-layout-3435438">Slideshare on effective layouts</a> gives you a sense of things to watch out for as well.</p>
+<h2 id="layout">Layout</h2>
+<p>'Layout' can mean different things in different contexts. A general overview on issues in layout is covered by <a href="https://www.lynda.com/InDesign-tutorials/Introduction-Graphic-Design/633854-2.html">'What makes a design great', Lynda.com (requires sign-up for free trial)</a> and <a href="https://www.lynda.com/Graphic-Design-tutorials/Exploring-principles-layout-composition/419419/534012-4.html">'Exploring principles of layout and composition' (requires sign-up for free trial)</a>. The <a href="http://www.slideshare.net/kernlearningsolutions/what-is-an-effective-layout-3435438">Slideshare on effective layouts</a> gives you a sense of things to watch out for as well.</p>
 <p>For academic posters in particular, consider <a href="http://www.apa.org/gradpsych/2011/01/poster.aspx">these poster design suggestions from the APA</a>.</p>
 <p>In essence, good layout makes your argument legible, intuitive, and reinforces the rhetorical points you are trying to make. You should take into account 'principles of universal design' &mdash; consider design issues with <a href="http://accessproject.colostate.edu/udl/modules/powerpoint/mod_ppt.php">PowerPoint</a> and <a href="http://accessproject.colostate.edu/udl/modules/html/mod_html.php">websites</a> (although some of the technical solutions proposed in those two documents are a bit out of date, the general principles hold!).</p>
-<p>In this exercise, you will design a new poster <strong>or</strong> modify an existing poster. You can use either Inkscape or PowerPoint.</p>
+<p>If you decided to communicate findings via a poster, following are some hints/tips for designing a poster or modifying an existing poster.</p>
 <h3 id="inkscape">Inkscape</h3>
 <p>View the <a href="../../supporting materials/inkscape/">Inkscape exercise in our supporting materials for a gentle introduction to the software</a>.</p>
 <ol>
 <li>Download one of the scientific poster templates from <a href="https://github.com/ugosan/svg-conference-poster">Ugo Sangiorgi</a> (These are developed from <a href="http://blog.felixbreuer.net/2010/10/24/poster.html">Felix Breuer's blog post</a>; note his discussion on design). </li>
 <li>Open it in Inkscape. </li>
 <li>Make notes in your open notebook <strong>from the point of view of layout:</strong> what elements of the design work? What aren't working? How would you repurpose this poster to fit the requirements of the assessment exercise (<a href="https://github.com/hist3907b-winter2015/syllabus/blob/master/exercise_assessment_guideline.md">remember, the details in the syllabus</a>)?</li>
-<li>Visit <a href="https://inkscape.org/en/doc/tutorials/basic/tutorial-basic.en.html">Inkscape's website for help with the basics of Inkscape</a>. </li>
+<li>Visit <a href="https://inkscape.org/en/doc/tutorials/basic/tutorial-basic.html">Inkscape's website for help with the basics of Inkscape</a>. </li>
 <li>Modify the poster, and upload the SVG, PDF, or PNG version to your repository.</li>
 </ol>
 <h3 id="powerpoint">PowerPoint</h3>
@@ -322,19 +478,19 @@
 <li>Grab a template from <a href="http://colinpurrington.com/tips/poster-design#templates">from Colin Purrington's website</a>, and use it to prototype a poster that works. </li>
 <li>Upload the poster as a PDF to your repository.</li>
 </ol>
-<p>If you want to explore layout in the context of webpage creation, I would point you to the the roster of lessons at <a href="http://www.codecademy.com/en/tracks/web">Codeacademy</a>. Same instructions: find an existing site that you will consider from the point of view of what works, what doesn't, and use that reflection to guide the construction of your own.</p>
+<p>If you want to explore layout in the context of webpage creation, I would point you to the the roster of lessons at <a href="https://www.codecademy.com/catalog/subject/web-development">Codeacademy</a>. Same instructions: find an existing site that you will consider from the point of view of what works, what doesn't, and use that reflection to guide the construction of your own.</p>
 <hr />
-<h2 id="exercise-2-typography">Exercise 2: Typography</h2>
+<h2 id="typography">Typography</h2>
 <p>Typography plays an important role in visual communication. It can do everything from reduce eyestrain (do a search for 'easiest fonts to read on screen') to communicate power and authority. Is it any wonder that strong bold capitals come to be known as 'Roman'? But first: <a href="http://www.comicsanscriminal.com/">are you a comic sans criminal?</a></p>
 <p><strong>NB</strong> Serif fonts are <strong>sometimes</strong> not as accessible as sans-serif fonts. Older screens and monitors can have a difficult time rendering serif fonts. Sans-serif fonts can be more readable across different screens. <strong>However</strong>, this does not mean you should throw away serif fonts &mdash; many serif fonts can be quite accessible and add to your design goals if used properly. For more information on accessible fonts, check out <a href="https://webaim.org/techniques/fonts/">WebAIM's article on the topic</a>.</p>
-<p>In this exercise,</p>
+<p>If you decided to communicate findings via a poster, website, or anything involving design, below are some hints/tips for the proper use of typography: </p>
 <ul>
 <li>I want you to read and understand the section on <a href="https://owl.english.purdue.edu/owl/resource/705/01/">font choices from the Owl at Purdue</a>.</li>
 <li>Then, play some rounds of <a href="http://www.typeconnection.com/index.php">Typeconnection</a>. Pay attention to why &mdash; or why not &mdash; various pairings work.</li>
-<li>Then, I want to consider the document you will be preparing for me that accounts for your learning in this course &mdash; the document where you choose your best exercises from the modules and explain how your approach to history, data, the digital, etc, has changed over this course. What typographic pair would work best for you?</li>
-<li>Finally, you'll make a webpage that uses those fonts and explains why they work.</li>
+<li>Then, I want you to consider what typographic pair would work best for the Capstone Exercise? </li>
+<li>Finally, the following tutorial shows how you can make a webpage that uses your paired fonts and explains why they work.</li>
 </ul>
-<p>The first part of this exercise then is to find a pair of fonts and to understand why they work best for you. </p>
+<p>The first part of this section then is to find a pair of fonts and to understand why they work best for you. </p>
 <ol>
 <li>
 <p>Read the materials above, and once you're done with the <a href="http://www.typeconnection.com/index.php">Typeconnection site</a>, go to <a href="https://www.google.com/fonts">Google Fonts</a> and search for a pair that are <strong>suitable for your purpose</strong>. </p>
@@ -349,7 +505,7 @@
 <p>Do you see the embed code that Google provides, and the code to integrate the font into your CSS (stylesheet)? Leave this window open &mdash; we're going to use it in a moment.</p>
 </li>
 <li>
-<p>Make a new repository for this exercise. </p>
+<p>Make a new repository on GitHub. </p>
 </li>
 <li>
 <p>In your repository, click the button beside 'branch'. </p>
@@ -394,16 +550,16 @@
 <br></p>
 </li>
 </ol>
-<p><strong>Hint</strong> You could use this as the basics of your submission for assessment, for your exercises. Build a webpage, link to your evidence, and embed your images. For basic HTML, <a href="http://www.w3schools.com/html/default.asp">W3schools has a really good guide to keep around</a>.</p>
-<h3 id="going-further-with-github-pages">Going further with GitHub pages</h3>
-<p>Now that you have learned the basics of creating a simple website using GitHub, you have the ability to go further. Using the DH Box, you can build a simple website through GitHub pages using the MkDocs static site generator. Navigate to the <a href="../../supporting materials/gh-pages/">static site generator exercise using GitHub pages in the supporting materials</a>.</p>
+<p><strong>Hint:</strong> For basic HTML, <a href="http://www.w3schools.com/html/default.asp">W3schools has a really good guide to keep around</a>.</p>
+<h3 id="going-further-with-github-pages">Going further with GitHub Pages</h3>
+<p>Now that you have learned the basics of creating a simple website using GitHub, you have the ability to go further. Using the DH Box, you can build a simple website through GitHub Pages using the MkDocs static site generator. Navigate to the <a href="../../supporting materials/gh-pages/">static site generator exercise using GitHub Pages in the supporting materials</a>.</p>
 <hr />
-<h2 id="exercise-3-colour">Exercise 3: Colour</h2>
+<h2 id="colour">Colour</h2>
 <p>There's a lot of bumpf out there on the 'pyschology of colour'. Google it to see what I mean (<a href="http://www.youthedesigner.com/graphic-design-resources/infographic-graphic-design-resources/infographic-a-color-guide-for-designers/">Youth Designer has a good example</a>). A lot of what you see here isn't so much psychology as it is associations (and indeed, western associations, at that). Associations are important of course; you don't want to undermine your message by making some unfortunate connections.</p>
-<p>In this exercise, I want you to take the webpage you developed in the previous exercise, and make two versions of it: </p>
+<p>If you decided to communicate findings via a website, below are some hints/tips for the proper use of colour: </p>
 <blockquote>
 <ol>
-<li>One where the colours <strong>support</strong> the broader message of the page (a prototype for your exercises assessment piece, remember?).</li>
+<li>One where the colours <strong>support</strong> the broader message of the page.</li>
 <li>And the other where the colours <strong>undermine</strong> that broader message. </li>
 </ol>
 </blockquote>
@@ -415,16 +571,16 @@
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ubiGLkh0aoY?rel=0" title="Web design using colours" frameborder="0" gesture="media" allowfullscreen></iframe>
 <br></p>
 <h3 id="resources">Resources</h3>
-<p>Below is a graphic and a video tutorial from Lynda.com to help with the theoretical side of things:</p>
+<p>Below is a graphic and a video tutorial from Lynda.com (requires sign-up for free trial) to help with the theoretical side of things:</p>
 <p><img alt="Image showing color theory graphic" src="http://paper-leaf.com/wp-content/uploads/2010/01/ct_1920.jpg" /></p>
-<p>Visit the tutorial <a href="https://www.lynda.com/Graphic-Design-tutorials/Understanding-rules-color/419419/534020-4.html">Understanding the rules of color, Lynda.com</a></p>
-<p>To learn how to style your webpage appropriately, you can <a href="http://www.codecademy.com/courses/web-beginner-en-TlhFi/0/1?curriculum_id=50579fb998b470000202dc8b">follow this tutorial on CSS from codeacademy.com</a>.</p>
+<p>Visit the tutorial <a href="https://www.lynda.com/Graphic-Design-tutorials/Understanding-rules-color/419419/534020-4.html">Understanding the rules of color, Lynda.com (requires sign-up for free trial)</a></p>
+<p>To learn how to style your webpage appropriately, you can <a href="https://www.codecademy.com/learn/learn-css">follow this tutorial on CSS from codeacademy.com</a>.</p>
 <p>Below is a graphic that presents how colours are perceived in different cultures:</p>
 <p><img alt="Image showing colours in other cultures" src="http://infobeautiful3.s3.amazonaws.com/2013/01/1276_colours_in_culture.png" /></p>
 <hr />
-<h2 id="exercise-4-creating-an-online-exhibit-with-omeka">Exercise 4: Creating an online exhibit with Omeka</h2>
+<h2 id="creating-an-online-exhibit-with-omeka">Creating an online exhibit with Omeka</h2>
 <p><a href="https://omeka.org/">Omeka</a> is an open source Content Management System (CMS) for sharing digital collections and creating media-rich online exhibits. A CMS is a web program that manages web content including graphics, text, videos, and more. A CMS allows users to upload their content via a Graphical User Interface (GUI) and organizes it into appropriate folder structures. Traditional websites are programmed from the ground up &mdash; everything from structure, to styling, to creating folders and specifiying where multi-media content is located. </p>
-<p>The main advantage of using a CMS is that it requires little to no actual, background-level programming. That being said, anyone can edit a CMS's source code files, add their own, or modify them to fit their needs. Most CMSs are built with <a href="https://en.wikipedia.org/wiki/PHP">PHP</a>, a web scripting language used to dynamically create content. However, most CMSs are also accompanied by massive native and third party plugin libraries that allow users to modify their website without touching any source code. Examples of CMSs include Wordpress, Drupal, Grav, Known, Joomla, and many more. </p>
+<p>The main advantage of using a CMS is that it requires little to no actual background-level programming. That being said, anyone can edit a CMS's source code files, add their own, or modify them to fit their needs. Most CMSs are built with <a href="https://en.wikipedia.org/wiki/PHP">PHP</a>, a web scripting language used to dynamically create content. However, most CMSs are also accompanied by massive native and third party plugin libraries that allow users to modify their website without touching any source code. Examples of CMSs include Wordpress, Drupal, Grav, Known, Joomla, and many more. </p>
 <p>Unlike many popular CMSs, Omeka is not a blogging platform. Omeka is used to create online exhibits. Today we are going to create a simple online exhibit. </p>
 <p>Our overall steps are as follows:</p>
 <ol>
@@ -440,12 +596,12 @@
 </li>
 <li>
 <p>In the client area, select the cPanel tab.</p>
-<p><img alt="Image showing cPanel" src="../../images/fig1.png" /></p>
+<p><img alt="Image showing cPanel" src="/images/fig1.png" /></p>
 </li>
 <li>
 <p>Under the Domains section, select Subdomains. Typically, a subdomain divides your overall website into distinct portions. For instance, you could have your landing page at <code>mysite.com</code>, your blog at <code>blog.mysite.com</code>, and your class work at <code>hist3814.mysite.com</code>. That way each subdomain could have different styles and serve different purposes, but still be connected to your overall domain. You can add as many subdomains to your site as you'd like. </p>
 <p>Subdomains are essentially just an easier way of organizing your files and showing distinct differences from your main domain. You could technically also do <code>mysite.com/blog</code> or <code>mysite.com/hist3814</code>. In that case, however, it seems expected they would all be styled similarly to <code>mysite.com</code>. Furthermore, it might cause file structure issues to have, for example, Wordpress running your <code>mysite.com</code> and Omeka running <code>mysite.com/Omeka</code>. It's best to stick with your free subdomains.</p>
-<p><img alt="Image showing Subdomains section of cPanel" src="../../images/fig2.png" /></p>
+<p><img alt="Image showing Subdomains section of cPanel" src="/images/fig2.png" /></p>
 </li>
 <li>
 <p>Enter the name of your online exhibit in the Subdomain field. You could simply put <code>omeka</code>, <code>omeka-test</code>, etc. or get more descriptive and say <code>gatineau-fire-maps</code>. Choose a title relevant to your Omeka site's purpose.</p>
@@ -455,11 +611,11 @@
 </li>
 <li>
 <p>The Document Root will be automatically created (an advantage of adding a subdomain!). I would not recommend changing this, but if you want to further organize your folder structure, you are able to change the location.</p>
-<p><img alt="Image showing how to create a subdomain in cPanel" src="../../images/fig3.png" /></p>
+<p><img alt="Image showing how to create a subdomain in cPanel" src="/images/fig3.png" /></p>
 </li>
 <li>
 <p>Click the Create button. It will take a moment, but your new subdomain will be approved. </p>
-<p><img alt="Image showing successful subdomain creation in cPanel" src="../../images/fig4.png" /></p>
+<p><img alt="Image showing successful subdomain creation in cPanel" src="/images/fig4.png" /></p>
 </li>
 </ol>
 <p><strong>NB Since the subdomain has nothing in it, if you navigate to it now, you will see 'Index of/' showing the file structure. This is normal.</strong></p>
@@ -470,18 +626,18 @@
 </li>
 <li>
 <p>Under the Applications section, select Omeka. </p>
-<p><img alt="Image showing web applications available to install in cPanel" src="../../images/fig5.png" /></p>
+<p><img alt="Image showing web applications available to install in cPanel" src="/images/fig5.png" /></p>
 </li>
 <li>
 <p>On the right side, click the '+ install this application' button. </p>
-<p><img alt="Image showing the Omeka application in cPanel" src="../../images/fig6.png" /></p>
+<p><img alt="Image showing the Omeka application in cPanel" src="/images/fig6.png" /></p>
 </li>
 <li>
 <p>Under the Location section, select the subdomain you created in the previous instructions. Do not choose your main <code>mysite.com</code> domain. Choose your <code>omeka.mysite.com</code> domain or your variant of it. You can choose the <code>https</code> or <code>http</code> version. Note, however, that <code>https</code> is more secure.</p>
 </li>
 <li>
 <p>Delete <code>cms</code> under Directory (Optional). We want Omeka installed to the root of our subdomain, not in a folder called <code>cms</code>. If you were installing Omeka to your main site, then you'd want a subdirectory called <code>cms</code>.</p>
-<p><img alt="Image showing how to set up Omeka domain" src="../../images/fig7.png" /></p>
+<p><img alt="Image showing how to set up Omeka domain" src="/images/fig7.png" /></p>
 </li>
 <li>
 <p>Under the Version section, leave the settings as they are. Make sure 'I accept the license agreement' is selected. It's also good practice to allow it to update as needed and to allow backups.</p>
@@ -494,44 +650,44 @@
 </li>
 <li>
 <p>Change the Website Title to a fitting and appropriate title.</p>
-<p><img alt="Image showing Omeka login and admin information" src="../../images/fig8.png" /></p>
+<p><img alt="Image showing Omeka login and admin information" src="/images/fig8.png" /></p>
 </li>
 <li>
 <p>Under Advanced, leave the default settings.</p>
 </li>
 <li>
 <p>Click the Install button. You will be redirected to 'My Applications'. The installation may take a minute to process.</p>
-<p><img alt="Image showing where to access Omeka appication in cPanel" src="../../images/fig9.png" /></p>
+<p><img alt="Image showing where to access Omeka appication in cPanel" src="/images/fig9.png" /></p>
 </li>
 <li>
 <p>Select the middle link of your new Omeka application that says <code>omeka.mysite.com/admin</code> or your variant of the subdomain.</p>
-<p><img alt="Image showing how to access Omeka admin in cPanel" src="../../images/fig10.png" /></p>
+<p><img alt="Image showing how to access Omeka admin in cPanel" src="/images/fig10.png" /></p>
 </li>
 <li>
 <p>Login using your Administrator Username and your Administrator Password.</p>
-<p><img alt="Image showing how to log in to Omeka admin" src="../../images/fig11.png" /></p>
+<p><img alt="Image showing how to log in to Omeka admin" src="/images/fig11.png" /></p>
 </li>
 <li>
 <p>At the top of the admin page, click on Settings.</p>
 </li>
 <li>
 <p>Scroll down to the bottom. In the ImageMagick Directory Path field, type <code>/usr/bin</code>. Reclaim Hosting comes with ImageMagick preinstalled. ImageMagick resizes and generates thumbnails of your images.</p>
-<p><img alt="Image showing ImageMagick file path" src="../../images/fig12.png" /></p>
+<p><img alt="Image showing ImageMagick file path" src="/images/fig12.png" /></p>
 </li>
 <li>
 <p>Click Save Changes.</p>
 </li>
 </ol>
 <h3 id="uploading-content-to-omeka">Uploading content to Omeka</h3>
-<p>For the purposes of this exercise, we will use the <a href="http://www.gvhs.ca/research/maps/maps-fire-insurance.html">Gatineau Valley Historical Society fire insurance maps</a> used in <a href="#exercise-8-simple-mapping-and-georectifying">Module 4, Exercise 8</a>. You are also allowed to use any historical sources to create an exhibit. Maybe you want to choose historical newspapers that have been digitized from the Library and Archives or the war diary from <a href="../../module-2/exercises/#exercise-2-wget">Module 2, Exercise 2</a>. Just make sure to note where you got your sources and, preferably, that you can download them as images.</p>
+<p>For the purposes of this option, we will use the <a href="http://www.gvhs.ca/research/maps/maps-fire-insurance.html">Gatineau Valley Historical Society fire insurance maps</a> used in <a href="#exercise-8-simple-mapping-and-georectifying">Module 4, Exercise 8</a>. You are also allowed to use any historical sources to create an exhibit. Maybe you want to choose historical newspapers that have been digitized from the Library and Archives or the war diary from <a href="../module-2/Exercises/#exercise-2-wget">Module 2, Exercise 2</a>. Just make sure to note where you got your sources and, preferably, that you can download them as images.</p>
 <ol>
 <li>
 <p>On the left side, select Collections.</p>
-<p><img alt="Image showing Collections panel in Omeka" src="../../images/fig13.png" /></p>
+<p><img alt="Image showing Collections panel in Omeka" src="/images/fig13.png" /></p>
 </li>
 <li>
 <p>Click Add a Collection. </p>
-<p><img alt="Image showing how to Add Collection in Omeka" src="../../images/fig14.png" /></p>
+<p><img alt="Image showing how to Add Collection in Omeka" src="/images/fig14.png" /></p>
 </li>
 <li>
 <p>My new collection will be fire insurance maps. Under Title, add Maps of the Gatineau Valley Fire Insurance Plans. </p>
@@ -541,14 +697,14 @@
 </li>
 <li>
 <p>Under Add Collection, click Public to make your collection publicly viewable. Click Add Collection.</p>
-<p><img alt="Image showing how to fill out collections details in Omeka" src="../../images/fig15.png" /></p>
+<p><img alt="Image showing how to fill out collections details in Omeka" src="/images/fig15.png" /></p>
 </li>
 <li>
 <p>On the left side, select Items.</p>
 </li>
 <li>
 <p>Click Add an item.</p>
-<p><img alt="Image showing how to add an Item in Omeka" src="../../images/fig16.png" /></p>
+<p><img alt="Image showing how to add an Item in Omeka" src="/images/fig16.png" /></p>
 </li>
 <li>
 <p>Navigate to the <a href="http://www.gvhs.ca/research/maps/maps-fire-insurance.html">Gatineau Valley Historical Society Fire insurance maps</a> or your own source of historical files.</p>
@@ -564,22 +720,22 @@
 </li>
 <li>
 <p>Select the Files tab.</p>
-<p><img alt="Image showing how to upload file to an Item in Omeka" src="../../images/fig18.png" /></p>
+<p><img alt="Image showing how to upload file to an Item in Omeka" src="/images/fig18.png" /></p>
 </li>
 <li>
 <p>Click Browse and choose your image file (note you cannot upload a single image larger than 128MB).</p>
 </li>
 <li>
 <p>On the right side under Collection, select your Collection and make sure it is set to Public.</p>
-<p><img alt="Image showing how to add the Item in Omeka" src="../../images/fig17.png" /></p>
+<p><img alt="Image showing how to add the Item in Omeka" src="/images/fig17.png" /></p>
 </li>
 <li>
 <p>Click Add Item. It may take a few minutes to upload.</p>
-<p><img alt="Image showing successful upload of Item in Omeka" src="../../images/fig19.png" /></p>
+<p><img alt="Image showing successful upload of Item in Omeka" src="/images/fig19.png" /></p>
 </li>
 <li>
 <p>On the right side, click the middle, blue View Public Page button.</p>
-<p><img alt="Image showing Item page in Omeka" src="../../images/fig21.png" /></p>
+<p><img alt="Image showing Item page in Omeka" src="/images/fig21.png" /></p>
 </li>
 <li>
 <p>Go ahead and upload several exhibit items. If you can find other items related to your collection elsewhere, that'd be great too. </p>
@@ -594,12 +750,12 @@
 <p>At the top of the admin page, click Appearance. The default theme is 'Thanks, Roy'. You can choose any theme you want. They are all different and each has different advantages and disadvantages for editing.</p>
 </li>
 <li>
-<p>For this exercise, we will use the 'Thanks, Roy' theme. </p>
+<p>For this option, we will use the 'Thanks, Roy' theme. </p>
 <p><strong>NB If you choose a different theme to modify, you may see different options. Proceed at your own intent.</strong></p>
 </li>
 <li>
 <p>Click the blue Configure Theme button. Each theme configuration allows you to change basic style and content settings.</p>
-<p><img alt="Image showing how to configure default theme in Omeka" src="../../images/fig22.png" /></p>
+<p><img alt="Image showing how to configure default theme in Omeka" src="/images/fig22.png" /></p>
 </li>
 <li>
 <p>With the configuration page open in one tab, open your <code>omeka.mysite.com</code> to view the public page. Whenever you make an update, simply refresh the public page to view it.</p>
@@ -615,7 +771,7 @@
 </li>
 <li>
 <p>Navigate back to the Omeka configuration page and replace the Text and Links fields hex codes of <code>#444444</code> with <code>#1b1b1b</code>.</p>
-<p><img alt="Image showing how to replace colour codes in default theme configuration in Omeka" src="../../images/fig23.png" /></p>
+<p><img alt="Image showing how to replace colour codes in default theme configuration in Omeka" src="/images/fig23.png" /></p>
 </li>
 <li>
 <p>On the right side, click Save Changes.</p>
@@ -635,7 +791,7 @@
 <li>
 <p>Select Inspect Element. The browser inspection tool allows you to view the code behind a website. </p>
 <p><strong>NB Chrome and Firefox have great inspector tools. Not all browsers have these tools, however, notably Safari.</strong></p>
-<p><img alt="Image showing how to access inspector tool in Firefox browser" src="../../images/fig24.png" /></p>
+<p><img alt="Image showing how to access inspector tool in Firefox browser" src="/images/fig24.png" /></p>
 </li>
 <li>
 <p>The font is not that easy to read either. We will change it, but first let's find the current font. Scroll down on the right side under the Rules tab until you see the body CSS. This rule shows the font is called PT serif, written like the following:</p>
@@ -643,7 +799,7 @@
     font-family: "PT Serif", Times, serif;
 }
 </code></pre>
-<p><img alt="Image showing inspector tool to access element style" src="../../images/fig25.png" /></p>
+<p><img alt="Image showing inspector tool to access element style" src="/images/fig25.png" /></p>
 </li>
 <li>
 <p>Go to <a href="https://fonts.google.com/">Google Fonts</a> to choose a new, more readable font.</p>
@@ -662,11 +818,11 @@
 </li>
 <li>
 <p>Copy the text that says <code>font-family: 'Roboto', sans-serif;</code>. We will add this rule to our CSS file.</p>
-<p><img alt="Image showing Roboto font style rule in Google Fonts" src="../../images/fig26.png" /></p>
+<p><img alt="Image showing Roboto font style rule in Google Fonts" src="/images/fig26.png" /></p>
 </li>
 <li>
 <p>Navigate to your cPanel home page and select File Manager at the top of the page.</p>
-<p><img alt="Image showing where to access File Manager in cPanel" src="../../images/fig27.png" /></p>
+<p><img alt="Image showing where to access File Manager in cPanel" src="/images/fig27.png" /></p>
 </li>
 <li>
 <p>On the left side click on the folder for your Omeka site. The folder should have the same name as your domain. For instance, if your site is called <code>omeka.mysite.com</code>, the folder will be called <code>omeka.mysite.com</code> unless you changed the name earlier.</p>
@@ -676,15 +832,15 @@
 </li>
 <li>
 <p>Right click <code>style.css</code> and select Edit. Reclaim Hosting has some great editing tools within the cPanel so you don't have to make updates within your desktop text editor and then reupload the files.</p>
-<p><img alt="Image showing how to edit style css file" src="../../images/fig28.png" /></p>
+<p><img alt="Image showing how to edit style css file" src="/images/fig28.png" /></p>
 </li>
 <li>
 <p>Search <code>font-family</code> by hitting ctrl-f (Windows) or cmnd-f (Mac). We <strong>ONLY</strong> want to change the rules that say <code>font-family: "PT Serif", Times, serif;</code>.</p>
-<p><img alt="Image showing default font rule in style css file" src="../../images/fig29.png" /></p>
+<p><img alt="Image showing default font rule in style css file" src="/images/fig29.png" /></p>
 </li>
 <li>
 <p>Use the search to replace each instance of <code>font-family: "PT Serif", Times, serif;</code> with <code>font-family: 'Roboto', sans-serif;</code>.</p>
-<p><img alt="Image showing updated Roboto font in style css file" src="../../images/fig30.png" /></p>
+<p><img alt="Image showing updated Roboto font in style css file" src="/images/fig30.png" /></p>
 </li>
 <li>
 <p>Click the blue Save Changes button at the top right of the editor.</p>
@@ -692,9 +848,9 @@
 <li>
 <p>Navigate to your Omeka site and refresh the page. Notice the font changes from PT Serif to Roboto.</p>
 <p><strong>Before (default PT Serif font)</strong>
-<img alt="Image showing Omeka public page before font change" src="../../images/fig31.png" /></p>
+<img alt="Image showing Omeka public page before font change" src="/images/fig31.png" /></p>
 <p><strong>After (updated Roboto font)</strong>
-<img alt="Image showing Omeka public page after font change" src="../../images/fig32.png" /></p>
+<img alt="Image showing Omeka public page after font change" src="/images/fig32.png" /></p>
 </li>
 <li>
 <p>Use your browser's inspector to find out the style rules of any specific element on a web page. </p>
@@ -703,9 +859,9 @@
 <p>If you make any major mistakes and want to start from scratch, you can copy the original <code>style.css</code> <a href="https://raw.githubusercontent.com/omeka/theme-thanksroy/master/css/style.css">file from GitHub</a>, paste it into your file, and save the changes. This will revert it back to the original style.</p>
 </li>
 </ol>
-<p><strong>NB</strong> It is important to note that for our purposes, we edited the default <code>style.css</code> file directly. This was to introduce you to CSS and making changes to the source code. Typically, you'd want to add a new file called, for example, <code>custom.css</code> and specify the path to that file in our source code. That way you keep your own changes distinct from the default source code files. However, that would involve editing different PHP rules which is beyond the scope of this exercise. This is very important for making upgrades. If your theme ever upgrades, you will lose all your changes if you only edited the default <code>style.css</code>. This applies to any file type. Therefore, you may want to keep a copy of your changes somewhere handy, like on your desktop.</p>
+<p><strong>NB</strong> It is important to note that for our purposes, we edited the default <code>style.css</code> file directly. This was to introduce you to CSS and making changes to the source code. Typically, you'd want to add a new file called, for example, <code>custom.css</code> and specify the path to that file in our source code. That way you keep your own changes distinct from the default source code files. However, that would involve editing different PHP rules which is beyond the scope of this option. This is very important for making upgrades. If your theme ever upgrades, you will lose all your changes if you only edited the default <code>style.css</code>. This applies to any file type. Therefore, you may want to keep a copy of your changes somewhere handy, like on your desktop.</p>
 <hr />
-<h2 id="more">More</h2>
+<h2 id="more-resources">More Resources</h2>
 <p>Below are more resources, tutorials, and things to explore.</p>
 <h3 id="accessibility-and-design">Accessibility and Design</h3>
 <p>While most of this applies to websites, think also about how the general principles apply to other ways and means of telling our data stories.</p>
@@ -722,10 +878,9 @@
 <h4 id="infographics">Infographics</h4>
 <ul>
 <li><a href="https://eagereyes.org/blog/2010/the-difference-between-infographics-and-visualization">The Difference between Infographics and Visualizations</a></li>
-<li><a href="http://piktochart.com/infographics-design-series-design-your-infographic-like-a-pro/">Design hints for infographics</a></li>
+<li><a href="https://piktochart.com/blog/infographics-design-series-design-your-infographic-like-a-pro/">Design hints for infographics</a></li>
 <li><a href="http://piktochart.com/">Piktochart</a></li>
 <li><a href="https://infogr.am/">Infogr.am</a></li>
-<li><a href="https://infoactive.co">Infoactive.co</a> (They have a free option, but might not allow exports. You'd have to check.)</li>
 <li><a href="http://www.easel.ly/">Easel.ly</a></li>
 </ul>
 <h4 id="storytelling">Storytelling</h4>
@@ -745,7 +900,7 @@
 <h3 id="leaflet">Leaflet</h3>
 <p>Maps can be created through a variety of services (<a href="https://tilemill-project.github.io/tilemill/">TileMill</a>, <a href="https://carto.com/">Carto</a> and <a href="http://mapbox.com">mapbox</a> for instance). These can then be embedded in your webpages or documents. Often, that's enough. But sometimes, you'd like to take control, and keep all the data, all the map, under your own name, in your own webspace. Visit the gentle introduction to using <a href="../../supporting materials/leaflet.txt/">leaflet.js in our supporting materials</a> to make, style, and serve your maps. Also visit <a href="https://github.com/shawngraham/daea">a template on my GitHub repository</a> for mapping with leaflet, drawing all of your point data and ancillary information from a CSV file. Leaflet also has <a href="http://leaflet-extras.github.io/leaflet-providers/preview/index.html">a list of background maps you can use</a>.</p>
 <h4 id="leaflet-in-the-field-pembroke-soundscapes-project">Leaflet in the field: Pembroke Soundscapes Project</h4>
-<p>View the <a href="http://pembrokesoundscapes.ca/map">Pembroke Soundscapes Project</a> for an example of an academic historical project using Leaflet. This project uses an interactive map with sound clips to explore the industrial history of Pembroke, Ontario. </p>
+<p>Visit the <a href="http://pembrokesoundscapes.ca/map">Pembroke Soundscapes Project</a> for an example of an academic historical project using Leaflet. This project uses an interactive map with sound clips to explore the industrial history of Pembroke, Ontario. </p>
 <h3 id="designing-maps-with-processing-and-illustrator">Designing Maps with Processing and Illustrator</h3>
 <p>Nicolas Felton is a renowned designer. Watch <a href="http://www.skillshare.com/classes/design/Data-Visualization-Designing-Maps-with-Processing-and-Illustrator/1063775924">his 90 minute workshop on Skillshare</a>.</p>
 <p><strong>NB I do not use Processing or Illustrator, but Processing is free and Inkscape can do many of the things that Illustrator does.</strong></p>
@@ -756,7 +911,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../../conclusion/conclusion/" class="btn btn-neutral float-right" title="6. Final Thoughts"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../../conclusion/Conclusion/" class="btn btn-neutral float-right" title="6. Final Thoughts">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
         <a href="../Humanities Visualization/" class="btn btn-neutral" title="Communicating your Findings"><span class="icon icon-circle-arrow-left"></span> Previous</a>
@@ -767,44 +922,36 @@
   <hr/>
 
   <div role="contentinfo">
-    <p>
     <!-- Copyright etc -->
-    </p>
+    
   </div>
 
-The Crafting Digital History site is built with <a href="http://www.mkdocs.org">MkDocs</a> using a theme provided by <a href="https://readthedocs.org">Read the Docs</a>. All documents are available on <a href="https://github.com/shawngraham/dhworkbook/tree/gh-pages"> GitHub</a>. I thank Reclaim Hosting for their help, support, and example in getting this site up and running.
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
 </footer>
-
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/fitvids/1.1.0/jquery.fitvids.min.js"></script>
-<script>
-  $(document).ready(function(){
-    // Target your .container, .wrapper, .post, etc.
-    $(".section").fitVids();
-  });
-</script>
-    
+      
         </div>
       </div>
 
     </section>
-    
+
   </div>
 
   <div class="rst-versions" role="note" style="cursor: pointer">
     <span class="rst-current-version" data-toggle="rst-current-version">
       
-          <a href="https://github.com/shawngraham/dhworkbook/tree/gh-pages" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+          <a href="https://github.com/shawngraham/dhworkbook/tree/gh-pages/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
         <span><a href="../Humanities Visualization/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../../conclusion/conclusion/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../../conclusion/Conclusion/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
-    <script src="../../js/theme.js"></script>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
 
 </body>
 </html>

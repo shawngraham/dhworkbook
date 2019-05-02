@@ -13,7 +13,7 @@
 
   <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
-  <link rel="stylesheet" href="../../css/highlight.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
   <link href="../../css/extra.css" rel="stylesheet">
   
   <script>
@@ -23,9 +23,10 @@
     var mkdocs_page_url = "/module-4/Exercises/";
   </script>
   
-  <script src="../../js/jquery-2.1.1.min.js"></script>
-  <script src="../../js/modernizr-2.8.3.min.js"></script>
-  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
   
 </head>
 
@@ -37,32 +38,29 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
       <div class="wy-side-nav-search">
         <a href="../.." class="icon icon-home"> HIST3814o Crafting Digital History</a>
-        <a href="#skip-nav">Skip navigation menu</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <label hidden for="search-box" aria-hidden="false">Search Documents
-    </label>
-    <input id="search-box" type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
   </form>
 </div>
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-  <ul class="current">
-    
+	<ul class="current">
+	  
           
             <li class="toctree-l1">
-    
+		
     <a class="" href="../..">Home</a>
-      </li>
+	    </li>
           
             <li class="toctree-l1">
-    
+		
     <a class="" href="../../introduction/crafting-digital-history/">Getting Started</a>
-      </li>
+	    </li>
           
             <li class="toctree-l1">
-    
+		
     <span class="caption-text">1. Open Access Research</span>
     <ul class="subnav">
                 <li class="">
@@ -74,10 +72,10 @@
     <a class="" href="../../module-1/Exercises/">Exercises</a>
                 </li>
     </ul>
-      </li>
+	    </li>
           
             <li class="toctree-l1">
-    
+		
     <span class="caption-text">2. Finding Data</span>
     <ul class="subnav">
                 <li class="">
@@ -89,10 +87,10 @@
     <a class="" href="../../module-2/Exercises/">Exercises</a>
                 </li>
     </ul>
-      </li>
+	    </li>
           
             <li class="toctree-l1">
-    
+		
     <span class="caption-text">3. Fixing Data</span>
     <ul class="subnav">
                 <li class="">
@@ -104,10 +102,10 @@
     <a class="" href="../../module-3/Exercises/">Exercises</a>
                 </li>
     </ul>
-      </li>
+	    </li>
           
             <li class="toctree-l1">
-    
+		
     <span class="caption-text">4. Analysis</span>
     <ul class="subnav">
                 <li class="">
@@ -145,7 +143,9 @@
         
             <li><a class="toctree-l4" href="#exercise-10-qgis">Exercise 10: QGIS</a></li>
         
-            <li><a class="toctree-l4" href="#going-further">Going Further</a></li>
+            <li><a class="toctree-l4" href="#exercise-11-identifying-similar-images-with-tensorflow">Exercise 11: Identifying Similar Images with TensorFlow</a></li>
+        
+            <li><a class="toctree-l4" href="#going-further_2">Going Further</a></li>
         
         </ul>
     
@@ -153,10 +153,10 @@
     </ul>
                 </li>
     </ul>
-      </li>
+	    </li>
           
             <li class="toctree-l1">
-    
+		
     <span class="caption-text">5. Visualization</span>
     <ul class="subnav">
                 <li class="">
@@ -165,18 +165,18 @@
                 </li>
                 <li class="">
                     
-    <a class="" href="../../module-5/Exercises/">Exercises (OPTIONAL)</a>
+    <a class="" href="../../module-5/Exercises/">Capstone Exercise</a>
                 </li>
     </ul>
-      </li>
+	    </li>
           
             <li class="toctree-l1">
-    
-    <a class="" href="../../conclusion/conclusion/">6. Final Thoughts</a>
-      </li>
+		
+    <a class="" href="../../conclusion/Conclusion/">6. Final Thoughts</a>
+	    </li>
           
             <li class="toctree-l1">
-    
+		
     <span class="caption-text">Appendices</span>
     <ul class="subnav">
                 <li class="">
@@ -229,10 +229,6 @@
                 </li>
                 <li class="">
                     
-    <a class="" href="../../supporting materials/multimode-networks.txt/">Multimode Networks</a>
-                </li>
-                <li class="">
-                    
     <a class="" href="../../supporting materials/graphing-the-net.txt/">Graphing the Net</a>
                 </li>
                 <li class="">
@@ -260,7 +256,7 @@
     <a class="" href="../../supporting materials/leaflet.txt/">Leaflet</a>
                 </li>
     </ul>
-      </li>
+	    </li>
           
         </ul>
       </div>
@@ -298,19 +294,18 @@
   </ul>
   <hr/>
 </div>
-          <a name="skip-nav" aria-label="Anchor link destination for skipping navigation"></a>
           <div role="main">
             <div class="section">
               
                 <h1 id="module-4-exercises">Module 4 Exercises</h1>
-<p>There are <strong>many</strong> <a href="http://dhresourcesforprojectbuilding.pbworks.com/w/page/69244314/Tutorials%20for%20DH%20Tools%20and%20Methods">different tools and approaches</a> you could use to visualize your data, both as a preliminary pass to spot the holes and also for more formal analysis. In which case, for this module, I would like you to select <strong>two</strong> of these exercises which seem most germane for your final project.</p>
-<p>You are welcome to work through more of them, of course, but I want the exercises to move your own research forward. Some of these I wrote and some are adapted from <a href="http://themacroscope.org">The Macroscope</a>; others are adapted or used holus-bolus from scholars like <a href="http://miriamposner.com/blog/">Miriam Posner</a>, <a href="http://fredgibbs.net/">Fred Gibbs</a>, and <a href="http://hfroehli.ch/">Heather Froehlich</a> (and I'm grateful that they shared their materials!). Finally, you are welcome to explore the lessons and tutorials at <a href="http://programminghistorian.org/lessons/">The Programming Historian</a> if they seem appropriate to what you want to do for your project.</p>
-<p><strong>But what if I haven't any idea of what to do for the final project?</strong> Then read through the various tutorials for inspiration. Find something that strikes you as interesting, and then talk to me about how you might employ the ideas or concepts with regard to the Canadian war diary data.</p>
+<p>There are <strong>many</strong> <a href="http://dhresourcesforprojectbuilding.pbworks.com/w/page/69244314/Tutorials%20for%20DH%20Tools%20and%20Methods">different tools and approaches</a> you could use to visualize your data, both as a preliminary pass to spot the holes and also for more formal analysis. In which case, for this module, I would like you to select <strong>two</strong> of these exercises which seem most relevant to your capstone exercise.</p>
+<p>You are welcome to work through more of them, of course, but I want the exercises to move your own research forward. Some of these I wrote and some are adapted from <a href="http://themacroscope.org">The Macroscope</a>; others are adapted or used holus-bolus from scholars like <a href="http://miriamposner.com/blog/">Miriam Posner</a>, <a href="http://fredgibbs.net/">Fred Gibbs</a>, and <a href="http://hfroehli.ch/">Heather Froehlich</a> (and I'm grateful that they shared their materials!). Finally, you are welcome to explore the lessons and tutorials at <a href="http://programminghistorian.org/lessons/">The Programming Historian</a> if they seem appropriate to what you want to do for the Capstone Exercise.</p>
+<p><strong>But what if I haven't any idea of what to do for the capstone exercise?</strong> Then read through the various tutorials for inspiration. Find something that strikes you as interesting, and then talk to me about how you might employ the ideas or concepts with regard to the Canadian war diary data.</p>
 <h2 id="things-to-install">Things to install?</h2>
 <p>Many of these involve having to install more software on your own machine. In those exercises that involve using R and RStudio, you are welcome to install RStudio on your own machine OR to use it in DH Box. Please read <a href="../../supporting materials/quick-intro-r/">this quick introduction to R and Rstudio carefully</a>.</p>
-<p><strong>If you decide to install R and RStudio on your own machine,</strong> I would suggest you read the introductory bits from Lincoln Mullen's book-in-progress, <a href="http://dh-r.lincolnmullen.com/getting-started.html">Computational Historical Thinking</a>, especially the 'setup' part under 'getting started' (pay attention to the bit on installing packages and dependencies). If you spot any exercises in Mullen's book that seem relevant to your project, you may do those as an alternative to the ones here. <strong>Alternatively</strong>, go to <a href="http://swirlstats.com/">Swirl</a> and <a href="http://swirlstats.com/students.html">learn the basics of R within Swirl</a>. <a href="http://digitalhumanitiesnow.org/2016/01/resource-basic-text-mining-in-r/">DHNow</a> links to a new <a href="https://web.archive.org/web/20160309170928/https://rstudio-pubs-static.s3.amazonaws.com/31867_8236987cf0a8444e962ccd2aec46d9c3.html">Basic Text Mining in R</a> tutorial which is worth checking out as well.</p>
+<p><strong>If you decide to install R and RStudio on your own machine,</strong> I would suggest you read the introductory bits from Lincoln Mullen's book-in-progress, <a href="http://dh-r.lincolnmullen.com/getting-started.html">Computational Historical Thinking</a>, especially the 'setup' part under 'getting started' (pay attention to the bit on installing packages and dependencies). If you spot any exercises in Mullen's book that seem relevant to the Capstone Exercise, you may do those as an alternative to the ones here. <strong>Alternatively</strong>, go to <a href="http://swirlstats.com/">Swirl</a> and <a href="http://swirlstats.com/students.html">learn the basics of R within Swirl</a>. <a href="http://digitalhumanitiesnow.org/2016/01/resource-basic-text-mining-in-r/">DHNow</a> links to a new <a href="https://web.archive.org/web/20160309170928/https://rstudio-pubs-static.s3.amazonaws.com/31867_8236987cf0a8444e962ccd2aec46d9c3.html">Basic Text Mining in R</a> tutorial which is worth checking out as well.</p>
 <p><strong>NB It is always very important to record in your own notebooks what version of R you used for your analysis, what version of any R packages you installed and used, and so on because packages can go out of date.</strong></p>
-<p>In the table below I've gathered the exercises together under the headings of <strong>Text</strong>, <strong>Networks</strong>, <strong>Maps</strong>, and <strong>Charts</strong>. I've also added some entries that I am categorizing under <strong>Art</strong>. The first is a series of exercises on <a href="http://programminghistorian.org/lessons/sonification">the sonification of data</a> and the second is a guide <a href="https://programminghistorian.github.io/ph-submissions/lessons/intro-to-twitterbots">to making Twitterbots</a>; the third is about glitching digital imagery. These approaches can provide surprising and novel insights into history, as they move from representing history digitally to <strong>performing</strong> it. Visit, for instance, <a href="https://danielruten.wordpress.com/2017/04/15/sonic-word-clouds-an-experiment-with-data-sonification-part-i-introduction/">the final project in an undergraduate digital history class at the University of Saskatchewan by Daniel Ruten</a>. Daniel translated simple word clouds of a First World War diary into a profound auditory performance. I would be very interested indeed to see if any final projects in HIST3814o gave sonification or Twitterbots or glitching a try.</p>
+<p>In the table below I've gathered the exercises together under the headings of <strong>Text</strong>, <strong>Networks</strong>, <strong>Maps</strong>, and <strong>Charts</strong>. I've also added some entries that I am categorizing under <strong>Art</strong>. The first is a series of exercises on <a href="http://programminghistorian.org/lessons/sonification">the sonification of data</a> and the second is a guide <a href="https://programminghistorian.github.io/ph-submissions/lessons/intro-to-twitterbots">to making Twitterbots</a>; the third is about glitching digital imagery. These approaches can provide surprising and novel insights into history, as they move from representing history digitally to <strong>performing</strong> it. Visit, for instance, <a href="https://danielruten.wordpress.com/2017/04/15/sonic-word-clouds-an-experiment-with-data-sonification-part-i-introduction/">the final project in an undergraduate digital history class at the University of Saskatchewan by Daniel Ruten</a>. Daniel translated simple word clouds of a First World War diary into a profound auditory performance. I would be very interested indeed to see if any capstone exercises in HIST3814o gave sonification or Twitterbots or glitching a try.</p>
 <p>The exercises in this module are covered in the chart below:</p>
 <table>
 <thead>
@@ -332,34 +327,34 @@
 </tr>
 <tr>
 <td><a href="#exercise-3-topic-modeling-in-r">Topic Modeling in R</a></td>
-<td align="center"><a href="../../supporting materials/multimode-networks.txt/">Converting 2-mode to 1-mode</a></td>
+<td align="center"><a href="#exercise-9-network-analysis-in-r">Network Analysis in R</a></td>
 <td align="center"><a href="#exercise-10-qgis">QGIS (tutorials by Fred Gibbs)</a></td>
 <td align="center"></td>
 <td align="right"><a href="https://programminghistorian.github.io/ph-submissions/lessons/intro-to-twitterbots">Twitterbots</a></td>
 </tr>
 <tr>
 <td><a href="#exercise-4-text-analysis-with-overview">Text Analysis with OverviewProject</a></td>
-<td align="center"><a href="#exercise-9-network-analysis-in-r">Network Analysis in R</a></td>
+<td align="center"><a href="https://github.com/miriamposner/cytoscape_tutorials">Network Analysis in Cytoscape</a></td>
 <td align="center"><a href="../../supporting materials/geoparsing-w-python.txt/">Geoparsing with Python</a></td>
 <td align="center"></td>
 <td align="right"><a href="../../supporting materials/glitch/">Glitching Photos</a></td>
 </tr>
 <tr>
 <td><a href="#exercise-5-corpus-linguistics-with-antconc">Corpus Linguistics with AntConc</a></td>
-<td align="center"><a href="https://github.com/miriamposner/cytoscape_tutorials">Network Analysis in Cytoscape</a></td>
+<td align="center"><a href="../../supporting materials/cyoa.txt/">Choose your own adventure</a></td>
 <td align="center"><a href="http://miriamposner.com/blog/getting-started-with-palladio/">Palladio with Posner</a></td>
 <td align="center"></td>
 <td align="right"></td>
 </tr>
 <tr>
 <td><a href="#exercise-6-text-analysis-with-voyant">Text Analysis with Voyant</a></td>
-<td align="center"><a href="../../supporting materials/cyoa.txt/">Choose your own adventure</a></td>
+<td align="center"><a href="../../supporting materials/netviz/">Using igraph to visualize network data</a></td>
 <td align="center"><a href="../../supporting materials/leaflet.txt/">Leaflet.js Maps</a></td>
 <td align="center"></td>
 <td align="right"></td>
 </tr>
 <tr>
-<td></td>
+<td><a href="#exercise-11-identifying-similar-images-with-tensorflow">Identifying Similar Images with TensorFlow</a></td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -375,6 +370,9 @@
 <ol>
 <li>Transform your Texan Correspondence data into a network, which you will then visualize with the open source program <strong>Gephi</strong>. The detailed instructions are <a href="../../supporting materials/gephi.txt/">in our supporting materials</a>.</li>
 </ol>
+<h3 id="going-further">Going Further</h3>
+<p>The data you get from topic modeling is in many ways just the first step to making it meaningful. Read through <a href="http://miriamposner.com/blog/very-basic-strategies-for-interpreting-results-from-the-topic-modeling-tool/">Miram Posner's article, <strong>Very basic strategies for interpreting results from the Topic Modeling Tool</strong></a>. In this article, Posner explores the results of your data, what the different files mean, and how you can interpret that data.</p>
+<p>Posner also shows in another article <a href="http://miriamposner.com/classes/dh201w19/tutorials-guides/text-analysis/visualize-your-topic-model/">how you can visualize your results from the Topic Modeling Tool</a>. While visualization is just one method to interpret your data, it is a powerful way to begin to make some meaningful insights into the data.</p>
 <hr />
 <h2 id="exercise-2-topic-modeling-tool">Exercise 2: Topic Modeling Tool</h2>
 <p>In this exercise you will use the <strong>Topic Modeling Tool</strong> to create a simple topic model and a webpage that allows you to browse the results.</p>
@@ -456,7 +454,7 @@
 <p>For your information, <a href="http://www.helsinki.fi/varieng/CoRD/corpora/index.html">CoRD has a collection of corpora that you can explore</a>.</p>
 <hr />
 <h2 id="exercise-6-text-analysis-with-voyant">Exercise 6: Text Analysis with Voyant</h2>
-<p>In <a href="../../module-2/Exercises/#exercise-3-tei">Module 2</a>, if you recall, we worked through how to transform XML using stylesheets. Melodee Beals used a <a href="https://github.com/mhbeals/Colonial-Newspaper-Database/tree/master/Transformers">stylesheet </a> to transform her database into a series of individual txt files. In the exercises above, a transformer was used to make the database into a single CSV file. In this exercise, we are going to use <a href="http://voyant-tools.org">Voyant Tools</a> to visualize patterns of word use in the database. Voyant can read either a CSV <strong>or</strong> text files. The advantage of uploading a folder of text files is that, if the files are in chronological order, Voyant's default visualizations will also be arranged in chronological order and thus we can see change over time.</p>
+<p>In <a href="../module-2/Exercises/#exercise-3-tei">Module 2</a>, if you recall, we worked through how to transform XML using stylesheets. Melodee Beals used a <a href="https://github.com/mhbeals/Colonial-Newspaper-Database/tree/master/Transformers">stylesheet </a> to transform her database into a series of individual txt files. In the exercises above, a transformer was used to make the database into a single CSV file. In this exercise, we are going to use <a href="http://voyant-tools.org">Voyant Tools</a> to visualize patterns of word use in the database. Voyant can read either a CSV <strong>or</strong> text files. The advantage of uploading a folder of text files is that, if the files are in chronological order, Voyant's default visualizations will also be arranged in chronological order and thus we can see change over time.</p>
 <ol>
 <li>
 <p>Go to <a href="http://voyant-tools.org">Voyant Tools</a>. Paste the following URL to the CSV of the CND database: <a href="https://raw.githubusercontent.com/shawngraham/exercise/gh-pages/CND.csv">https://raw.githubusercontent.com/shawngraham/exercise/gh-pages/CND.csv</a>.</p>
@@ -482,7 +480,7 @@
 <hr />
 <h2 id="exercise-7-raw">Exercise 7: RAW</h2>
 <h3 id="quick-charts-using-raw">Quick Charts Using RAW</h3>
-<p>A quick chart can be a handy thing to have. Google spreadsheets, Microsoft Excel, and a host of other programs can make excellent charts quickly with their wizard functions. Never hesitate to turn to these. However, they are not always good with non-numeric data. In <a href="../../module-3/Exercises/#going-further">Module 3</a>, you used the Stanford Named Entity Recognizer to extract place names from a text. After some further munging with regex, you might have ended up with a CSV that looks like <a href="https://raw.githubusercontent.com/hist3907b-winter2015/module4-holes/master/texas.csv">the Texas CSV</a>. Can we do a quick visualization of this information? One useful tool is <a href="http://app.rawgraphs.io/">RAW</a>. </p>
+<p>A quick chart can be a handy thing to have. Google spreadsheets, Microsoft Excel, and a host of other programs can make excellent charts quickly with their wizard functions. Never hesitate to turn to these. However, they are not always good with non-numeric data. In <a href="../module-3/Exercises/#going-further">Module 3</a>, you used the Stanford Named Entity Recognizer to extract place names from a text. After some further munging with regex, you might have ended up with a CSV that looks like <a href="https://raw.githubusercontent.com/hist3907b-winter2015/module4-holes/master/texas.csv">the Texas CSV</a>. Can we do a quick visualization of this information? One useful tool is <a href="http://app.rawgraphs.io/">RAW</a>. </p>
 <ol>
 <li>Open RAW in a new window.</li>
 <li>Copy the table of data of places mentioned in the Texan correspondence, and paste it into the data input box at the top of the RAW screen.</li>
@@ -676,7 +674,35 @@
 <p>Next, try georectifying a historical map and adding it to your GIS following Gibbs' other tutorial <a href="http://fredgibbs.net/tutorials/qgis/overlaying-historic-maps-with-qgis.html">'Using Historical maps with QGIS'</a>.</p>
 </li>
 </ol>
-<h2 id="going-further">Going Further</h2>
+<hr />
+<h2 id="exercise-11-identifying-similar-images-with-tensorflow">Exercise 11: Identifying Similar Images with TensorFlow</h2>
+<p>This exercise uses uses a <a href="https://jupyter.org/">jupyter notebook</a> to run the code. You can launch this jupyter notebook in an executable environment by clicking on the button below.</p>
+<p><a href="http://mybinder.org/v2/gh/shawngraham/bindr-test-Identifying-Similar-Images-with-TensorFlow/master"><img alt="Binder" src="https://mybinder.org/badge.svg" /></a></p>
+<p>This exercise is based on Douglas Duhaime's tutorial <a href="http://douglasduhaime.com/posts/identifying-similar-images-with-tensorflow.html">identifying similar images with tensorflow</a> which is very clearly laid out and explained. In this notebook, I've compressed the steps. The 'images' directory only has 25 images in it for demo purposes. In Duhaime's post, the images folder (that you grab with <code>wget</code> has about 2000 images in it).</p>
+<ol>
+<li>Launch the <a href="http://mybinder.org/v2/gh/shawngraham/bindr-test-Identifying-Similar-Images-with-TensorFlow/master">jupyter notebook</a>. This may take up to a minute to finish loading.</li>
+<li>Open the <code>find-similar-images.ipynb</code> file. You'll notice that the notebook is already pre-populated with commands.</li>
+<li>For each section, click the button labelled <code>|&gt; Run</code>. This will either skip to the next paragraph if it is text/information or run the command if it is a command. Each time the run finishes, check the main notebook with the file listings. The notebook will update and create new files as different commands run.</li>
+<li>Click <code>|&gt; Run</code> through each command/section.</li>
+<li>Open the <code>Affinity Propagation.ipynb</code> file and for each section, click the button labelled <code>|&gt; Run</code>. Notice the clusters that are created.</li>
+</ol>
+<h3 id="going-further_1">Going Further</h3>
+<p>Now that you understand the basics of the TensorFlow exercise, try running your own jupyter instance.</p>
+<ol>
+<li>Navigate to Dr. Graham's <a href="https://github.com/shawngraham/Identifying-Similar-Images-with-TensorFlow-notebooks">TensorFlow GitHub respository</a>.</li>
+<li>Fork the repository so you have your own version. </li>
+<li>Drop more images into the image folder.</li>
+<li>Navigate to the <a href="https://mybinder.org/">Binder website</a>.</li>
+<li>Paste the URL of your forked GitHub repository into the section labelled <code>GitHub repository name or URL</code>.</li>
+<li>Click the button labelled <code>launch</code> to create your own instance of the jupyter notebook.</li>
+<li>When the Binder finishes building, click the text labelled <code>Copy the text below, then paste into your README to show a binder badge: launch|Binder    &gt;</code>.</li>
+<li>Copy the Markdown link to your Binder instance.</li>
+<li>Navigate to your forked repository on GitHub.</li>
+<li>Open the <code>README.md</code> file and click the pen/pencil icon to edit the file.</li>
+<li>Use the button text you copied in step 8 to change the link for the button labelled <code>launch|Binder</code> from the link to Dr. Graham's Binder instance to your new Binder URL, otherwise clicking the button in your GitHub repository will just open Dr. Graham's original repository. </li>
+</ol>
+<hr />
+<h2 id="going-further_2">Going Further</h2>
 <p>There are many tutorials at <a href="http://programminghistorian.org/lessons/">The Programming Historian</a> that are appropriate here. Try some under the 'Data Manipulation' or 'Distant Reading' headings.</p>
               
             </div>
@@ -685,7 +711,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../../module-5/Humanities Visualization/" class="btn btn-neutral float-right" title="Communicating your Findings"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../../module-5/Humanities Visualization/" class="btn btn-neutral float-right" title="Communicating your Findings">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
         <a href="../Seeing Patterns/" class="btn btn-neutral" title="Seeing Patterns"><span class="icon icon-circle-arrow-left"></span> Previous</a>
@@ -696,34 +722,24 @@
   <hr/>
 
   <div role="contentinfo">
-    <p>
     <!-- Copyright etc -->
-    </p>
+    
   </div>
 
-The Crafting Digital History site is built with <a href="http://www.mkdocs.org">MkDocs</a> using a theme provided by <a href="https://readthedocs.org">Read the Docs</a>. All documents are available on <a href="https://github.com/shawngraham/dhworkbook/tree/gh-pages"> GitHub</a>. I thank Reclaim Hosting for their help, support, and example in getting this site up and running.
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
 </footer>
-
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/fitvids/1.1.0/jquery.fitvids.min.js"></script>
-<script>
-  $(document).ready(function(){
-    // Target your .container, .wrapper, .post, etc.
-    $(".section").fitVids();
-  });
-</script>
-    
+      
         </div>
       </div>
 
     </section>
-    
+
   </div>
 
   <div class="rst-versions" role="note" style="cursor: pointer">
     <span class="rst-current-version" data-toggle="rst-current-version">
       
-          <a href="https://github.com/shawngraham/dhworkbook/tree/gh-pages" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+          <a href="https://github.com/shawngraham/dhworkbook/tree/gh-pages/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
         <span><a href="../Seeing Patterns/" style="color: #fcfcfc;">&laquo; Previous</a></span>
@@ -733,7 +749,9 @@ The Crafting Digital History site is built with <a href="http://www.mkdocs.org">
       
     </span>
 </div>
-    <script src="../../js/theme.js"></script>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
 
 </body>
 </html>

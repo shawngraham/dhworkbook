@@ -13,7 +13,7 @@
 
   <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
-  <link rel="stylesheet" href="../../css/highlight.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
   <link href="../../css/extra.css" rel="stylesheet">
   
   <script>
@@ -23,9 +23,10 @@
     var mkdocs_page_url = "/introduction/crafting-digital-history/";
   </script>
   
-  <script src="../../js/jquery-2.1.1.min.js"></script>
-  <script src="../../js/modernizr-2.8.3.min.js"></script>
-  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
   
 </head>
 
@@ -37,27 +38,24 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
       <div class="wy-side-nav-search">
         <a href="../.." class="icon icon-home"> HIST3814o Crafting Digital History</a>
-        <a href="#skip-nav">Skip navigation menu</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <label hidden for="search-box" aria-hidden="false">Search Documents
-    </label>
-    <input id="search-box" type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
   </form>
 </div>
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-  <ul class="current">
-    
+	<ul class="current">
+	  
           
             <li class="toctree-l1">
-    
+		
     <a class="" href="../..">Home</a>
-      </li>
+	    </li>
           
             <li class="toctree-l1 current">
-    
+		
     <a class="current" href="./">Getting Started</a>
     <ul class="subnav">
             
@@ -69,6 +67,14 @@
         
             <li><a class="toctree-l3" href="#setting-up-a-your-workspace">Setting up a your workspace</a></li>
         
+            <li><a class="toctree-l3" href="#hypothesis">Hypothes.is</a></li>
+        
+            <li><a class="toctree-l3" href="#github">GitHub</a></li>
+        
+            <li><a class="toctree-l3" href="#your-digital-history-labstudioworkshop">Your digital history lab/studio/workshop</a></li>
+        
+            <li><a class="toctree-l3" href="#vpn-dh-box">VPN &amp; DH Box</a></li>
+        
             <li><a class="toctree-l3" href="#some-readings-to-kick-things-off">Some Readings To Kick Things Off</a></li>
         
         </ul>
@@ -78,10 +84,10 @@
     
 
     </ul>
-      </li>
+	    </li>
           
             <li class="toctree-l1">
-    
+		
     <span class="caption-text">1. Open Access Research</span>
     <ul class="subnav">
                 <li class="">
@@ -93,10 +99,10 @@
     <a class="" href="../../module-1/Exercises/">Exercises</a>
                 </li>
     </ul>
-      </li>
+	    </li>
           
             <li class="toctree-l1">
-    
+		
     <span class="caption-text">2. Finding Data</span>
     <ul class="subnav">
                 <li class="">
@@ -108,10 +114,10 @@
     <a class="" href="../../module-2/Exercises/">Exercises</a>
                 </li>
     </ul>
-      </li>
+	    </li>
           
             <li class="toctree-l1">
-    
+		
     <span class="caption-text">3. Fixing Data</span>
     <ul class="subnav">
                 <li class="">
@@ -123,10 +129,10 @@
     <a class="" href="../../module-3/Exercises/">Exercises</a>
                 </li>
     </ul>
-      </li>
+	    </li>
           
             <li class="toctree-l1">
-    
+		
     <span class="caption-text">4. Analysis</span>
     <ul class="subnav">
                 <li class="">
@@ -138,10 +144,10 @@
     <a class="" href="../../module-4/Exercises/">Exercises</a>
                 </li>
     </ul>
-      </li>
+	    </li>
           
             <li class="toctree-l1">
-    
+		
     <span class="caption-text">5. Visualization</span>
     <ul class="subnav">
                 <li class="">
@@ -150,18 +156,18 @@
                 </li>
                 <li class="">
                     
-    <a class="" href="../../module-5/Exercises/">Exercises (OPTIONAL)</a>
+    <a class="" href="../../module-5/Exercises/">Capstone Exercise</a>
                 </li>
     </ul>
-      </li>
+	    </li>
           
             <li class="toctree-l1">
-    
-    <a class="" href="../../conclusion/conclusion/">6. Final Thoughts</a>
-      </li>
+		
+    <a class="" href="../../conclusion/Conclusion/">6. Final Thoughts</a>
+	    </li>
           
             <li class="toctree-l1">
-    
+		
     <span class="caption-text">Appendices</span>
     <ul class="subnav">
                 <li class="">
@@ -214,10 +220,6 @@
                 </li>
                 <li class="">
                     
-    <a class="" href="../../supporting materials/multimode-networks.txt/">Multimode Networks</a>
-                </li>
-                <li class="">
-                    
     <a class="" href="../../supporting materials/graphing-the-net.txt/">Graphing the Net</a>
                 </li>
                 <li class="">
@@ -245,7 +247,7 @@
     <a class="" href="../../supporting materials/leaflet.txt/">Leaflet</a>
                 </li>
     </ul>
-      </li>
+	    </li>
           
         </ul>
       </div>
@@ -279,7 +281,6 @@
   </ul>
   <hr/>
 </div>
-          <a name="skip-nav" aria-label="Anchor link destination for skipping navigation"></a>
           <div role="main">
             <div class="section">
               
@@ -290,12 +291,12 @@
 <p>Why 'forking'? It seems an odd phrase. Think of it like this: Writing, crafting, coding: these are like a small river, flowing in one direction into the future. You get new ideas, new hunches: the river branches. There's a fork in its path. Sometimes new ideas, new hunches, fold back into that original stream: they merge.</p>
 <p>GitHub is a way of mapping that stream, and a guide to revisiting the interesting parts of it.</p>
 <p>It's not the best metaphor, but it'll do. No doubt you've had that experience where, after working on an essay for days, you make a change that you regret. You wish you could go back to fix it, but ctrl+z only goes so far. You realize that everything you've done for the last week needs to be thrown out, and you start over.</p>
-<p>Well, with 'versioning control', you can travel back upriver, back to where things were good. There are two tools that we will use to make this happen: <a href="https://git-scm.com/">git</a> and <a href="http://github.com">GitHub</a>. You'll learn more about making those things work in <a href="../../module-1/Open-Access-Research/"><strong>Module 1</strong></a>. You'll see why you'd want to do that, and how to future-proof your work, writing things <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">in a plain-text format called 'Markdown'</a>.</p>
-<p>In <a href="../../module-2/Finding%20Data/"><strong>Module 2</strong></a>, we'll start exploring the wide variety of historical data out there. We'll talk about some of the ethical dilemmas posed by having so much data out there. <strong>Data</strong> are not neutral 'things given'; rather, they are <strong>capta</strong>: things <strong>taken</strong>.</p>
+<p>Well, with 'versioning control', you can travel back upriver, back to where things were good. There are two tools that we will use to make this happen: <a href="https://git-scm.com/">git</a> and <a href="http://github.com">GitHub</a>. You'll learn more about making those things work in <a href="../module-1/Open-Access-Research/"><strong>Module 1</strong></a>. You'll see why you'd want to do that, and how to future-proof your work, writing things <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">in a plain-text format called 'Markdown'</a>.</p>
+<p>In <a href="../module-2/Finding%20Data/"><strong>Module 2</strong></a>, we'll start exploring the wide variety of historical data out there. We'll talk about some of the ethical dilemmas posed by having so much data out there. <strong>Data</strong> are not neutral 'things given'; rather, they are <strong>capta</strong>: things <strong>taken</strong>.</p>
 <p><strong>NB</strong> I am assuming, in this course, that the digital materials we want have already been digitized. Digitizing, adding meta-data (information that describes the data), and structuring it <strong>properly</strong> are very complex topics on their own that could be the subject of a complete course! If you are interested in those problems, a good place to start is this open course from the University of London's School of Advanced Study on <a href="http://port.sas.ac.uk/mod/book/view.php?id=75&amp;chapterid=125">database design for historians</a>.</p>
-<p>In <a href="../../module-3/Wrangling%20Data/"><strong>Module 3</strong></a>, we'll see that data/capta are <strong>messy</strong>, and that they make a kind of illusory order that as historians, we are not normally in the habit of thinking about. The big secret of digital history is that the majority of your time on <strong>any</strong> digital history project won't be finding the capta, won't be analyzing the capta, won't be thinking about the historical meaning of the capta. We'll be <strong>cleaning it up</strong>. The exercises in this module will help you do that more efficiently (and be aware that 'efficiency' in computing terms is not a theoretically neutral idea!).</p>
-<p>In <a href="../../module-4/Seeing%20Patterns/"><strong>Module 4</strong></a>, we talk about doing the analysis. I present finding, cleaning, and analyzing as if they were sequential steps, but in reality they are circular. Movement in one aspect often requires revisiting another one! This module explores how we do this, and what it means for us as historians.</p>
-<p>In <a href="../../module-5/Humanities%20Visualization/"><strong>Module 5</strong></a>, we begin at last to think about how we communicate all of this to our audiences. Look at how <a href="http://historyarthistory.gmu.edu/graduate/phd-history/digital-dissertation-guidelines">one university lays out the expectations for digital history work</a> (and, do you see how this ties back to ideas about <a href="http://site.craftingdigitalhistory.ca/rubric-and-assessment.html#final-project">paradata</a>?). We will think about things like typography and layout. We'll look at ways of making our visualizations more compelling, more effective. We will also create an online digital exhibit using <a href="https://omeka.org/">Omeka</a>.</p>
+<p>In <a href="../module-3/Wrangling%20Data/"><strong>Module 3</strong></a>, we'll see that data/capta are <strong>messy</strong>, and that they make a kind of illusory order that as historians, we are not normally in the habit of thinking about. The big secret of digital history is that the majority of your time on <strong>any</strong> digital history project won't be finding the capta, won't be analyzing the capta, won't be thinking about the historical meaning of the capta. We'll be <strong>cleaning it up</strong>. The exercises in this module will help you do that more efficiently (and be aware that 'efficiency' in computing terms is not a theoretically neutral idea!).</p>
+<p>In <a href="../module-4/Seeing%20Patterns/"><strong>Module 4</strong></a>, we talk about doing the analysis. I present finding, cleaning, and analyzing as if they were sequential steps, but in reality they are circular. Movement in one aspect often requires revisiting another one! This module explores how we do this, and what it means for us as historians.</p>
+<p>In <a href="../module-5/Humanities%20Visualization/"><strong>Module 5</strong></a>, we begin at last to think about how we communicate all of this to our audiences. Look at how <a href="http://historyarthistory.gmu.edu/graduate/phd-history/digital-dissertation-guidelines">one university lays out the expectations for digital history work</a> (and, do you see how this ties back to ideas about <a href="http://site.craftingdigitalhistory.ca/rubric-and-assessment.html#final-project">paradata</a>?). We will think about things like typography and layout. We'll look at ways of making our visualizations more compelling, more effective. We will also learn how to create an online digital exhibit using <a href="https://omeka.org/">Omeka</a>.</p>
 <p>Finally, while there is no formal requirement for you to do this, it would be a great way of launching yourself as a digital historian to think about how you would formally reveal your project work in this class to the wider world: and then do it. There's a lot of noise on the internet, especially when it comes to history. How do you, as a digital historian, make the strongest possible signal?</p>
 <h2 id="what-you-need-to-do-this-week">What you need to do this week</h2>
 <ol>
@@ -313,47 +314,7 @@
 <li>When you're working with academic databases such as JSTOR, then you'll also need a bibliography manager. We don't go into this aspect very much in this course (if you take other courses with me, you will) but you might want to check out <a href="http://zotero.org">Zotero</a>.</li>
 <li>It can sometimes be useful to make little videos of your work to explain when something isn't working - <a href="http://screencast-o-matic.com/">Screen-cast-o-matic</a> is free and does a good job.</li>
 </ul>
-<p>Now, the final part of your studio/lab/workshop is a domain (website + complete access to the webserver that powers it, so that you can install other platforms/services) of your own. A typical setup will be something along the lines of:</p>
-<ol>
-<li><code>your-domain-name.org</code> for your narrative, annotations, and anything you build regarding your work.</li>
-<li><code>github.com/your-name</code> for your scratch pad and code repository.</li>
-</ol>
-<p>On your blog/narrative, you'll have a page that collates all of your web annotations as well. You'll also have - typically - an 'about' page where you can signal the kinds of history you're interested in, and the preferred way for people to get in touch with you. You do not have to use your real name. Remember the <a href="http://site.craftingdigitalhistory.ca/rubric-and-assessment.html#real-names-policy">real names policy</a>.</p>
-<p>Because you have complete access and control over your domain, you can install other services as well. For instance, maybe you use Dropbox or Google Drive to sync your files across machines, or to function as a backup? You can install a service called 'OwnCloud' on your own domain that does the same thing, so that you have control over all your own materials.</p>
-<p>So let's get started.</p>
-<h3 id="reclaim-hosting">Reclaim Hosting</h3>
-<p>In the course space for cuLearn, I gave you a code to use to pay for a domain of your own. I have already purchased domain space for you from an academic web hosting service, <a href="https://reclaimhosting.com/shared-hosting/">Reclaim Hosting</a>. This space will last for one year, at which point you have the option of paying to renew it or letting it die. Previous students in this course have used their domain to help with their applications for jobs and graduate school. One such is <a href="http://theproudhistorynerd.com">Melissa</a>.</p>
-<ol>
-<li>You will be asked for the name you want to have for your space. You need to be thinking of branding here. Think of a professional name that conveys something of your personality and approach to history. I for instance own the domain, 'Electric Archaeology', which I chose to convey that I'm interested in digital archaeology, but also, that I move fast and cover a lot of breaking develops in the field (Hey. It's my blog. I like the name). Please choose wisely. Some combination of your first and last name is often the best idea, since your own name is your own best calling card ('shawn graham' is such a generic name, that it was already long gone by the time I started doing digital history). Type in a name, select a top-level domain (ie. .com, .ca, .org, etc. I'll suggest .ca), and click on the 'check availability' button.</li>
-<li>If the pop-up says 'Congratulations, domain available!' then click on the continue button. (You may be offered free id protection, where Reclaim Hosting will hide your details is someone does a 'who-is' search on the domain name. If it does, then tick off the check box to confirm that you want this, and hit continue).</li>
-<li>On the next screen, (the billing screen) fill in all of the information. The balance should be $0. At the bottom left, it will also say that you’ve used a one-time promotional code. Hit the green button at the bottom to complete the purchase (which is not costing you anything).</li>
-</ol>
-<p>Congratulations! You now own your very own domain. <strong>It might take a bit of time for your domain to appear live on the web</strong>. During this time, you can log into your cPanel and install Wordpress and so on - see the next section below.</p>
-<p>Giving you a space of your own is my political act of protest against the centralization of learning inside learning management systems. Learning isn't 'managed', it's cultivated. Unlike cuLearn, I cannot monitor your activity inside your own domain. I can only see what you choose to make public. Unlike Facebook or Snapchat or Instagram, I am not trying to monetize your personality on the web.</p>
-<h3 id="wordpress-for-your-blog">Wordpress for your blog</h3>
-<p>Wordpress is probably the best option for a platform for writing the narrative bits of your digital history work.</p>
-<ol>
-<li>Click the 'Client area'. It will tell you that you have one active account (with Reclaim Hosting) and one active domain. When the time comes to renew your account or to close it down, this is where you do it. Note also that there is a link to 'Support', which will put you in touch with Reclaim Hosting's help desk. They are extremely fast and good at providing support; always treat any help request you make with them <strong>as if</strong> you were writing a formal email to me. Be polite and considerate, and thank them. The owners of the business often are the ones who provide the help! Without them, we couldn't do this class.</li>
-<li>Go to 'cPanel' - this is where you can install all sorts of different kinds of software on your account. Search for and select 'Web applications'</li>
-<li>Click on Wordpress. Then click on 'Install this application'.</li>
-<li>The next screen presents you with a number of options. Leave these set to their defaults. For 'location', leave this blank (you want to leave the directory option blank). That tells the installatron to put Wordpress at <code>your-domain.ca</code>. (When/if you install other pieces of software, you'd change this variable so that the new software doesn't overwrite this software!)</li>
-<li>Further down the page, under 'Settings', you need to change 'Administrator username', 'Administrator password', 'Website title', 'Website tagline'. <strong>This is the username and password to actually do things with your blog, and the name of your blog itself</strong>. Leave everything else alone.</li>
-<li>Click Install!</li>
-<li>Once it's done, the installer will remind you of the URL to your site, and the URL to the blog's dashboard (where you go to write posts, make changes to the look and feel of the site). Open these in a new browser window, and bookmark them. To login to your blog, remember to go to the dashboard URL (eg. <code>http://your-domain.ca/wp-admin</code>), enter your blog administrator username and password.</li>
-<li>You can close the cPanel webpage now (log out first).</li>
-</ol>
-<h4 id="customising-your-blog">Customising your blog</h4>
-<p>If you look at the dashboard for your blog, you'll see a lot of options down the left side of your screen. If you want to change the look of your blog, click on 'Appearance' then click on 'Themes'. A number of themes are pre-installed. You can click on the different themes and select 'Preview' to see how your blog might look. When you find one you like, select 'activate'. Go to the other browser window where you have <code>your-domain.ca</code> open. Reload the page to see the changes take effect!</p>
-<p>If you're the sort of person who likes to sketch ideas out on paper, Lauren Heywood of the <a href="http://dmll.org.uk/">Disruptive Media Learning Lab</a> has designed a paper-based exercise to prototype ideas. Why not give it a try? <a href="http://dmll.org.uk/wp-content/uploads/2017/06/plan-your-wordpress-site-with-paper-dmll.pdf">Print this PDF of Wordpress design (downloads in a new window)</a> and follow the instructions.</p>
-<p>To write new content, know that there is a difference between a <strong>Post</strong> and a <strong>Page</strong>. A <strong>page</strong> is a new link on your site, while <strong>posts</strong> appear in chronological order on a page, with the most recent on top. Most themes show the most recent post by default, and pages appear in any menus on the site. <strong>When you are logged into your blog</strong> any post or page will have an 'Edit' button at the bottom that you can click. You'll then be presented with an editing box with the standard toolbar across the top (allowing you to change the font, insert images, change the alignment of the text and so on). At the top right will be a button to save or publish/update the post/page.</p>
-<p>Your blog will have a default 'about' page. Change that default text now to reflect something about who you are and why you are taking this course.</p>
-<p>To create new pages, you click on the 'Pages' link in your dashboard and select 'Add new'.</p>
-<p>To create new posts, you click on the 'Posts' link in  your dashboard and select 'Add new'.</p>
-<p>Explore the options for your blog; customize and make the space your own.</p>
-<p><strong>Password protected posts:</strong> If for any reason you feel that you don't want a post to be viewable by the web-at-large, you can hide it behind a password. At the top right where the 'Publish' button hides, click on 'Visibility' and select 'Password protected'. Remember though: you'll have to share the password with me for grading purposes.</p>
-<p><img alt="Visibility Options in Wordpress" src="https://codex.wordpress.org/images/7/70/visibility.jpg" /></p>
-<p>For more information about controlling visibility of your posts and so on, <a href="https://codex.wordpress.org/Content_Visibility">visit the Wordpress content visibility help page</a>.</p>
-<h3 id="hypothesis">Hypothes.is</h3>
+<h2 id="hypothesis">Hypothes.is</h2>
 <p>Hypothes.is is an overlay on the web that allows you to highlight or annotate any text you come across (including <strong>inside PDFs</strong>). All of your annotations can then be collected together. It is a very effective research tool.</p>
 <ol>
 <li>Create an account with <a href="https://web.hypothes.is/start/">Hypothes.is</a>.</li>
@@ -365,29 +326,24 @@
 
 <p>Annotations are public by default. When you are making a new annotation you can toggle the visibility so that they are private and thus visible only to you.</p>
 <p>You can also 'tag' any annotation you make. If many people use the same set of tags, you can collect annotations by tag. This can make it easier to do group research projects, for instance.</p>
-<h4 id="important-information-about-annotating">Important information about annotating</h4>
+<h3 id="important-information-about-annotating">Important information about annotating</h3>
 <p><strong>Please join our private HIST3814o annotation group. Remember to make all annotations to that group! Earlier iterations of this course used the ‘public’ group, and you can still see their annotations. However, we realized that it wasn’t fair to the people whose work we were annotating to have year after year of our annotations littering their page. Remember then: make your annotations in <a href="https://hypothes.is/groups/886ipqWe/hist3814o">our HIST3814o group</a></strong>!</p>
-<h4 id="collecting-your-own-annotations-on-your-blog">Collecting your own annotations on your blog</h4>
-<p>Hypothes.is has an <strong>API</strong> that allows you to do some neat things. 'API' stands for 'Application Programming Interface', which is just a fancy way of saying, 'you can write a program that interacts with this web service'. <a href="http://pushpullfork.com/">Kris Shaffer</a>, a professor at the University of Mary Washington, has written a <strong>plugin</strong> for Wordpress that allows you to automatically collect annotations you make across the web and to display them all on a single page on your blog. So, we'll go get that plugin and install it on your blog:</p>
-<p>Open <a href="https://github.com/kshaffer/hypothesis_aggregator">Kris Shaffer's Hypothes.is aggregator</a> in a new browser window.</p>
+<h2 id="github">GitHub</h2>
+<p>Finally, you need a GitHub account. We will go into more detail about how to use GitHub in the next module. For now, go to <a href="http://github.com">GitHub.com</a> and sign up for a new account. Follow all the prompts, and make a note of the direct URL to your account (mine for instance is <a href="http://github.com/shawngraham">http://github.com/shawngraham</a>). You'll learn how to use this space in <a href="../module-1/Exercises/#exercise-3-setting-up-your-github-space">Module 1, Exercise 3</a>.</p>
+<h3 id="fail-log">Fail Log</h3>
+<p>Each week you will upload a fail log to you GitHub account. You will include a link to your 3 most important Hypothes.is annotations and reflect on how those 3 annotations were meaningful to your learning. In the first week you will also reflect on your worries for the course, any technical issues you encountered, etc.</p>
+<p>This week, you will fork the fail log example ('fork' is a GitHub term meaning to make a personal copy of a repository). To begin, follow the instructions below:</p>
 <ol>
-<li>Click 'Clone or Download' (the green button at the top right).</li>
-<li>In the pop-up, click 'Download ZIP'</li>
-<li>Go over to the dashboard for your blog (if you closed this, you can get there again by opening a new browser window and going to <code>your-domain.ca/wp-admin</code>).</li>
-<li>In the dashboard, click on Plugins &gt;&gt; Add New.</li>
-<li>Click 'Upload Plugin'. It will open a window asking you to find and select the zip file you downloaded. This is probably in your 'Downloads' folder. Select and click Ok.</li>
-<li>Once it’s uploaded and installed, click 'Activate'.</li>
-<li>In the dashboard, click on 'pages' then add a new page. Call it 'Web Notes' or 'Annotations' or something similar.</li>
-<li>Shaffer has created a 'shortcode' that tells Wordpress to go over to Hypothes.is and grab the latest information. So, in the text of your new page (in the editor window, make sure to click the 'text' button or else this won't work), enter the shortcode that will grab all of your public annotations: <code>[hypothesis user = 'kris.shaffer']</code> where you remove the <code>kris.shaffer</code> and put in your own Hypothes.is username.</li>
-<li>Hit the 'Publish' button. Wordpress will report that the page has been published and give you a link to it; click on this link to see your new always-updating list of annotations! Of course, if you haven't made any public annotations yet, nothing will display. Go annotate something, then come back and reload the page, but remember to annotate using <a href="https://hypothes.is/groups/886ipqWe/hist3814o">our HIST3814o group</a>.</li>
+<li>Open <a href="https://github.com/">GitHub</a>.</li>
+<li>Login to your GitHub account.</li>
+<li>Navigate to the <a href="https://github.com/rblades/example_fail-log_craftingDH">example fail log repository on GitHub</a>.</li>
+<li>Follow the <a href="https://github.com/rblades/example_fail-log_craftingDH#example_fail-log_craftingdh">instructions for getting started with the example fail log</a>.</li>
 </ol>
-<h3 id="github">GitHub</h3>
-<p>Finally, you need a GitHub account. We will go into more detail about how to use GitHub in the next module. For now, go to <a href="http://github.com">GitHub.com</a> and sign up for a new account. Follow all the prompts, and make a note of the direct URL to your account (mine for instance is <a href="http://github.com/shawngraham">http://github.com/shawngraham</a>). Put this link in your 'About' page on your blog. You'll learn how to use this space in <a href="../../module-1/exercises/#exercise-3-setting-up-your-github-space">Module 1, Exercise 3</a>.</p>
-<h3 id="your-digital-history-labstudioworkshop">Your digital history lab/studio/workshop</h3>
-<p>You now have a digital history lab equipped with all of the necessary ingredients for doing digital history. You have an open notebook for recording what you are up to (both your narrative and your annotations). In GitHub, you have a scratch pad for keeping track of the actual nuts-and-bolts of any digital work you do (and note that it is entirely possible to do digital history successfully without having to do anything that a Computer Scientist for instance would call coding). You have a domain that you control completely, and where you can install other platforms and services as seems necessary.</p>
-<h3 id="vpn-dh-box">VPN &amp; DH Box</h3>
+<h2 id="your-digital-history-labstudioworkshop">Your digital history lab/studio/workshop</h2>
+<p>You now have a digital history lab equipped with all of the necessary ingredients for doing digital history. You have an open notebook for recording what you are up to (both your narrative and your annotations). In GitHub, you have a scratch pad \ fail logfor keeping track of the actual nuts-and-bolts of any digital work you do (and note that it is entirely possible to do digital history successfully without having to do anything that a Computer Scientist for instance would call coding). You have a domain that you control completely, and where you can install other platforms and services as seems necessary.</p>
+<h2 id="vpn-dh-box">VPN &amp; DH Box</h2>
 <p>To access our virtual computer, the DH Box, you will need to use Carleton's VPN service. Please visit <a href="https://carleton.ca/its/help-centre/page-type/vpn/">Carleton's VPN help page</a> and follow the instructions for your particular computer. Once you've got it installed, you will need to connect to Carleton through the VPN with your MyCarletonOne credentials. Indeed, you should always connect via a VPN whenever you're using a public wifi point (like in coffee shops). The VPN acts like a private tunnel from your computer to Carleton's servers. To the rest of the internet, it will now look as if you actually are on campus. Once you're connected via the VPN, you can <a href="http://134.117.26.132:5000/">access the DH Box through your browser</a>. Bookmark the site; you'll use it in the exercises in Module 1.</p>
-<h4 id="using-the-dh-box">Using the DH Box</h4>
+<h3 id="using-the-dh-box">Using the DH Box</h3>
 <ol>
 <li>Click the 'Sign up' button</li>
 <li>Fill in the form. Choose a username and password that you'll remember. You don't have to use a real email by the way, just something that looks email-like (this is handy if, like me, you end up creating multiple DH Boxes - it's a bad idea to have more than one DH Box with the <strong>same</strong> email address)</li>
@@ -400,7 +356,7 @@
 <h2 id="some-readings-to-kick-things-off">Some Readings To Kick Things Off</h2>
 <p>What is digital history anyway? How is it connected to so-called 'big data'? Read the following pieces. Annotate with Hypothes.is anything that strikes you as interesting using <a href="https://hypothes.is/groups/886ipqWe/hist3814o">our HIST3814o group</a>; annotate anything that puzzles you - feel free to just say, 'I'm not sure what this means; does it mean.... does anybody have any ideas?' <strong>and</strong> if you see someone is asking questions, you can reply to that annotation with thoughts of your own!</p>
 <p><strong>NB</strong> Each week, I expect you to respond to at least someone else's annotation in a <strong>substantive</strong> way. No "I agree!" or "right on!" or that sort of thing. Make a <strong>meaningful</strong> contribution.</p>
-<p>Once you have read and annotated the works, <strong>write a post on your blog that poses the question 'what is digital history for me anyway?'</strong> . Explain why you're in this class, your level of comfort with digital tech, the kinds of history you're interested in, and what you hope to get out of this course. Your post should link to relevant annotations made by you or by your peers. (Every Hypothes.is annotation has a direct link visible when you click on the 'share' icon for an existing annotation).</p>
+<p>Once you have read and annotated the works, <strong>update your fail log in your GitHub repository</strong> . Explain why you're in this class, your level of comfort with digital tech, the kinds of history you're interested in, and what you hope to get out of this course. Your post should link to relevant annotations made by you or by your peers. (Every Hypothes.is annotation has a direct link visible when you click on the 'share' icon for an existing annotation).</p>
 <h3 id="readings">Readings</h3>
 <p>Excerpts from <a href="http://www.themacroscope.org/?page_id=595">Chapter 1, the Historian's Macroscope original draft</a>; read from 'Joys of Big Data' to 'Chapter One Conclusion'. Use Hypothes.is to annotate rather than the 'commenting' function on the site, but remember to annotate using <a href="https://hypothes.is/groups/886ipqWe/hist3814o">our HIST3814o group</a>.</p>
 <p>James Baker <a href="https://cradledincaricature.com/2017/05/24/the-soft-digital-history-that-underpins-my-book/">'The soft digital history that underpins my book' https://cradledincaricature.com/2017/05/24/the-soft-digital-history-that-underpins-my-book/</a></p>
@@ -418,7 +374,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../../module-1/Open-Access-Research/" class="btn btn-neutral float-right" title="Why you should be open"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../../module-1/Open-Access-Research/" class="btn btn-neutral float-right" title="Why you should be open">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
         <a href="../.." class="btn btn-neutral" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
@@ -429,34 +385,24 @@
   <hr/>
 
   <div role="contentinfo">
-    <p>
     <!-- Copyright etc -->
-    </p>
+    
   </div>
 
-The Crafting Digital History site is built with <a href="http://www.mkdocs.org">MkDocs</a> using a theme provided by <a href="https://readthedocs.org">Read the Docs</a>. All documents are available on <a href="https://github.com/shawngraham/dhworkbook/tree/gh-pages"> GitHub</a>. I thank Reclaim Hosting for their help, support, and example in getting this site up and running.
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
 </footer>
-
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/fitvids/1.1.0/jquery.fitvids.min.js"></script>
-<script>
-  $(document).ready(function(){
-    // Target your .container, .wrapper, .post, etc.
-    $(".section").fitVids();
-  });
-</script>
-    
+      
         </div>
       </div>
 
     </section>
-    
+
   </div>
 
   <div class="rst-versions" role="note" style="cursor: pointer">
     <span class="rst-current-version" data-toggle="rst-current-version">
       
-          <a href="https://github.com/shawngraham/dhworkbook/tree/gh-pages" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+          <a href="https://github.com/shawngraham/dhworkbook/tree/gh-pages/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
         <span><a href="../.." style="color: #fcfcfc;">&laquo; Previous</a></span>
@@ -466,7 +412,9 @@ The Crafting Digital History site is built with <a href="http://www.mkdocs.org">
       
     </span>
 </div>
-    <script src="../../js/theme.js"></script>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
 
 </body>
 </html>
